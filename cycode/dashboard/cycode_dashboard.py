@@ -18,8 +18,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-_CYCODE_DIR = Path(__file__).resolve().parent.parent
-for _p in (str(_CYCODE_DIR), str(Path(__file__).resolve().parent)):
+_REPO_DIR = Path(__file__).resolve().parents[1]
+_PACKAGE_DIR = _REPO_DIR / "cycode"
+for _p in (str(_REPO_DIR), str(_PACKAGE_DIR), str(Path(__file__).resolve().parent)):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 # Streamlit keeps modules in sys.modules across reruns; reload so new helpers
