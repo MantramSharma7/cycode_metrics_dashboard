@@ -26,9 +26,9 @@ for _p in (str(_REPO_DIR), str(_PACKAGE_DIR), str(Path(__file__).resolve().paren
 # Streamlit keeps modules in sys.modules across reruns; reload so new helpers
 # (e.g. recommend_next_steps) are visible without restarting the server.
 import importlib
-import cycode.cycode_pipeline as _cycode_pipeline
+import cycode_pipeline as _cycode_pipeline
 importlib.reload(_cycode_pipeline)
-from cycode.cycode_pipeline import attain_insights, identify_anomalies, recommend_next_steps  # noqa: E402
+from cycode_pipeline import attain_insights, identify_anomalies, recommend_next_steps  # noqa: E402
 
 REPORT_DIR = Path(__file__).resolve().parent.parent / "reports"
 DIMENSIONS = ["Project", "Team", "Repository"]
