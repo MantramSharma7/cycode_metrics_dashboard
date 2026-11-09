@@ -13,13 +13,21 @@ from datetime import datetime, timedelta
 from hashlib import sha1
 import math
 import re
+import sys
 import traceback
 import warnings
 import pandas as pd
 import numpy as np
 NaN = float("nan")
 from pathlib import Path
-from cycode.merge_api_closing_times import *
+
+if __package__ in (None, ""):
+    repo_root = Path(__file__).resolve().parents[1]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    from cycode.merge_api_closing_times import *
+else:
+    from .merge_api_closing_times import *
 
 # This batch script only needs Stage 1. Importing app.py would execute the
 # Streamlit application in bare Python and emit missing ScriptRunContext warnings.
