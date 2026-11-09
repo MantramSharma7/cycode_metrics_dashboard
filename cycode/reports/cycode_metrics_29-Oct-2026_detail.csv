@@ -1,0 +1,829 @@
+﻿## M1 detail
+snapshot_date,metric,dimension,group,value,n,status
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Alpha Serve,106,106,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Apps,6,6,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Connector for Jira,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Custom Charts,553,553,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Loop,38,38,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Other,17,17,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Portfolio Manager,218,218,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Shared infra,38,38,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Strategic Roadmaps,190,190,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Structure,168,168,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Tempo for Jira,401,401,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Time Tracker,7,7,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Unmapped,1239,1239,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Project,Workforce Intelligence,16,16,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,All Structure,165,165,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,AlphaServe Cloud,134,134,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,AlphaServe DC,24,24,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Avengers,336,336,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Brazil / eCore,72,72,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Custom Charts,553,553,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Dev,12,12,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Kenobi Mongoose Visualizations,105,105,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,"Kenobi, Mongoose, Visualizations",85,85,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Kraken,218,218,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Structure DC,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,TBA,1,1,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,Unmapped,1239,1239,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,"Vanguard, The Rejects, Insights",38,38,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Team,X-Men,15,15,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,as-ansible-infrastructure,28,28,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,as-flux,5,5,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,as-k8s-terraform,4,4,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,aws-infra,7,7,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,cc-flux,131,131,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,cc-terraform,26,26,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,cl-bi-connectors,76,76,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,cloud,147,147,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,custom-charts,213,213,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,custom-charts-dc,183,183,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,dc-bi-connectors,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,dev-workgraph,1,1,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,dolly,317,317,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,flux,5,5,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,gantt,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,jira-apps-2fa,5,5,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,monday-bi-core,14,14,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,nexus,24,24,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,nexus-infra,14,14,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,pfm_flux,5,5,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,pfm_terraform,42,42,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,powerbi-connector-for-servicenow-frontend,2,2,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,prime-cloudtimesheet,4,4,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,prime-timesheets-dc,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,relight,171,171,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,roadmapping,105,105,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,roadmunk,85,85,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,shared-tf-infrastructure,10,10,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,structure,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,structure-bundle,3,3,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,tempo-server,65,65,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,terraform-pbi-cloud,19,19,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,testing,1,1,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,tj-flux-apps,8,8,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,tj-infrastructure,11,11,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,tokclaw-apps,1,1,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,trains-noc,2,2,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,workforce-intelligence,9,9,READY
+2026-10-29T00:00:00Z,actionable_open_high_critical,Repository,workforce-intelligence-infra,6,6,READY
+
+## M2 detail
+snapshot_date,metric,dimension,group,new,resolved,net,value,n,status,note
+2026-10-29T00:00:00Z,backlog_trend,Project,Alpha Serve,294,60,234,234,1047,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Apps,3,0,3,3,31,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Connector for Jira,34,49,-15,-15,189,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Custom Charts,791,76,715,715,4736,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Loop,4025,300,3725,3725,5126,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Other,276,8,268,268,281,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Portfolio Manager,938,9,929,929,1957,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Shared infra,19,10,9,9,117,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Strategic Roadmaps,295,223,72,72,4226,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Structure,84,26,58,58,1089,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Tempo for Jira,1423,110,1313,1313,3966,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Time Tracker,81,44,37,37,590,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Unmapped,11313,0,11313,11313,11313,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Project,Workforce Intelligence,496,79,417,417,776,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,All Structure,81,21,60,60,997,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,AlphaServe Cloud,305,60,245,245,1129,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,AlphaServe DC,301,49,252,252,483,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Avengers,1397,102,1295,1295,2827,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Brazil / eCore,107,52,55,55,1729,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Custom Charts,791,76,715,715,4736,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Dev,20,18,2,2,53,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Kenobi Mongoose Visualizations,188,132,56,56,2866,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,"Kenobi, Mongoose, Visualizations",107,91,16,16,1360,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Kraken,938,9,929,929,1957,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Structure DC,3,5,-2,-2,92,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,TBA,0,0,0,0,1,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,Unmapped,11313,0,11313,11313,11313,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,"Vanguard, The Rejects, Insights",4025,300,3725,3725,5126,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Team,X-Men,496,79,417,417,775,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,as-ansible-infrastructure,11,0,11,11,82,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,as-flux,8,0,8,8,14,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,as-k8s-terraform,7,0,7,7,12,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,aws-infra,0,0,0,0,18,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,cc-flux,104,2,102,102,1168,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,cc-terraform,111,0,111,111,111,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,cl-bi-connectors,204,60,144,144,707,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,cloud,58,21,37,37,841,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,custom-charts,307,72,235,235,1779,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,custom-charts-dc,269,2,267,267,1678,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,dc-bi-connectors,34,49,-15,-15,189,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,dev-workgraph,0,0,0,0,1,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,dolly,1356,102,1254,1254,2769,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,engineering-digest,12,8,4,4,16,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,flux,18,0,18,18,18,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,gantt,3,5,-2,-2,92,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,jira-apps-2fa,3,0,3,3,30,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,loop-brain,0,0,0,0,55,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,monday-bi-core,90,0,90,90,90,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,nexus,3879,299,3580,3580,4719,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,nexus-infra,146,1,145,145,352,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,pfm_flux,45,0,45,45,45,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,pfm_terraform,367,0,367,367,367,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,powerbi-connector-for-servicenow-frontend,39,0,39,39,39,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,prime-cloudtimesheet,75,44,31,31,387,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,prime-timesheets-dc,6,0,6,6,203,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,relight,526,9,517,517,1545,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,roadmapping,188,132,56,56,2866,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,roadmunk,107,91,16,16,1360,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,shared-tf-infrastructure,8,10,-2,-2,35,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,structure,4,0,4,4,114,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,structure-bundle,1,0,1,1,6,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,tempo-server,26,8,18,18,1139,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,terraform-pbi-cloud,36,0,36,36,275,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,testing,0,0,0,0,1,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,tj-flux-apps,14,0,14,14,14,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,tj-infrastructure,27,0,27,27,44,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,tokclaw-apps,0,0,0,0,1,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,trains-noc,174,0,174,174,174,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,workforce-intelligence,458,79,379,379,737,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-10-29T00:00:00Z,backlog_trend,Repository,workforce-intelligence-infra,38,0,38,38,38,READY,new = open now but not in previous snapshot; resolved = open then but not now
+
+## M3 detail
+snapshot_date,metric,dimension,group,severity,general_ttr_days,ttr_days_mean,ttr_days_median,ttr_days_p90,ttr_days_n,n,resolved_unclassified,status
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Alpha Serve,Critical,11.533685973004062,4.983202271828704,4.983202271828704,4.983202271828704,1,1,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Alpha Serve,High,11.533685973004062,5.256994542967923,6.316643772083333,6.9201955220138895,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Alpha Serve,Low,11.533685973004062,5.4817484372067895,6.687749284583333,8.086631596685185,12,12,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Alpha Serve,Medium,11.533685973004062,5.456902389879299,6.317740131678241,8.096333214671297,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Connector for Jira,High,11.533685973004062,3.188750608449798,3.4197672940972224,5.911888846626157,16,16,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Connector for Jira,Low,11.533685973004062,0.0029793013425925925,0.0029793013425925925,0.0029793013425925925,1,1,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Connector for Jira,Medium,11.533685973004062,5.91165602474537,5.91165602474537,5.91165602474537,1,1,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Custom Charts,Critical,11.533685973004062,1.0454178629753086,1.2348604676041666,1.4027770882268518,15,15,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Custom Charts,High,11.533685973004062,1.6624915833454037,1.2352257273206018,3.747505657774306,70,70,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Custom Charts,Low,11.533685973004062,2.5425913401016866,3.140847642309028,3.5873361043449075,14,14,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Custom Charts,Medium,11.533685973004062,2.8862877118191963,1.0798454209143518,8.291964918771992,28,28,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Loop,Critical,11.533685973004062,8.796209666603009,12.96699037501736,12.979463894924768,20,20,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Loop,High,11.533685973004062,11.419859614486562,12.96775836369213,12.982257311562499,155,155,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Loop,Info,11.533685973004062,6.982243219550714,1.8056076847337965,14.841335851712962,11,11,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Loop,Low,11.533685973004062,9.998914417125066,6.301513963819444,25.410664554189815,3654,3654,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Loop,Medium,11.533685973004062,10.63234318928648,9.301178356539351,23.809101210738426,213,213,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Other,High,11.533685973004062,2.7423249135763887,2.7423249135763887,2.7423249135763887,1,1,4,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Portfolio Manager,High,11.533685973004062,6.568501330196759,6.568501330196759,8.718094253113426,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Portfolio Manager,Medium,11.533685973004062,3.2280335121296297,3.2280335121296297,3.2280335121296297,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Strategic Roadmaps,Critical,11.533685973004062,0.5112540901851852,0.5112540901851852,0.5112540901851852,1,1,41,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Strategic Roadmaps,High,11.533685973004062,6.803802912126736,8.49747622759838,10.087508706678241,16,16,41,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Strategic Roadmaps,Low,11.533685973004062,0.8234744189988427,0.8235467126099537,1.6068873238692132,4,4,41,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Strategic Roadmaps,Medium,11.533685973004062,2.0337318702729554,1.796518195324074,3.8725018766250003,12,12,41,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Structure,Critical,11.533685973004062,3.797077596446759,4.190228970729167,4.190420268219907,3,3,42,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Structure,High,11.533685973004062,3.2738668313399617,3.0105278116377314,5.185886423181718,22,22,42,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Structure,Low,11.533685973004062,2.7321990722857388,3.011109202945602,3.0158919706516203,82,82,42,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Structure,Medium,11.533685973004062,1.6174516656238425,2.365554818269676,3.006454095065972,10,10,42,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Tempo for Jira,Critical,11.533685973004062,42.466401065937504,58.09263289949652,58.0953478766493,32,32,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Tempo for Jira,High,11.533685973004062,20.157347577258875,6.285530238362269,58.09493776098843,108,108,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Tempo for Jira,Info,11.533685973004062,37.96553666635031,56.94290996962963,56.943132741768515,3,3,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Tempo for Jira,Low,11.533685973004062,11.531683374929152,9.740905010596066,18.992081847444446,990,990,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Tempo for Jira,Medium,11.533685973004062,27.52153578968966,8.04603283041088,58.14932989036921,150,150,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Time Tracker,High,11.533685973004062,0.9963502071133206,0.8149779376909722,0.8731651175393519,22,22,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Time Tracker,Low,11.533685973004062,2.109216167746362,0.8128000451388888,4.444485937511576,7,7,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Time Tracker,Medium,11.533685973004062,1.4956595627728173,0.8133426432175925,2.7485872018819464,7,7,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Unmapped,High,11.533685973004062,26.96628817994213,28.110395128067132,28.247048963900465,3,3,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Unmapped,Info,11.533685973004062,25.58583276222222,25.58583276222222,25.58583276222222,1,1,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Unmapped,Low,11.533685973004062,3.299444950040509,3.299444950040509,5.142727338934028,2,2,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Unmapped,Medium,11.533685973004062,2.4444003671313133,0.6514926752777778,0.7540341005648148,110,110,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Workforce Intelligence,Critical,11.533685973004062,8.874561246848957,4.038133519849537,23.37342230016435,8,8,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Workforce Intelligence,High,11.533685973004062,5.972841196700232,4.038528087465278,5.972540067211833,20,20,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Workforce Intelligence,Info,11.533685973004062,30.59642837097222,30.59642837097222,30.59642837097222,1,1,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Workforce Intelligence,Low,11.533685973004062,17.11453445405013,12.935193771568287,27.303682578310184,1032,1032,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Project,Workforce Intelligence,Medium,11.533685973004062,22.46885816703704,5.649421602731482,47.30484822190741,3,3,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,All Structure,Critical,11.533685973004062,3.0105357260185186,3.0105357260185186,3.0105357260185186,1,1,40,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,All Structure,High,11.533685973004062,3.0671617826626796,3.0105278116377314,3.015939759005787,18,18,40,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,All Structure,Low,11.533685973004062,2.829543966733914,3.011189195914352,3.0158936393217592,79,79,40,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,All Structure,Medium,11.533685973004062,1.9800591270746528,2.4303979453240743,3.0065385036006944,8,8,40,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe Cloud,Critical,11.533685973004062,4.983202271828704,4.983202271828704,4.983202271828704,1,1,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe Cloud,High,11.533685973004062,5.256994542967923,6.316643772083333,6.9201955220138895,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe Cloud,Low,11.533685973004062,5.4817484372067895,6.687749284583333,8.086631596685185,12,12,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe Cloud,Medium,11.533685973004062,5.456902389879299,6.317740131678241,8.096333214671297,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe DC,High,11.533685973004062,3.162490273457244,2.7423249135763887,5.911842462520833,17,17,28,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe DC,Low,11.533685973004062,0.0029793013425925925,0.0029793013425925925,0.0029793013425925925,1,1,28,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,AlphaServe DC,Medium,11.533685973004062,5.91165602474537,5.91165602474537,5.91165602474537,1,1,28,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Avengers,Critical,11.533685973004062,42.466401065937504,58.09263289949652,58.0953478766493,32,32,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Avengers,High,11.533685973004062,20.413687640970036,6.285530238362269,58.0949420029051,106,106,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Avengers,Info,11.533685973004062,37.96553666635031,56.94290996962963,56.943132741768515,3,3,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Avengers,Low,11.533685973004062,11.531683374929152,9.740905010596066,18.992081847444446,990,990,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Avengers,Medium,11.533685973004062,27.8345838725097,8.208587310578704,58.14950754133912,148,148,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Brazil / eCore,High,11.533685973004062,1.4609313732344713,0.8151994363483795,2.981665103958331,24,24,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Brazil / eCore,Low,11.533685973004062,2.109216167746362,0.8128000451388888,4.444485937511576,7,7,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Brazil / eCore,Medium,11.533685973004062,2.1312858068248457,0.8133530075810185,5.468816621171296,9,9,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Custom Charts,Critical,11.533685973004062,1.0454178629753086,1.2348604676041666,1.4027770882268518,15,15,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Custom Charts,High,11.533685973004062,1.6624915833454037,1.2352257273206018,3.747505657774306,70,70,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Custom Charts,Low,11.533685973004062,2.5425913401016866,3.140847642309028,3.5873361043449075,14,14,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Custom Charts,Medium,11.533685973004062,2.8862877118191963,1.0798454209143518,8.291964918771992,28,28,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Kenobi Mongoose Visualizations,High,11.533685973004062,5.996574758312501,7.787411646828704,8.688848716752315,5,5,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Kenobi Mongoose Visualizations,Low,11.533685973004062,1.606866832945602,1.606866832945602,1.6069078147928242,2,2,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Kenobi Mongoose Visualizations,Medium,11.533685973004062,2.594320756753472,2.4126663634837966,3.7271495448518523,4,4,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Kenobi, Mongoose, Visualizations",Critical,11.533685973004062,0.5112540901851852,0.5112540901851852,0.5112540901851852,1,1,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Kenobi, Mongoose, Visualizations",High,11.533685973004062,7.170724800224115,9.2497611825,10.087563172256944,11,11,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Kenobi, Mongoose, Visualizations",Low,11.533685973004062,0.040082005052083335,0.040082005052083335,0.04023865667708333,2,2,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Kenobi, Mongoose, Visualizations",Medium,11.533685973004062,1.7534374270326967,1.7103185325868056,3.429781416653935,8,8,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Kraken,High,11.533685973004062,6.568501330196759,6.568501330196759,8.718094253113426,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Kraken,Medium,11.533685973004062,3.2280335121296297,3.2280335121296297,3.2280335121296297,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Structure DC,Critical,11.533685973004062,4.190348531660879,4.190348531660879,4.19044418040625,2,2,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Structure DC,High,11.533685973004062,4.204039550387732,4.198954772505787,5.441237365114584,4,4,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Structure DC,Low,11.533685973004062,0.16878351848379633,0.16803752641203704,0.17058330723611112,3,3,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Structure DC,Medium,11.533685973004062,0.16702181982060185,0.16702181982060185,0.16702186489930557,2,2,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Unmapped,High,11.533685973004062,26.96628817994213,28.110395128067132,28.247048963900465,3,3,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Unmapped,Info,11.533685973004062,25.58583276222222,25.58583276222222,25.58583276222222,1,1,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Unmapped,Low,11.533685973004062,3.299444950040509,3.299444950040509,5.142727338934028,2,2,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,Unmapped,Medium,11.533685973004062,2.4444003671313133,0.6514926752777778,0.7540341005648148,110,110,141,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Vanguard, The Rejects, Insights",Critical,11.533685973004062,8.796209666603009,12.96699037501736,12.979463894924768,20,20,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Vanguard, The Rejects, Insights",High,11.533685973004062,11.419859614486562,12.96775836369213,12.982257311562499,155,155,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Vanguard, The Rejects, Insights",Info,11.533685973004062,6.982243219550714,1.8056076847337965,14.841335851712962,11,11,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Vanguard, The Rejects, Insights",Low,11.533685973004062,9.998914417125066,6.301513963819444,25.410664554189815,3654,3654,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,"Vanguard, The Rejects, Insights",Medium,11.533685973004062,10.63234318928648,9.301178356539351,23.809101210738426,213,213,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,X-Men,Critical,11.533685973004062,8.874561246848957,4.038133519849537,23.37342230016435,8,8,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,X-Men,High,11.533685973004062,5.972841196700232,4.038528087465278,5.972540067211833,20,20,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,X-Men,Info,11.533685973004062,30.59642837097222,30.59642837097222,30.59642837097222,1,1,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,X-Men,Low,11.533685973004062,17.11453445405013,12.935193771568287,27.303682578310184,1032,1032,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Team,X-Men,Medium,11.533685973004062,22.46885816703704,5.649421602731482,47.30484822190741,3,3,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cl-bi-connectors,Critical,11.533685973004062,4.983202271828704,4.983202271828704,4.983202271828704,1,1,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cl-bi-connectors,High,11.533685973004062,5.256994542967923,6.316643772083333,6.9201955220138895,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cl-bi-connectors,Low,11.533685973004062,5.4817484372067895,6.687749284583333,8.086631596685185,12,12,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cl-bi-connectors,Medium,11.533685973004062,5.456902389879299,6.317740131678241,8.096333214671297,7,7,20,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cloud,Critical,11.533685973004062,3.0105357260185186,3.0105357260185186,3.0105357260185186,1,1,29,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cloud,High,11.533685973004062,3.137870750303649,3.0105294593171297,3.0160000174282406,17,17,29,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cloud,Low,11.533685973004062,2.9392460526312747,3.0111919044328705,3.01589386177662,76,76,29,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,cloud,Medium,11.533685973004062,2.6227165701909723,2.495971980167824,3.0066229121354167,6,6,29,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts,Critical,11.533685973004062,0.3571303995515046,0.07596905248842592,0.9127303259664354,4,4,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts,High,11.533685973004062,2.208535185623843,0.3833877084606482,5.334099659061342,20,20,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts,Low,11.533685973004062,2.5425913401016866,3.140847642309028,3.5873361043449075,14,14,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts,Medium,11.533685973004062,2.947470212453275,1.079845000173611,8.410274356356485,27,27,190,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts-dc,Critical,11.533685973004062,1.2957042133112375,1.237110443888889,1.4027781886574073,11,11,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts-dc,High,11.533685973004062,1.444074142434028,1.2353004334722222,1.416960772513889,50,50,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,custom-charts-dc,Medium,11.533685973004062,1.234360194699074,1.234360194699074,1.234360194699074,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dc-bi-connectors,High,11.533685973004062,3.188750608449798,3.4197672940972224,5.911888846626157,16,16,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dc-bi-connectors,Low,11.533685973004062,0.0029793013425925925,0.0029793013425925925,0.0029793013425925925,1,1,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dc-bi-connectors,Medium,11.533685973004062,5.91165602474537,5.91165602474537,5.91165602474537,1,1,24,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dolly,Critical,11.533685973004062,42.466401065937504,58.09263289949652,58.0953478766493,32,32,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dolly,High,11.533685973004062,20.413687640970036,6.285530238362269,58.0949420029051,106,106,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dolly,Info,11.533685973004062,37.96553666635031,56.94290996962963,56.943132741768515,3,3,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dolly,Low,11.533685973004062,15.437559063497611,12.851905051400463,26.81340295868056,439,439,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,dolly,Medium,11.533685973004062,27.8345838725097,8.208587310578704,58.14950754133912,148,148,1334,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,gantt,Critical,11.533685973004062,4.190348531660879,4.190348531660879,4.19044418040625,2,2,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,gantt,High,11.533685973004062,4.204039550387732,4.198954772505787,5.441237365114584,4,4,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,gantt,Low,11.533685973004062,0.16878351848379633,0.16803752641203704,0.17058330723611112,3,3,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,gantt,Medium,11.533685973004062,0.16702181982060185,0.16702181982060185,0.16702186489930557,2,2,2,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,loop-brain,Medium,11.533685973004062,1.7028379899537036,1.7028379899537036,3.011838827490741,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus,Critical,11.533685973004062,9.259067024682626,12.967189392916666,12.979536439224535,19,19,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus,High,11.533685973004062,11.171813473606042,12.967190978564815,12.981578238090277,153,153,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus,Low,11.533685973004062,10.075479667761414,6.243179873217593,25.87240318965278,3076,3076,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus,Medium,11.533685973004062,10.755984411535808,9.301317659027777,23.810322771645833,209,209,870,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus-infra,Critical,11.533685973004062,0.0019198630902777778,0.0019198630902777778,0.0019198630902777778,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus-infra,High,11.533685973004062,30.395389391846066,30.395389391846066,36.46031974645255,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus-infra,Info,11.533685973004062,6.982243219550714,1.8056076847337965,14.841335851712962,11,11,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus-infra,Low,11.533685973004062,9.591449519274876,6.355146862609954,13.621528942652779,578,578,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,nexus-infra,Medium,11.533685973004062,6.641340663564815,6.641340663564815,11.946057379370371,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,prime-cloudtimesheet,High,11.533685973004062,0.9963502071133206,0.8149779376909722,0.8731651175393519,22,22,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,prime-cloudtimesheet,Low,11.533685973004062,2.109216167746362,0.8128000451388888,4.444485937511576,7,7,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,prime-cloudtimesheet,Medium,11.533685973004062,0.8333213463946759,0.8133219128761574,0.8739362183449074,6,6,61,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,prime-timesheets-dc,Medium,11.533685973004062,5.469688861041667,5.469688861041667,5.469688861041667,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,relight,High,11.533685973004062,6.568501330196759,6.568501330196759,8.718094253113426,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,relight,Medium,11.533685973004062,3.2280335121296297,3.2280335121296297,3.2280335121296297,1,1,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmapping,High,11.533685973004062,5.996574758312501,7.787411646828704,8.688848716752315,5,5,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmapping,Low,11.533685973004062,1.606866832945602,1.606866832945602,1.6069078147928242,2,2,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmapping,Medium,11.533685973004062,2.594320756753472,2.4126663634837966,3.7271495448518523,4,4,9,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmunk,Critical,11.533685973004062,0.5112540901851852,0.5112540901851852,0.5112540901851852,1,1,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmunk,High,11.533685973004062,7.170724800224115,9.2497611825,10.087563172256944,11,11,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmunk,Low,11.533685973004062,0.040082005052083335,0.040082005052083335,0.04023865667708333,2,2,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,roadmunk,Medium,11.533685973004062,1.7534374270326967,1.7103185325868056,3.429781416653935,8,8,32,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,structure,High,11.533685973004062,1.8651093327662036,1.8651093327662036,1.8651093327662036,1,1,11,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,structure,Low,11.533685973004062,0.050424457334104944,0.04656292628472222,0.056080167951388885,3,3,11,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,structure,Medium,11.533685973004062,0.05208679772569444,0.05208679772569444,0.05404343481365741,2,2,11,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,tempo-server,High,11.533685973004062,6.571324200567129,6.571324200567129,8.721215013104166,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,tempo-server,Medium,11.533685973004062,4.3559776610069445,4.3559776610069445,5.246074381164352,2,2,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,tj-infrastructure,Low,11.533685973004062,8.419742490570616,8.194152647326389,12.863536044386572,551,551,0,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,trains-noc,High,11.533685973004062,2.7423249135763887,2.7423249135763887,2.7423249135763887,1,1,4,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence,Critical,11.533685973004062,8.874561246848957,4.038133519849537,23.37342230016435,8,8,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence,High,11.533685973004062,5.972841196700232,4.038528087465278,5.972540067211833,20,20,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence,Info,11.533685973004062,30.59642837097222,30.59642837097222,30.59642837097222,1,1,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence,Low,11.533685973004062,19.121766352890887,25.27471966730324,27.3281886918287,841,841,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence,Medium,11.533685973004062,22.46885816703704,5.649421602731482,47.30484822190741,3,3,17,READY
+2026-10-29T00:00:00Z,mttr_by_severity,Repository,workforce-intelligence-infra,Low,11.533685973004062,8.276408658630865,6.324997536851852,12.912454738854166,191,191,0,READY
+
+## M4 detail
+snapshot_date,metric,dimension,group,general_noise_rate,noise_count,total,noise_rate,top_policy,top_policy_share_pct,top5_policy_share_pct,top_noise_policies,general_issue_noise_rate,issues,repeat_factor,duplicate_share_pct,noise_issues,noise_rate_issues,actionable_issues,noise_reduction_pts,n,status,note
+2026-10-29T00:00:00Z,noise_reduction,Project,Alpha Serve,6.51,28,1381,2.03,Vulnerability found in dependency,29.5,70.7,"Vulnerability found in dependency (11), AWS Account ID (5), A developer pushed a commit to a repository they have not used in 6 months (4)",0.64,419,3.3,69.7,19,4.53,106,-2.5,1381,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Apps,6.51,2,39,5.13,Unsanitized user input in redirect (Java),25.6,61.5,A developer pushed a commit to a repository they have not used in 6 months (2),0.64,31,1.3,20.5,1,3.23,6,1.9,39,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Connector for Jira,6.51,10,236,4.24,Vulnerability found in dependency,75.0,97.5,"Vulnerability found in dependency (5), A developer pushed a commit to a repository they have not used in 6 months (3), Pull request merged without review (2)",0.64,32,7.4,86.4,6,18.75,3,-14.51,236,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Custom Charts,6.51,232,11414,2.03,Generic Secret/Password,64.7,91.0,"AWS Account ID (222), Vulnerability found in dependency (10)",0.64,1503,7.6,86.8,11,0.73,553,1.3,11414,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Loop,6.51,3688,12656,29.14,AWS Access Key Id,47.3,96.2,"AWS Access Key Id (3626), Leakage of information in logger message (JavaScript) (24), Vulnerability found in dependency (22)",0.64,4744,2.7,62.5,47,0.99,38,28.15,12656,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Other,6.51,18,429,4.2,Vulnerability Found In Container Image,69.5,89.3,"Leakage of information in logger message (JavaScript) (13), HEALTHCHECK instruction should be used (3), Vulnerability found in dependency (2)",0.64,276,1.6,35.7,18,6.52,17,-2.32,429,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Portfolio Manager,6.51,361,2258,15.99,Vulnerability found in dependency,56.2,86.1,"AWS Account ID (344), Vulnerability found in dependency (17)",0.64,801,2.8,64.5,19,2.37,218,13.62,2258,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Shared infra,6.51,3,161,1.86,Generic Secret/Password,31.7,77.0,"Vulnerability found in dependency (2), AWS Account ID (1)",0.64,79,2.0,50.9,3,3.8,38,-1.94,161,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Strategic Roadmaps,6.51,2,5113,0.04,Vulnerability Found In Container Image,31.0,81.6,Missing CODEOWNERS file (2),0.64,3708,1.4,27.5,2,0.05,190,-0.01,5113,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Structure,6.51,3,1833,0.16,Generic Secret/Password,26.1,71.4,"AWS Account ID (2), Vulnerability found in dependency (1)",0.64,765,2.4,58.3,3,0.39,168,-0.23,1833,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Tempo for Jira,6.51,84,7703,1.09,Vulnerability Found In Container Image,50.9,82.1,"AWS Account ID (47), Vulnerability found in dependency (37)",0.64,3168,2.4,58.9,33,1.04,401,0.05,7703,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Time Tracker,6.51,15,699,2.15,Leakage of information in logger message (JavaScript),31.8,80.3,Vulnerability found in dependency (15),0.64,495,1.4,29.2,9,1.82,7,0.33,699,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Unmapped,6.51,187,25310,0.74,Vulnerability Found In Container Image,48.3,63.9,"AWS ECR Repository Lacks Policies (99), AWS ECR Repository Not Encrypted With Customer-Managed Keys Detected (82), Google OAuth Client Id (5)",0.64,11308,2.2,55.3,3,0.03,1239,0.71,25310,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Project,Workforce Intelligence,6.51,6,1982,0.3,Generic Secret/Password,59.0,96.4,"Incomplete multi-character sanitization (2), AWS Account ID (2), Vulnerability found in dependency (1)",0.64,600,3.3,69.7,5,0.83,16,-0.53,1982,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,All Structure,6.51,2,1716,0.12,Generic Secret/Password,25.8,73.4,AWS Account ID (2),0.64,681,2.5,60.3,2,0.29,165,-0.17,1716,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,AlphaServe Cloud,6.51,30,1507,1.99,Vulnerability found in dependency,28.3,70.1,"Vulnerability found in dependency (13), AWS Account ID (5), A developer pushed a commit to a repository they have not used in 6 months (4)",0.64,463,3.3,69.3,21,4.54,134,-2.55,1507,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,AlphaServe DC,6.51,17,686,2.48,Vulnerability Found In Container Image,43.4,87.8,"Vulnerability found in dependency (7), A developer pushed a commit to a repository they have not used in 6 months (5), HEALTHCHECK instruction should be used (3)",0.64,321,2.1,53.2,12,3.74,24,-1.26,686,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Avengers,6.51,50,6384,0.78,Vulnerability Found In Container Image,61.4,85.7,"AWS Account ID (47), Vulnerability found in dependency (3)",0.64,2424,2.6,62.0,16,0.66,336,0.12,6384,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Brazil / eCore,6.51,49,2018,2.43,Vulnerability found in dependency,41.8,75.4,Vulnerability found in dependency (49),0.64,1239,1.6,38.6,26,2.1,72,0.33,2018,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Custom Charts,6.51,232,11414,2.03,Generic Secret/Password,64.7,91.0,"AWS Account ID (222), Vulnerability found in dependency (10)",0.64,1503,7.6,86.8,11,0.73,553,1.3,11414,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Dev,6.51,14,53,26.42,Leakage of information in logger message (JavaScript),24.5,49.1,"Leakage of information in logger message (JavaScript) (13), AWS Account ID (1)",0.64,53,1.0,0.0,14,26.42,12,-0.0,53,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Kenobi Mongoose Visualizations,6.51,1,3449,0.03,Vulnerability Found In Container Image,36.0,86.3,Missing CODEOWNERS file (1),0.64,2522,1.4,26.9,1,0.04,105,-0.01,3449,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,"Kenobi, Mongoose, Visualizations",6.51,1,1664,0.06,Leakage of information in logger message (JavaScript),34.0,76.2,Missing CODEOWNERS file (1),0.64,1186,1.4,28.7,1,0.08,85,-0.02,1664,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Kraken,6.51,361,2258,15.99,Vulnerability found in dependency,56.2,86.1,"AWS Account ID (344), Vulnerability found in dependency (17)",0.64,801,2.8,64.5,19,2.37,218,13.62,2258,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,Structure DC,6.51,1,117,0.85,Generic Secret/Password,31.6,75.2,Vulnerability found in dependency (1),0.64,84,1.4,28.2,1,1.19,3,-0.34,117,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,TBA,6.51,0,1,0.0,Potential data leaks in public repositories,100.0,100.0,,0.64,1,1.0,0.0,0,0.0,1,0.0,1,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history; low n
+2026-10-29T00:00:00Z,noise_reduction,Team,Unmapped,6.51,187,25310,0.74,Vulnerability Found In Container Image,48.3,63.9,"AWS ECR Repository Lacks Policies (99), AWS ECR Repository Not Encrypted With Customer-Managed Keys Detected (82), Google OAuth Client Id (5)",0.64,11308,2.2,55.3,3,0.03,1239,0.71,25310,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,"Vanguard, The Rejects, Insights",6.51,3688,12656,29.14,AWS Access Key Id,47.3,96.2,"AWS Access Key Id (3626), Leakage of information in logger message (JavaScript) (24), Vulnerability found in dependency (22)",0.64,4744,2.7,62.5,47,0.99,38,28.15,12656,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Team,X-Men,6.51,6,1981,0.3,Generic Secret/Password,59.1,96.4,"Incomplete multi-character sanitization (2), AWS Account ID (2), Vulnerability found in dependency (1)",0.64,599,3.3,69.8,5,0.83,15,-0.53,1981,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,as-ansible-infrastructure,6.51,2,126,1.59,Generic Secret/Password,40.5,96.8,Vulnerability found in dependency (2),0.64,44,2.9,65.1,2,4.55,28,-2.96,126,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,as-flux,6.51,1,14,7.14,Kubernetes Role or ClusterRole with Wildcard Detected in Rules,21.4,64.3,A developer pushed a commit to a repository they have not used in 6 months (1),0.64,14,1.0,0.0,1,7.14,5,0.0,14,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,as-k8s-terraform,6.51,3,12,25.0,Merging code without squashing commits history is permitted,8.3,41.7,"A developer pushed a commit to a repository they have not used in 6 months (1), AWS ECR Repository Not Encrypted With Customer-Managed Keys Detected (1), AWS ECR Repository Lacks Policies (1)",0.64,12,1.0,0.0,3,25.0,4,0.0,12,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,aws-infra,6.51,2,23,8.7,Generic Secret/Password,43.5,73.9,AWS Account ID (2),0.64,14,1.6,39.1,2,14.29,7,-5.59,23,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,cc-flux,6.51,208,1719,12.1,Generic Secret/Password,79.1,95.5,AWS Account ID (208),0.64,171,10.1,90.1,4,2.34,131,9.76,1719,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,cc-terraform,6.51,14,125,11.2,AWS Account ID,11.2,29.6,AWS Account ID (14),0.64,105,1.2,16.0,2,1.9,26,9.3,125,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,cl-bi-connectors,6.51,11,933,1.18,Vulnerability found in dependency,43.0,74.2,"Vulnerability found in dependency (6), AWS Account ID (5)",0.64,258,3.6,72.3,3,1.16,76,0.02,933,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,cloud,6.51,0,1505,0.0,Generic Secret/Password,27.6,81.7,,0.64,532,2.8,64.7,0,0.0,147,0.0,1505,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,custom-charts,6.51,0,7313,0.0,Generic Secret/Password,68.9,96.2,,0.64,719,10.2,90.2,0,0.0,213,0.0,7313,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,custom-charts-dc,6.51,10,2257,0.44,Generic Secret/Password,43.3,96.6,Vulnerability found in dependency (10),0.64,508,4.4,77.5,5,0.98,183,-0.54,2257,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,dc-bi-connectors,6.51,10,236,4.24,Vulnerability found in dependency,75.0,97.5,"Vulnerability found in dependency (5), A developer pushed a commit to a repository they have not used in 6 months (3), Pull request merged without review (2)",0.64,32,7.4,86.4,6,18.75,3,-14.51,236,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,dev-workgraph,6.51,0,1,0.0,Potential data leaks in public repositories,100.0,100.0,,0.64,1,1.0,0.0,0,0.0,1,0.0,1,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history; low n
+2026-10-29T00:00:00Z,noise_reduction,Repository,dolly,6.51,30,6256,0.48,Vulnerability Found In Container Image,62.6,86.4,"AWS Account ID (27), Vulnerability found in dependency (3)",0.64,2380,2.6,62.0,11,0.46,317,0.02,6256,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,engineering-digest,6.51,13,16,81.25,Leakage of information in logger message (JavaScript),81.2,100.0,Leakage of information in logger message (JavaScript) (13),0.64,16,1.0,0.0,13,81.25,0,0.0,16,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,flux,6.51,0,18,0.0,GitHub workflows use uncertified CI/CD modules,16.7,72.2,,0.64,18,1.0,0.0,0,0.0,5,0.0,18,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,gantt,6.51,1,117,0.85,Generic Secret/Password,31.6,75.2,Vulnerability found in dependency (1),0.64,84,1.4,28.2,1,1.19,3,-0.34,117,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,jira-apps-2fa,6.51,2,38,5.26,Unsanitized user input in redirect (Java),26.3,63.2,A developer pushed a commit to a repository they have not used in 6 months (2),0.64,30,1.3,21.1,1,3.33,5,1.93,38,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,loop-brain,6.51,24,56,42.86,Leakage of information in logger message (JavaScript),42.9,89.3,Leakage of information in logger message (JavaScript) (24),0.64,55,1.0,1.8,24,43.64,0,-0.78,56,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,monday-bi-core,6.51,5,98,5.1,Leakage of information in logger message (JavaScript),44.9,74.5,"HEALTHCHECK instruction should be used (3), Vulnerability found in dependency (2)",0.64,87,1.1,11.2,5,5.75,14,-0.65,98,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,nexus,6.51,35,6473,0.54,Leakage of information in logger message (JavaScript),43.7,95.7,"Vulnerability found in dependency (22), Google OAuth Client Id (9), Incomplete string escaping or encoding (2)",0.64,4571,1.4,29.4,13,0.28,24,0.26,6473,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,nexus-infra,6.51,3629,6127,59.23,AWS Access Key Id,97.6,98.7,"AWS Access Key Id (3625), Missing Kubernetes Pod or Container Security Context (1), Kubernetes Container with Writable Root Filesystem Detected (1)",0.64,118,51.9,98.1,10,8.47,14,50.76,6127,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,pfm_flux,6.51,54,63,85.71,AWS Account ID,85.7,98.4,AWS Account ID (54),0.64,10,6.3,84.1,3,30.0,5,55.71,63,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,pfm_terraform,6.51,162,490,33.06,AWS Account ID,33.1,71.8,AWS Account ID (162),0.64,226,2.2,53.9,11,4.87,42,28.19,490,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,powerbi-connector-for-servicenow-frontend,6.51,6,40,15.0,Leakage of information in logger message (JavaScript),62.5,92.5,"Vulnerability found in dependency (5), A developer pushed a commit to a repository they have not used in 6 months (1)",0.64,39,1.0,2.5,5,12.82,2,2.18,40,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,prime-cloudtimesheet,6.51,15,470,3.19,Leakage of information in logger message (JavaScript),44.0,84.0,Vulnerability found in dependency (15),0.64,356,1.3,24.3,9,2.53,4,0.66,470,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,prime-timesheets-dc,6.51,0,229,0.0,Vulnerability found in dependency,55.9,82.5,,0.64,139,1.6,39.3,0,0.0,3,0.0,229,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,relight,6.51,145,1705,8.5,Vulnerability found in dependency,74.5,91.6,"AWS Account ID (128), Vulnerability found in dependency (17)",0.64,565,3.0,66.9,5,0.88,171,7.62,1705,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,roadmapping,6.51,1,3449,0.03,Vulnerability Found In Container Image,36.0,86.3,Missing CODEOWNERS file (1),0.64,2522,1.4,26.9,1,0.04,105,-0.01,3449,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,roadmunk,6.51,1,1664,0.06,Leakage of information in logger message (JavaScript),34.0,76.2,Missing CODEOWNERS file (1),0.64,1186,1.4,28.7,1,0.08,85,-0.02,1664,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,shared-tf-infrastructure,6.51,1,35,2.86,AWS Lambda Function Tracing Configuration Not Found or Inactive,17.1,42.9,AWS Account ID (1),0.64,35,1.0,0.0,1,2.86,10,-0.0,35,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,structure,6.51,0,161,0.0,Leakage of sensitive information in logger message (Java),23.0,61.5,,0.64,111,1.5,31.1,0,0.0,3,0.0,161,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,structure-bundle,6.51,0,9,0.0,Pipeline is running with high privileges,33.3,88.9,,0.64,6,1.5,33.3,0,0.0,3,0.0,9,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,tempo-server,6.51,34,1319,2.58,Vulnerability found in dependency,48.7,72.9,Vulnerability found in dependency (34),0.64,744,1.8,43.6,17,2.28,65,0.3,1319,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,terraform-pbi-cloud,6.51,7,382,1.83,Generic Secret/Password,57.9,90.8,"VPC without Associated Flow Log Detected (3), AWS EC2 Instance Not EBS Optimized Detected (1), AWS EC2 Instance Detailed Monitoring Disabled (1)",0.64,96,4.0,74.9,7,7.29,19,-5.46,382,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,testing,6.51,0,1,0.0,Potential data leaks in public repositories,100.0,100.0,,0.64,1,1.0,0.0,0,0.0,1,0.0,1,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history; low n
+2026-10-29T00:00:00Z,noise_reduction,Repository,tj-flux-apps,6.51,0,14,0.0,GitHub workflows use uncertified CI/CD modules,35.7,78.6,,0.64,12,1.2,14.3,0,0.0,8,0.0,14,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,tj-infrastructure,6.51,20,114,17.54,Generic Secret/Password,57.0,83.3,AWS Account ID (20),0.64,32,3.6,71.9,5,15.62,11,1.92,114,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,tokclaw-apps,6.51,0,1,0.0,Potential data leaks in public repositories,100.0,100.0,,0.64,1,1.0,0.0,0,0.0,1,0.0,1,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history; low n
+2026-10-29T00:00:00Z,noise_reduction,Repository,trains-noc,6.51,0,314,0.0,Vulnerability Found In Container Image,94.9,98.4,,0.64,172,1.8,45.2,0,0.0,2,0.0,314,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,workforce-intelligence,6.51,4,1943,0.21,Generic Secret/Password,60.2,97.9,"Incomplete multi-character sanitization (2), Vulnerability found in dependency (1), Incomplete string escaping or encoding (1)",0.64,578,3.4,70.3,4,0.69,9,-0.48,1943,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+2026-10-29T00:00:00Z,noise_reduction,Repository,workforce-intelligence-infra,6.51,2,38,5.26,GitHub Token,47.4,60.5,AWS Account ID (2),0.64,21,1.8,44.7,1,4.76,6,0.5,38,PARTIAL,noise rate (rows and distinct issues) and policy concentration; tuning impact needs audit logs + weekly history
+
+## M5 detail
+snapshot_date,metric,dimension,group,general_hygiene_score,detection_age_days,detection_age_days_p90,code_age_days,code_age_n,sla_breached_count,hygiene_score,n,status,note
+2026-10-29T00:00:00Z,vulnerability_age,Project,Alpha Serve,53.57,10.0,10.0,882.0,58,42,60.38,106,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Apps,53.57,9.0,32.5,,0,1,83.33,6,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Connector for Jira,53.57,9.0,9.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Project,Custom Charts,53.57,9.0,10.0,127.0,330,98,82.28,553,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Loop,53.57,46.0,64.0,423.0,5,31,18.42,38,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Other,53.57,1.0,3.0,412.5,6,1,94.12,17,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Portfolio Manager,53.57,10.0,10.0,611.0,20,48,77.98,218,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Shared infra,53.57,9.0,29.0,937.0,23,10,73.68,38,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Strategic Roadmaps,53.57,10.0,10.0,1073.0,36,45,76.32,190,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Structure,53.57,10.0,10.0,1263.0,51,28,83.33,168,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Tempo for Jira,53.57,64.0,64.0,1907.0,150,303,24.44,401,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Time Tracker,53.57,10.0,10.0,1167.5,2,2,71.43,7,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Unmapped,53.57,17.0,58.0,45.0,1,769,37.93,1239,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Project,Workforce Intelligence,53.57,64.0,64.0,196.0,3,15,6.25,16,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,All Structure,53.57,10.0,10.0,1263.0,51,28,83.03,165,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,AlphaServe Cloud,53.57,9.0,10.0,882.0,81,42,68.66,134,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,AlphaServe DC,53.57,1.0,9.0,412.5,6,0,100.0,24,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Avengers,53.57,64.0,64.0,1885.0,145,299,11.01,336,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Brazil / eCore,53.57,10.0,10.0,2873.0,7,6,91.67,72,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Custom Charts,53.57,9.0,10.0,127.0,330,98,82.28,553,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Dev,53.57,29.0,48.80000000000001,,0,12,0.0,12,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Kenobi Mongoose Visualizations,53.57,10.0,10.0,1455.0,17,27,74.29,105,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,"Kenobi, Mongoose, Visualizations",53.57,10.0,10.0,1007.0,19,18,78.82,85,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Kraken,53.57,10.0,10.0,611.0,20,48,77.98,218,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,Structure DC,53.57,10.0,10.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Team,TBA,53.57,56.0,56.0,,0,1,0.0,1,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Team,Unmapped,53.57,17.0,58.0,45.0,1,769,37.93,1239,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,"Vanguard, The Rejects, Insights",53.57,46.0,64.0,423.0,5,31,18.42,38,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Team,X-Men,53.57,64.0,64.0,196.0,3,14,6.67,15,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,as-ansible-infrastructure,53.57,9.0,9.0,937.0,23,0,100.0,28,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,as-flux,53.57,9.0,9.0,,0,0,100.0,5,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,as-k8s-terraform,53.57,9.0,9.0,,0,0,100.0,4,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,aws-infra,53.57,10.0,10.0,1368.0,3,3,57.14,7,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,cc-flux,53.57,9.0,9.0,113.0,116,29,77.86,131,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,cc-terraform,53.57,3.0,3.0,199.0,7,0,100.0,26,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,cl-bi-connectors,53.57,10.0,10.0,882.0,47,42,44.74,76,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,cloud,53.57,10.0,10.0,1256.0,48,25,82.99,147,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,custom-charts,53.57,10.0,10.0,183.0,117,25,88.26,213,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,custom-charts-dc,53.57,9.0,9.0,420.0,90,44,75.96,183,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,dc-bi-connectors,53.57,9.0,9.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,dev-workgraph,53.57,51.0,51.0,,0,1,0.0,1,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,dolly,53.57,64.0,64.0,1896.0,143,289,8.83,317,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,flux,53.57,3.0,3.0,,0,0,100.0,5,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,gantt,53.57,10.0,10.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,jira-apps-2fa,53.57,9.0,9.0,,0,0,100.0,5,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,monday-bi-core,53.57,1.0,1.0,412.5,6,0,100.0,14,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,nexus,53.57,50.5,64.0,423.0,5,21,12.5,24,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,nexus-infra,53.57,36.0,64.0,,0,10,28.57,14,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,pfm_flux,53.57,3.0,3.0,,0,0,100.0,5,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,pfm_terraform,53.57,3.0,3.0,1778.5,6,0,100.0,42,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,powerbi-connector-for-servicenow-frontend,53.57,1.0,1.0,,0,0,100.0,2,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,prime-cloudtimesheet,53.57,10.0,10.0,849.0,1,1,75.0,4,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,prime-timesheets-dc,53.57,10.0,10.0,1486.0,1,1,66.67,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,relight,53.57,10.0,10.0,592.0,14,48,71.93,171,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,roadmapping,53.57,10.0,10.0,1455.0,17,27,74.29,105,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,roadmunk,53.57,10.0,10.0,1007.0,19,18,78.82,85,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,shared-tf-infrastructure,53.57,29.0,29.0,,0,10,0.0,10,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,structure,53.57,10.0,10.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,structure-bundle,53.57,8.0,8.0,,0,0,100.0,3,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,tempo-server,53.57,10.0,10.0,2894.0,5,4,93.85,65,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,terraform-pbi-cloud,53.57,9.0,9.0,643.0,11,0,100.0,19,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,testing,53.57,56.0,56.0,,0,1,0.0,1,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,tj-flux-apps,53.57,3.0,3.0,,0,0,100.0,8,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,tj-infrastructure,53.57,64.0,64.0,314.0,2,10,9.09,11,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,tokclaw-apps,53.57,56.0,56.0,,0,1,0.0,1,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,trains-noc,53.57,3.0,3.0,,0,0,100.0,2,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan; low n
+2026-10-29T00:00:00Z,vulnerability_age,Repository,workforce-intelligence,53.57,64.0,64.0,80.0,1,8,11.11,9,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+2026-10-29T00:00:00Z,vulnerability_age,Repository,workforce-intelligence-infra,53.57,64.0,64.0,196.0,2,6,0.0,6,READY,SLA_DAYS are placeholders; detection age counts from first Cycode scan
+
+## M6 detail
+snapshot_date,metric,dimension,group,ai_verified_pct,ai_verified_pct_issues,auto_triage_pct,reachability_pct,filtered_by_ai_context,filtered_by_ai_context_issues,issues,n,status
+2026-10-29T00:00:00Z,ai_leverage,Project,Alpha Serve,66.77,73.08,,,0,0,419,1381,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Apps,,,,,0,0,31,39,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Connector for Jira,0.0,0.0,,,0,0,32,236,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Custom Charts,80.46,89.88,,,0,0,1503,11414,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Loop,0.97,27.94,,,0,0,4744,12656,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Other,68.18,55.56,,,0,0,276,429,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Portfolio Manager,14.55,42.11,,,0,0,801,2258,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Shared infra,48.57,58.33,,,0,0,79,161,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Strategic Roadmaps,28.73,53.55,,,0,0,3708,5113,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Structure,82.76,81.69,,,0,0,765,1833,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Tempo for Jira,34.06,75.0,,,0,0,3168,7703,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Time Tracker,24.24,61.11,,,0,0,495,699,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Unmapped,0.0,0.0,,,0,0,11308,25310,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Project,Workforce Intelligence,0.67,27.27,,,0,0,600,1982,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,All Structure,82.68,79.66,,,0,0,681,1716,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,AlphaServe Cloud,64.37,70.87,,,0,0,463,1507,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,AlphaServe DC,23.08,50.0,,,0,0,321,686,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Avengers,30.37,77.33,,,0,0,2424,6384,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Brazil / eCore,48.25,65.15,,,0,0,1239,2018,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Custom Charts,80.46,89.88,,,0,0,1503,11414,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Dev,0.0,0.0,,,0,0,53,53,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Kenobi Mongoose Visualizations,38.32,62.07,,,0,0,2522,3449,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,"Kenobi, Mongoose, Visualizations",16.78,42.65,,,0,0,1186,1664,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Kraken,14.55,42.11,,,0,0,801,2258,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Structure DC,84.62,91.67,,,0,0,84,117,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,TBA,,,,,0,0,1,1,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,Unmapped,0.0,0.0,,,0,0,11308,25310,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,"Vanguard, The Rejects, Insights",0.97,27.94,,,0,0,4744,12656,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Team,X-Men,0.67,27.27,,,0,0,599,1981,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,as-ansible-infrastructure,49.04,60.87,,,0,0,44,126,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,as-flux,,,,,0,0,14,14,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,as-k8s-terraform,,,,,0,0,12,12,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,aws-infra,83.33,60.0,,,0,0,14,23,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,cc-flux,85.06,93.33,,,0,0,171,1719,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,cc-terraform,37.5,66.67,,,0,0,105,125,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,cl-bi-connectors,60.37,71.7,,,0,0,258,933,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,cloud,82.91,81.25,,,0,0,532,1505,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,custom-charts,80.16,88.89,,,0,0,719,7313,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,custom-charts-dc,77.45,88.89,,,0,0,508,2257,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,dc-bi-connectors,0.0,0.0,,,0,0,32,236,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,dev-workgraph,,,,,0,0,1,1,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,dolly,32.03,79.88,,,0,0,2380,6256,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,engineering-digest,,,,,0,0,16,16,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,flux,,,,,0,0,18,18,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,gantt,84.62,91.67,,,0,0,84,117,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,jira-apps-2fa,,,,,0,0,30,38,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,loop-brain,0.0,0.0,,,0,0,55,56,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,monday-bi-core,53.85,50.0,,,0,0,87,98,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,nexus,5.13,46.34,,,0,0,4571,6473,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,nexus-infra,0.0,0.0,,,0,0,118,6127,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,pfm_flux,0.0,0.0,,,0,0,10,63,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,pfm_terraform,12.12,22.22,,,0,0,226,490,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,powerbi-connector-for-servicenow-frontend,,,,,0,0,39,40,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,prime-cloudtimesheet,23.71,62.5,,,0,0,356,470,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,prime-timesheets-dc,50.0,50.0,,,0,0,139,229,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,relight,21.84,70.59,,,0,0,565,1705,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,roadmapping,38.32,62.07,,,0,0,2522,3449,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,roadmunk,16.78,42.65,,,0,0,1186,1664,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,shared-tf-infrastructure,0.0,0.0,,,0,0,35,35,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,structure,68.75,83.33,,,0,0,111,161,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,structure-bundle,,,,,0,0,6,9,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,tempo-server,59.26,66.67,,,0,0,744,1319,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,terraform-pbi-cloud,73.0,74.51,,,0,0,96,382,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,testing,,,,,0,0,1,1,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,tj-flux-apps,100.0,100.0,,,0,0,12,14,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,tj-infrastructure,1.16,14.29,,,0,0,32,114,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,tokclaw-apps,,,,,0,0,1,1,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,trains-noc,88.89,66.67,,,0,0,172,314,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,workforce-intelligence,0.68,37.5,,,0,0,578,1943,PARTIAL
+2026-10-29T00:00:00Z,ai_leverage,Repository,workforce-intelligence-infra,0.0,0.0,,,0,0,21,38,PARTIAL
+
+## M7 detail
+snapshot_date,metric,dimension,group,general_coverage_pct,coverage_pct,expected_repos,scanned_repos,not_onboarded_repos,unmapped_scanned_repos,n,status
+2026-10-29,scanner_coverage,Project,Alpha Serve,100.0,100.0,5,5,,,5,PARTIAL
+2026-10-29,scanner_coverage,Project,Apps,100.0,100.0,2,2,,,2,PARTIAL
+2026-10-29,scanner_coverage,Project,Connector for Jira,100.0,100.0,1,1,,,1,PARTIAL
+2026-10-29,scanner_coverage,Project,Custom Charts,100.0,100.0,4,4,,,4,PARTIAL
+2026-10-29,scanner_coverage,Project,Loop,100.0,100.0,4,4,,,4,PARTIAL
+2026-10-29,scanner_coverage,Project,Other,100.0,100.0,4,4,,,4,PARTIAL
+2026-10-29,scanner_coverage,Project,Portfolio Manager,100.0,100.0,3,3,,,3,PARTIAL
+2026-10-29,scanner_coverage,Project,Shared infra,100.0,100.0,2,2,,,2,PARTIAL
+2026-10-29,scanner_coverage,Project,Strategic Roadmaps,100.0,100.0,2,2,"feedback-portal, fim, rm-tf-infrastructure",,2,PARTIAL
+2026-10-29,scanner_coverage,Project,Structure,100.0,100.0,6,6,,,6,PARTIAL
+2026-10-29,scanner_coverage,Project,Tempo for Jira,100.0,100.0,5,5,"rocket, tempo-chromium-extension, tui, vscode-timetracker",,5,PARTIAL
+2026-10-29,scanner_coverage,Project,Time Tracker,100.0,100.0,2,2,,,2,PARTIAL
+2026-10-29,scanner_coverage,Project,Workforce Intelligence,100.0,100.0,3,3,tea-infra,,3,PARTIAL
+
+## M8 detail
+snapshot_date,metric,dimension,group,period,cost,cost_share_pct,remediations,avg_remediations,cost_per_remediation,general_cost_per_remediation,n,status,note
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Alpha Serve,week,36.84029775523948,1.37,27,13.5,2.7289109448325544,4.305813407296397,708,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Alpha Serve,month,159.64129027270442,1.37,27,27.0,5.912640380470534,5.088688572259378,708,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Alpha Serve,quarter,478.92387081811324,1.37,27,27.0,17.7379211414116,10.177377144518756,708,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Apps,week,2.133407073396637,0.08,0,0.0,,4.305813407296397,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Apps,month,9.244763984718759,0.08,0,0.0,,5.088688572259378,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Apps,quarter,27.734291954156276,0.08,0,0.0,,10.177377144518756,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Connector for Jira,week,13.320785629013148,0.49,18,9.0,1.480087292112572,4.305813407296397,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Connector for Jira,month,57.7234043923903,0.49,18,18.0,3.206855799577239,5.088688572259378,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Connector for Jira,quarter,173.17021317717092,0.49,18,18.0,9.620567398731717,10.177377144518756,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Custom Charts,week,150.1710442395779,5.58,127,14.11111111111111,10.642042505166938,4.305813407296397,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Custom Charts,month,650.7411917048375,5.58,127,63.5,10.247892782753347,5.088688572259378,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Custom Charts,quarter,1952.2235751145129,5.58,127,63.5,30.743678348260044,10.177377144518756,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Loop,week,695.230534332987,25.82,4053,405.3,1.7153479751615766,4.305813407296397,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Loop,month,3012.6656487762766,25.82,4053,1351.0,2.2299523677100495,5.088688572259378,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Loop,quarter,9037.99694632883,25.82,4053,2026.5,4.459904735420099,10.177377144518756,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Other,week,22.53086006782302,0.84,1,1.0,22.53086006782302,4.305813407296397,433,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Other,month,97.63372696056642,0.84,1,1.0,97.63372696056642,5.088688572259378,433,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Other,quarter,292.90118088169925,0.84,1,1.0,292.90118088169925,10.177377144518756,433,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Portfolio Manager,week,62.85745718690578,2.33,3,1.5,41.90497145793719,4.305813407296397,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Portfolio Manager,month,272.3823144765917,2.33,3,3.0,90.79410482553057,5.088688572259378,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Portfolio Manager,quarter,817.1469434297752,2.33,3,3.0,272.3823144765917,10.177377144518756,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Shared infra,week,7.544976235183229,0.28,0,0.0,,4.305813407296397,145,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Shared infra,month,32.69489701912732,0.28,0,0.0,,5.088688572259378,145,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Shared infra,quarter,98.08469105738196,0.28,0,0.0,,10.177377144518756,145,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Strategic Roadmaps,week,242.42789158426663,9.0,33,16.5,14.692599489955553,4.305813407296397,4659,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Strategic Roadmaps,month,1050.520863531822,9.0,33,33.0,31.833965561570363,5.088688572259378,4659,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Strategic Roadmaps,quarter,3151.562590595466,9.0,33,33.0,95.5018966847111,10.177377144518756,4659,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Structure,week,63.22169741894911,2.35,117,58.5,1.0807127763922926,4.305813407296397,1215,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Structure,month,273.96068881544613,2.35,117,117.0,2.341544348849967,5.088688572259378,1215,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Structure,quarter,821.8820664463385,2.35,117,117.0,7.024633046549901,10.177377144518756,1215,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Tempo for Jira,week,395.2526860858745,14.68,1283,128.3,3.080691239952256,4.305813407296397,7596,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Tempo for Jira,month,1712.7616397054558,14.68,1283,427.6666666666667,4.004898611937932,5.088688572259378,7596,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Tempo for Jira,quarter,5138.284919116368,14.68,1283,641.5,8.009797223875866,10.177377144518756,7596,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Time Tracker,week,41.73152372839275,1.55,36,18.0,2.3184179849107083,4.305813407296397,802,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Time Tracker,month,180.83660282303524,1.55,36,36.0,5.0232389673065345,5.088688572259378,802,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Time Tracker,quarter,542.5098084691057,1.55,36,36.0,15.069716901919602,10.177377144518756,802,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Unmapped,week,822.7666498670151,30.56,116,10.545454545454545,78.02097541842384,4.305813407296397,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Unmapped,month,3565.322149423732,30.56,116,38.666666666666664,92.20660731268272,5.088688572259378,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Unmapped,quarter,10695.966448271196,30.56,116,58.0,184.41321462536544,10.177377144518756,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Workforce Intelligence,week,136.2778811030681,5.06,1064,106.4,1.2808071532243241,4.305813407296397,2619,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Workforce Intelligence,month,590.5374847799617,5.06,1064,354.6666666666667,1.6650492991916213,5.088688572259378,2619,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Project,Workforce Intelligence,quarter,1771.612454339885,5.06,1064,532.0,3.3300985983832425,10.177377144518756,2619,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,All Structure,week,55.57265254603922,2.06,106,53.0,1.0485406140762117,4.305813407296397,1068,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,All Structure,month,240.81482769950327,2.06,106,106.0,2.2718379971651252,5.088688572259378,1068,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,All Structure,quarter,722.4444830985099,2.06,106,106.0,6.815513991495376,10.177377144518756,1068,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe Cloud,week,40.58676871339943,1.51,27,13.5,3.0064273121036615,4.305813407296397,780,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe Cloud,month,175.8759977580642,1.51,27,27.0,6.5139258428912665,5.088688572259378,780,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe Cloud,quarter,527.6279932741926,1.51,27,27.0,19.5417775286738,10.177377144518756,780,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe DC,week,35.79961137797283,1.33,19,9.5,3.768380145049772,4.305813407296397,688,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe DC,month,155.13164930454894,1.33,19,19.0,8.16482364760784,5.088688572259378,688,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,AlphaServe DC,quarter,465.39494791364683,1.33,19,19.0,24.49447094282352,10.177377144518756,688,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Avengers,week,316.3166243701989,11.75,1279,127.9,2.4731557808459645,4.305813407296397,6079,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Avengers,month,1370.7053722708617,11.75,1279,426.3333333333333,3.215102515099754,5.088688572259378,6079,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Avengers,quarter,4112.1161168125855,11.75,1279,639.5,6.430205030199508,10.177377144518756,6079,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Brazil / eCore,week,120.66758544406832,4.48,40,20.0,6.033379272203416,4.305813407296397,2319,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Brazil / eCore,month,522.8928702576294,4.48,40,40.0,13.072321756440735,5.088688572259378,2319,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Brazil / eCore,quarter,1568.678610772888,4.48,40,40.0,39.2169652693222,10.177377144518756,2319,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Custom Charts,week,150.1710442395779,5.58,127,14.11111111111111,10.642042505166938,4.305813407296397,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Custom Charts,month,650.7411917048375,5.58,127,63.5,10.247892782753347,5.088688572259378,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Custom Charts,quarter,1952.2235751145129,5.58,127,63.5,30.743678348260044,10.177377144518756,2886,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Dev,week,5.98394666928325,0.22,0,0.0,,4.305813407296397,115,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Dev,month,25.93043556689408,0.22,0,0.0,,5.088688572259378,115,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Dev,quarter,77.79130670068224,0.22,0,0.0,,10.177377144518756,115,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kenobi Mongoose Visualizations,week,160.62994233110774,5.97,11,5.5,29.20544406020141,4.305813407296397,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kenobi Mongoose Visualizations,month,696.0630834348002,5.97,11,11.0,63.27846213043638,5.088688572259378,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kenobi Mongoose Visualizations,quarter,2088.1892503044005,5.97,11,11.0,189.83538639130913,10.177377144518756,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Kenobi, Mongoose, Visualizations",week,81.79794925315886,3.04,22,11.0,7.436177204832624,4.305813407296397,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Kenobi, Mongoose, Visualizations",month,354.4577800970217,3.04,22,22.0,16.111717277137352,5.088688572259378,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Kenobi, Mongoose, Visualizations",quarter,1063.3733402910652,3.04,22,22.0,48.335151831412055,10.177377144518756,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kraken,week,62.85745718690578,2.33,3,1.5,41.90497145793719,4.305813407296397,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kraken,month,272.3823144765917,2.33,3,3.0,90.79410482553057,5.088688572259378,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Kraken,quarter,817.1469434297752,2.33,3,3.0,272.3823144765917,10.177377144518756,1208,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Structure DC,week,7.649044872909894,0.28,11,11.0,0.6953677157190813,4.305813407296397,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Structure DC,month,33.14586111594287,0.28,11,11.0,3.013260101449352,5.088688572259378,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Structure DC,quarter,99.4375833478286,0.28,11,11.0,9.039780304348055,10.177377144518756,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,TBA,week,0.05203431886333261,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,TBA,month,0.2254820484077746,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,TBA,quarter,0.6764461452233239,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Unmapped,week,822.7666498670151,30.56,116,10.545454545454545,78.02097541842384,4.305813407296397,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Unmapped,month,3565.322149423732,30.56,116,38.666666666666664,92.20660731268272,5.088688572259378,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,Unmapped,quarter,10695.966448271196,30.56,116,58.0,184.41321462536544,10.177377144518756,15812,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Vanguard, The Rejects, Insights",week,695.230534332987,25.82,4053,405.3,1.7153479751615766,4.305813407296397,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Vanguard, The Rejects, Insights",month,3012.6656487762766,25.82,4053,1351.0,2.2299523677100495,5.088688572259378,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,"Vanguard, The Rejects, Insights",quarter,9037.99694632883,25.82,4053,2026.5,4.459904735420099,10.177377144518756,13361,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,X-Men,week,136.22584678420475,5.06,1064,106.4,1.2803181088741047,4.305813407296397,2618,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,X-Men,month,590.3120027315539,5.06,1064,354.6666666666667,1.6644135415363361,5.088688572259378,2618,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Team,X-Men,quarter,1770.9360081946618,5.06,1064,532.0,3.3288270830726727,10.177377144518756,2618,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,TEMPO-JIRA-API,week,0.07493411150623988,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,TEMPO-JIRA-API,month,0.3247144831937061,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,TEMPO-JIRA-API,quarter,0.9741434495811183,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-ansible-infrastructure,week,5.395256028449271,0.2,0,0.0,,4.305813407296397,72,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-ansible-infrastructure,month,23.37944278994684,0.2,0,0.0,,5.088688572259378,72,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-ansible-infrastructure,quarter,70.13832836984052,0.2,0,0.0,,10.177377144518756,72,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-flux,week,1.273879895606078,0.05,0,0.0,,4.305813407296397,17,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-flux,month,5.520146214293003,0.05,0,0.0,,5.088688572259378,17,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-flux,quarter,16.56043864287901,0.05,0,0.0,,10.177377144518756,17,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-k8s-terraform,week,2.397891568199676,0.09,0,0.0,,4.305813407296397,32,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-k8s-terraform,month,10.390863462198595,0.09,0,0.0,,5.088688572259378,32,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,as-k8s-terraform,quarter,31.172590386595786,0.09,0,0.0,,10.177377144518756,32,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,aws-infra,week,1.3488140071123178,0.05,0,0.0,,4.305813407296397,18,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,aws-infra,month,5.84486069748671,0.05,0,0.0,,5.088688572259378,18,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,aws-infra,quarter,17.53458209246013,0.05,0,0.0,,10.177377144518756,18,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-flux,week,24.95305913157788,0.93,0,0.0,,4.305813407296397,333,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-flux,month,108.12992290350414,0.93,0,0.0,,5.088688572259378,333,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-flux,quarter,324.38976871051244,0.93,0,0.0,,10.177377144518756,333,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-terraform,week,11.0902485029235,0.41,0,0.0,,4.305813407296397,148,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-terraform,month,48.057743512668495,0.41,0,0.0,,5.088688572259378,148,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cc-terraform,quarter,144.1732305380055,0.41,0,0.0,,10.177377144518756,148,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cl-bi-connectors,week,36.2681099690201,1.35,27,13.5,2.6865266643718595,4.305813407296397,484,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cl-bi-connectors,month,157.16180986575375,1.35,27,27.0,5.820807772805694,5.088688572259378,484,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cl-bi-connectors,quarter,471.48542959726126,1.35,27,27.0,17.462423318417084,10.177377144518756,484,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cloud,week,60.62169620854805,2.25,100,50.0,1.212433924170961,4.305813407296397,809,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cloud,month,262.6940169037082,2.25,100,100.0,2.626940169037082,5.088688572259378,809,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,cloud,quarter,788.0820507111247,2.25,100,100.0,7.880820507111247,10.177377144518756,809,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,content-intelligence,week,0.07493411150623988,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,content-intelligence,month,0.3247144831937061,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,content-intelligence,quarter,0.9741434495811183,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts,week,118.24602795684652,4.39,65,7.222222222222222,16.372526947871055,4.305813407296397,1578,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts,month,512.3994544796682,4.39,65,32.5,15.766137060912866,5.088688572259378,1578,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts,quarter,1537.1983634390047,4.39,65,32.5,47.298411182738604,10.177377144518756,1578,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts-dc,week,61.970510215660376,2.3,62,31.0,1.9990487166342057,4.305813407296397,827,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts-dc,month,268.53887760119494,2.3,62,62.0,4.331272219374112,5.088688572259378,827,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,custom-charts-dc,quarter,805.6166328035848,2.3,62,62.0,12.993816658122336,10.177377144518756,827,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dc-bi-connectors,week,19.18313254559741,0.71,18,9.0,2.1314591717330456,4.305813407296397,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dc-bi-connectors,month,83.12690769758876,0.71,18,18.0,4.618161538754931,5.088688572259378,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dc-bi-connectors,quarter,249.3807230927663,0.71,18,18.0,13.854484616264793,10.177377144518756,256,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dev-workgraph,week,0.07493411150623988,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dev-workgraph,month,0.3247144831937061,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dev-workgraph,quarter,0.9741434495811183,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dolly,week,379.6911430021175,14.1,728,80.88888888888889,4.693983910740464,4.305813407296397,5067,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dolly,month,1645.3282863425088,14.1,728,242.66666666666666,6.780198982180669,5.088688572259378,5067,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,dolly,quarter,4935.984859027527,14.1,728,364.0,13.560397964361337,10.177377144518756,5067,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,engineering-digest,week,2.997364460249595,0.11,0,0.0,,4.305813407296397,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,engineering-digest,month,12.988579327748244,0.11,0,0.0,,5.088688572259378,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,engineering-digest,quarter,38.96573798324473,0.11,0,0.0,,10.177377144518756,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,flux,week,4.346178467361913,0.16,0,0.0,,4.305813407296397,58,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,flux,month,18.833440025234953,0.16,0,0.0,,5.088688572259378,58,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,flux,quarter,56.50032007570486,0.16,0,0.0,,10.177377144518756,58,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,gantt,week,11.015314391417261,0.41,11,11.0,1.0013922174015693,4.305813407296397,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,gantt,month,47.7330290294748,0.41,11,11.0,4.3393662754068,5.088688572259378,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,gantt,quarter,143.1990870884244,0.41,11,11.0,13.018098826220399,10.177377144518756,147,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,jira-apps-2fa,week,2.997364460249595,0.11,0,0.0,,4.305813407296397,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,jira-apps-2fa,month,12.988579327748244,0.11,0,0.0,,5.088688572259378,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,jira-apps-2fa,quarter,38.96573798324473,0.11,0,0.0,,10.177377144518756,40,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,loop-brain,week,4.795783136399352,0.18,2,0.6666666666666666,7.193674704599029,4.305813407296397,64,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,loop-brain,month,20.78172692439719,0.18,2,2.0,10.390863462198595,5.088688572259378,64,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,loop-brain,quarter,62.34518077319157,0.18,2,2.0,31.172590386595786,10.177377144518756,64,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,monday-bi-core,week,14.612151743716774,0.54,0,0.0,,4.305813407296397,195,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,monday-bi-core,month,63.319324222772686,0.54,0,0.0,,5.088688572259378,195,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,monday-bi-core,quarter,189.95797266831806,0.54,0,0.0,,10.177377144518756,195,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus,week,867.8868794652702,32.24,3457,345.7,2.510520334004253,4.305813407296397,11582,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus,month,3760.843144349504,32.24,3457,1152.3333333333333,3.2636764342055287,5.088688572259378,11582,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus,quarter,11282.529433048512,32.24,3457,1728.5,6.527352868411057,10.177377144518756,11582,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus-infra,week,128.43706712169515,4.77,594,66.0,1.9460161685105326,4.305813407296397,1714,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus-infra,month,556.5606241940122,4.77,594,297.0,1.8739414956027347,5.088688572259378,1714,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,nexus-infra,quarter,1669.6818725820367,4.77,594,297.0,5.621824486808205,10.177377144518756,1714,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_flux,week,3.072298571755835,0.11,0,0.0,,4.305813407296397,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_flux,month,13.31329381094195,0.11,0,0.0,,5.088688572259378,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_flux,quarter,39.93988143282586,0.11,0,0.0,,10.177377144518756,41,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_terraform,week,18.433791430535006,0.68,0,0.0,,4.305813407296397,246,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_terraform,month,79.8797628656517,0.68,0,0.0,,5.088688572259378,246,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,pfm_terraform,quarter,239.63928859695508,0.68,0,0.0,,10.177377144518756,246,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,powerbi-connector-for-servicenow-frontend,week,4.4211125788681525,0.16,0,0.0,,4.305813407296397,59,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,powerbi-connector-for-servicenow-frontend,month,19.15815450842866,0.16,0,0.0,,5.088688572259378,59,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,powerbi-connector-for-servicenow-frontend,quarter,57.474463525285984,0.16,0,0.0,,10.177377144518756,59,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-cloudtimesheet,week,39.11560620625721,1.45,35,17.5,2.235177497500412,4.305813407296397,522,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-cloudtimesheet,month,169.50096022711458,1.45,35,35.0,4.842884577917559,5.088688572259378,522,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-cloudtimesheet,quarter,508.50288068134375,1.45,35,35.0,14.528653733752678,10.177377144518756,522,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-timesheets-dc,week,20.981551221747164,0.78,1,1.0,20.981551221747164,4.305813407296397,280,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-timesheets-dc,month,90.92005529423771,0.78,1,1.0,90.92005529423771,5.088688572259378,280,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,prime-timesheets-dc,quarter,272.7601658827131,0.78,1,1.0,272.7601658827131,10.177377144518756,280,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,relight,week,69.01431669724693,2.56,3,1.5,46.009544464831286,4.305813407296397,921,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,relight,month,299.0620390214033,2.56,3,3.0,99.68734634046776,5.088688572259378,921,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,relight,quarter,897.18611706421,2.56,3,3.0,299.06203902140334,10.177377144518756,921,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmapping,week,231.3216022197625,8.59,11,5.5,42.058473130865906,4.305813407296397,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmapping,month,1002.3936096189708,8.59,11,11.0,91.1266917835428,5.088688572259378,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmapping,quarter,3007.1808288569123,8.59,11,11.0,273.3800753506284,10.177377144518756,3087,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmunk,week,117.79642328780909,4.38,22,11.0,10.70876575343719,4.305813407296397,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmunk,month,510.451167580506,4.38,22,22.0,23.20232579911391,5.088688572259378,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,roadmunk,quarter,1531.353502741518,4.38,22,22.0,69.60697739734172,10.177377144518756,1572,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,shared-tf-infrastructure,week,5.470190139955511,0.2,0,0.0,,4.305813407296397,73,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,shared-tf-infrastructure,month,23.70415727314054,0.2,0,0.0,,5.088688572259378,73,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,shared-tf-infrastructure,quarter,71.11247181942163,0.2,0,0.0,,10.177377144518756,73,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure,week,12.963601290579497,0.48,6,3.0,4.321200430193166,4.305813407296397,173,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure,month,56.175605592511154,0.48,6,6.0,9.362600932085192,5.088688572259378,173,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure,quarter,168.52681677753347,0.48,6,6.0,28.087802796255577,10.177377144518756,173,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure-bundle,week,0.7493411150623988,0.03,0,0.0,,4.305813407296397,10,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure-bundle,month,3.247144831937061,0.03,0,0.0,,5.088688572259378,10,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,structure-bundle,quarter,9.741434495811182,0.03,0,0.0,,10.177377144518756,10,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tempo-server,week,113.6750471549659,4.22,4,2.0,56.83752357748295,4.305813407296397,1517,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tempo-server,month,492.5918710048522,4.22,4,4.0,123.14796775121305,5.088688572259378,1517,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tempo-server,quarter,1477.7756130145565,4.22,4,4.0,369.4439032536391,10.177377144518756,1517,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,terraform-pbi-cloud,week,8.692356934723826,0.32,0,0.0,,4.305813407296397,116,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,terraform-pbi-cloud,month,37.666880050469906,0.32,0,0.0,,5.088688572259378,116,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,terraform-pbi-cloud,quarter,113.00064015140973,0.32,0,0.0,,10.177377144518756,116,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,testing,week,0.07493411150623988,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,testing,month,0.3247144831937061,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,testing,quarter,0.9741434495811183,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-flux-apps,week,4.570980801880632,0.17,0,0.0,,4.305813407296397,61,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-flux-apps,month,19.80758347481607,0.17,0,0.0,,5.088688572259378,61,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-flux-apps,quarter,59.42275042444822,0.17,0,0.0,,10.177377144518756,61,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-infrastructure,week,71.18740593092788,2.64,551,137.75,0.5167869759051026,4.305813407296397,950,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-infrastructure,month,308.4787590340208,2.64,551,275.5,1.1197051144610555,5.088688572259378,950,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tj-infrastructure,quarter,925.4362771020625,2.64,551,551.0,1.6795576716915834,10.177377144518756,950,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tokclaw-apps,week,0.07493411150623988,0.0,0,0.0,,4.305813407296397,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tokclaw-apps,month,0.3247144831937061,0.0,0,0.0,,5.088688572259378,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,tokclaw-apps,quarter,0.9741434495811183,0.0,0,0.0,,10.177377144518756,1,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,trains-noc,week,14.762019966729254,0.55,1,1.0,14.762019966729254,4.305813407296397,197,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,trains-noc,month,63.9687531891601,0.55,1,1.0,63.9687531891601,5.088688572259378,197,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,trains-noc,quarter,191.9062595674803,0.55,1,1.0,191.9062595674803,10.177377144518756,197,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence,week,163.58116541812163,6.08,873,87.3,1.873781963552367,4.305813407296397,2183,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence,month,708.8517168118603,6.08,873,291.0,2.435916552618077,5.088688572259378,2183,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence,quarter,2126.5551504355813,6.08,873,436.5,4.871833105236154,10.177377144518756,2183,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence-infra,week,32.59633850521435,1.21,191,95.5,0.34132291628496697,4.305813407296397,435,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence-infra,month,141.25080018926215,1.21,191,191.0,0.7395329852840951,5.088688572259378,435,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+2026-10-29T00:00:00Z,remediations_vs_ai_cost,Repository,workforce-intelligence-infra,quarter,423.7524005677865,1.21,191,191.0,2.2185989558522854,10.177377144518756,435,PARTIAL,"AI cost is a 140,000/year placeholder split by findings volume"
+
+## M9 detail
+snapshot_date,metric,dimension,group,posture_score,value,raw_exposure,norm_exposure,repos,top_policies,n,status,note
+2026-10-29T00:00:00Z,risk_posture_score,Project,Alpha Serve,52,52,711.35625,142.27125,5,"Redis Credentials, PostgreSQL Credentials, Vulnerability found in dependency",419,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Apps,91,91,29.797499999999992,14.898749999999996,2,"Potential data leaks in public repositories, Require reviewer(s) approval of pull request before merging, Pipeline is running with high privileges",31,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Connector for Jira,90,90,16.96875,16.96875,1,"Branch protection was deleted, Uncertified CI/CD modules are allowed to run, Branch protection rules are not enforced on administrators/custom roles.",32,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Custom Charts,16,16,3181.9874999999997,795.4968749999999,4,"Generic Secret/Password, Vulnerability found in dependency, Redis Credentials",1503,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Loop,38,38,750.59625,250.19875000000002,3,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, Vulnerability Found In Container Image",4744,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Other,86,86,103.1575,25.789375,4,"Vulnerability found in dependency, Generic Secret/Password, Specific user should be defined",276,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Portfolio Manager,23,23,1524.59,508.19666666666666,3,"Vulnerability found in dependency, Specific user should be defined, GitHub workflows use uncertified CI/CD modules",801,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Shared infra,59,59,215.93499999999997,107.96749999999999,2,"Generic Secret/Password, Unrestricted AWS Security Group Ingress Detected, HTTP Port Open in AWS Security Group",79,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Strategic Roadmaps,15,15,1728.7024999999999,864.3512499999999,2,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, Unsanitized input in NoSQL query (JavaScript)",3708,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Structure,48,48,1016.8925,169.48208333333335,6,"Unsanitized user input in React inner HTML method (XSS) (JavaScript), Generic Secret/Password, GitHub workflows use uncertified CI/CD modules",765,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Tempo for Jira,20,20,2493.5924999999997,623.3981249999999,4,"Vulnerability found in dependency, Generic Secret/Password, PostgreSQL Credentials",3168,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Time Tracker,78,78,87.6725,43.83625,2,"Vulnerability found in dependency, Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Jdbc Sqlserver Password",495,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Unmapped,3,3,5773.8550000000005,5773.8550000000005,1,"S3 Bucket Policy allows insecure HTTP requests, Secrets Detected as Environment Variables in Kubernetes Containers, Minimize the admission of containers with capabilities assigned",11308,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Project,Workforce Intelligence,72,72,183.845,61.281666666666666,3,"Leakage of information in logger message (JavaScript), GitHub Token, Require reviewer(s) approval of pull request before merging",600,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,All Structure,50,50,989.4887500000001,197.89775000000003,5,"Unsanitized user input in React inner HTML method (XSS) (JavaScript), Generic Secret/Password, GitHub workflows use uncertified CI/CD modules",681,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,AlphaServe Cloud,59,59,821.29625,136.88270833333334,6,"Redis Credentials, PostgreSQL Credentials, Generic Secret/Password",463,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,AlphaServe DC,85,85,135.71375,33.9284375,4,"Vulnerability found in dependency, Uncertified CI/CD modules are allowed to run, Leakage of information in logger message (JavaScript)",321,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Avengers,22,22,2090.54,696.8466666666667,3,"Generic Secret/Password, Vulnerability found in dependency, PostgreSQL Credentials",2424,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Brazil / eCore,55,55,490.7250000000001,163.57500000000002,3,"Vulnerability found in dependency, Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Leakage of information in logger message (JavaScript)",1239,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Custom Charts,20,20,3181.9874999999997,795.4968749999999,4,"Generic Secret/Password, Vulnerability found in dependency, Redis Credentials",1503,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Dev,86,86,125.10499999999999,31.276249999999997,4,"Unrestricted AWS Security Group Ingress Detected, AWS Security Group Has Unidentified Port Exposed To Internet, HTTP Port Open in AWS Security Group",53,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Kenobi Mongoose Visualizations,16,16,1059.1425,1059.1425,1,"Vulnerability found in dependency, Leakage of information in logger message (JavaScript), Unsanitized input in NoSQL query (JavaScript)",2522,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,"Kenobi, Mongoose, Visualizations",23,23,669.56,669.56,1,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, GitHub workflows use uncertified CI/CD modules",1186,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Kraken,28,28,1524.59,508.19666666666666,3,"Vulnerability found in dependency, Specific user should be defined, GitHub workflows use uncertified CI/CD modules",801,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Structure DC,88,88,27.40375,27.40375,1,"Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Uncertified CI/CD modules are allowed to run, Pipeline is running with high privileges",84,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,TBA,98,98,4.3,4.3,1,Potential data leaks in public repositories,1,PARTIAL,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,Unmapped,3,3,5773.8550000000005,5773.8550000000005,1,"S3 Bucket Policy allows insecure HTTP requests, Secrets Detected as Environment Variables in Kubernetes Containers, Minimize the admission of containers with capabilities assigned",11308,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,"Vanguard, The Rejects, Insights",44,44,750.59625,250.19875000000002,3,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, Vulnerability Found In Container Image",4744,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Team,X-Men,69,69,174.64499999999998,87.32249999999999,2,"Leakage of information in logger message (JavaScript), GitHub Token, Require reviewer(s) approval of pull request before merging",599,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,as-ansible-infrastructure,36,36,109.94,109.94,1,"Generic Secret/Password, Slack Webhook, Datadog Token",44,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,as-flux,75,75,21.201249999999998,21.201249999999998,1,"GitHub workflows use uncertified CI/CD modules, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",14,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,as-k8s-terraform,79,79,16.76625,16.76625,1,"GitHub workflows use uncertified CI/CD modules, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",12,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,aws-infra,57,57,47.67500000000001,47.67500000000001,1,"Generic Secret/Password, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",14,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,cc-flux,8,8,745.345,745.345,1,"Generic Secret/Password, PostgreSQL Credentials, Redis Credentials",171,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,cc-terraform,30,30,144.85125,144.85125,1,"Unsanitized user input in file path (Python), Generic Secret/Password, Possible CRLF injection detected (Python)",105,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,cl-bi-connectors,10,10,568.5674999999999,568.5674999999999,1,"Redis Credentials, PostgreSQL Credentials, Vulnerability found in dependency",258,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,cloud,7,7,881.1799999999998,881.1799999999998,1,"Unsanitized user input in React inner HTML method (XSS) (JavaScript), Generic Secret/Password, Leakage of information in logger message (JavaScript)",532,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,custom-charts,5,5,1205.13875,1205.13875,1,"Generic Secret/Password, Redis Credentials, Leakage of information in logger message (JavaScript)",719,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,custom-charts-dc,5,5,1086.6525000000004,1086.6525000000004,1,"Vulnerability found in dependency, Generic Secret/Password, Redis Credentials",508,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,dc-bi-connectors,79,79,16.96875,16.96875,1,"Branch protection was deleted, Uncertified CI/CD modules are allowed to run, Branch protection rules are not enforced on administrators/custom roles.",32,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,dev-workgraph,87,87,9.200000000000001,9.200000000000001,1,Potential data leaks in public repositories,1,PARTIAL,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,dolly,3,3,1964.1049999999998,1964.1049999999998,1,"Generic Secret/Password, Vulnerability found in dependency, PostgreSQL Credentials",2380,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,engineering-digest,99,99,0.71,0.71,1,"Uncertified CI/CD modules are allowed to run, Branch protection rules are not enforced on administrators/custom roles., Committing unsigned code on default branch is permitted",16,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,flux,74,74,21.944999999999997,21.944999999999997,1,"GitHub workflows use uncertified CI/CD modules, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",18,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,gantt,69,69,27.40375,27.40375,1,"Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Uncertified CI/CD modules are allowed to run, Pipeline is running with high privileges",84,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,jira-apps-2fa,71,71,25.49749999999999,25.49749999999999,1,"Require reviewer(s) approval of pull request before merging, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",30,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,loop-brain,93,93,4.6674999999999995,4.6674999999999995,1,"Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Uncertified CI/CD modules are allowed to run, Branch protection rules are not enforced on administrators/custom roles.",55,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,monday-bi-core,45,45,75.595,75.595,1,"Vulnerability found in dependency, Generic Secret/Password, Specific user should be defined",87,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,nexus,8,8,679.34125,679.34125,1,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, Vulnerability Found In Container Image",4571,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,nexus-infra,48,48,66.58750000000003,66.58750000000003,1,"GitHub workflows use uncertified CI/CD modules, Secrets Detected as Environment Variables in Kubernetes Containers, Vulnerability found in dependency",118,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,pfm_flux,55,55,49.855000000000004,49.855000000000004,1,"GitHub workflows use uncertified CI/CD modules, Uncertified CI/CD modules are allowed to run, Branch protection rules are not enforced on administrators/custom roles.",10,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,pfm_terraform,13,13,426.1700000000002,426.1700000000002,1,"AWS Security Group Has Unidentified Port Exposed To Internet, Unrestricted AWS Security Group Ingress Detected, HTTP Port Open in AWS Security Group",226,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,powerbi-connector-for-servicenow-frontend,81,81,14.35625,14.35625,1,"Leakage of information in logger message (JavaScript), Uncertified CI/CD modules are allowed to run, Branch protection rules are disabled for repository",39,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,prime-cloudtimesheet,53,53,55.34,55.34,1,"Vulnerability found in dependency, Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), Leakage of information in logger message (JavaScript)",356,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,prime-timesheets-dc,66,66,32.332499999999996,32.332499999999996,1,"Vulnerability found in dependency, Jdbc Sqlserver Password, Uncertified CI/CD modules are allowed to run",139,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,relight,6,6,1048.5649999999998,1048.5649999999998,1,"Vulnerability found in dependency, Specific user should be defined, Unsanitized user input in React inner HTML method (XSS) (JavaScript)",565,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,roadmapping,6,6,1059.1425,1059.1425,1,"Vulnerability found in dependency, Leakage of information in logger message (JavaScript), Unsanitized input in NoSQL query (JavaScript)",2522,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,roadmunk,8,8,669.56,669.56,1,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, GitHub workflows use uncertified CI/CD modules",1186,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,shared-tf-infrastructure,37,37,105.99499999999999,105.99499999999999,1,"Unrestricted AWS Security Group Ingress Detected, HTTP Port Open in AWS Security Group, AWS Security Group Has Unidentified Port Exposed To Internet",35,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,structure,70,70,26.953749999999992,26.953749999999992,1,"Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript), GitHub workflows use uncertified CI/CD modules, Pipeline is running with high privileges",111,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,structure-bundle,84,84,11.735000000000001,11.735000000000001,1,"GitHub workflows use uncertified CI/CD modules, Pipeline is running with high privileges, Uncertified CI/CD modules are allowed to run",6,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,tempo-server,13,13,403.0525,403.0525,1,"Vulnerability found in dependency, Datadog Token, Leakage of information in logger message (JavaScript)",744,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,terraform-pbi-cloud,41,41,90.46499999999999,90.46499999999999,1,"Generic Secret/Password, Unrestricted AWS Security Group Ingress Detected, Base64 Entropy",96,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,testing,87,87,9.200000000000001,9.200000000000001,1,Potential data leaks in public repositories,1,PARTIAL,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,tj-flux-apps,67,67,31.095000000000002,31.095000000000002,1,"GitHub workflows use uncertified CI/CD modules, Build step exposed to code and command injection, Pipeline is running with high privileges",12,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,tj-infrastructure,39,39,95.34,95.34,1,"GitHub workflows use uncertified CI/CD modules, IAM Policies with Full Administrative Privileges Detected, Uncertified CI/CD modules are allowed to run",32,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,tokclaw-apps,94,94,4.3,4.3,1,Potential data leaks in public repositories,1,PARTIAL,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,trains-noc,78,78,17.652499999999996,17.652499999999996,1,"Vulnerability Found In Container Image, GitHub workflows use uncertified CI/CD modules, Uncertified CI/CD modules are allowed to run",172,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,workforce-intelligence,36,36,112.60499999999999,112.60499999999999,1,"Leakage of information in logger message (JavaScript), Vulnerability found in dependency, GitHub workflows use uncertified CI/CD modules",578,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+2026-10-29T00:00:00Z,risk_posture_score,Repository,workforce-intelligence-infra,50,50,62.03999999999999,62.03999999999999,1,"GitHub Token, Require reviewer(s) approval of pull request before merging, Uncertified CI/CD modules are allowed to run",21,READY,score = 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group
+

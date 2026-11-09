@@ -1,0 +1,1546 @@
+﻿## Scorecard Project
+Project,Open findings,Open issues (distinct),M1 Actionable High/Crit open,M3 MTTR Critical (median days),M3 MTTR High (median days),M4 Noise rate (%),M5 Median detection age (days),M5 SLA breaches,M5 Hygiene score (0-100),M6 AI-verified (% of secrets),M7 Scanner coverage (%),"M8 AI cost per remediation (USD, monthly)",M9 Posture score (0-100)
+Unmapped,25310,11308,1239,,28.1,0.0,17.0,769,37.9,0.0,,92.2,3
+Loop,12656,4744,38,13.0,13.0,1.0,46.0,31,18.4,1.0,100.0,2.2,38
+Custom Charts,11414,1503,553,1.2,1.2,0.7,9.0,98,82.3,80.5,100.0,10.2,16
+Tempo for Jira,7703,3168,401,58.1,6.3,1.0,64.0,303,24.4,34.1,100.0,4.0,20
+Strategic Roadmaps,5113,3708,190,0.5,8.5,0.0,10.0,45,76.3,28.7,100.0,31.8,15
+Portfolio Manager,2258,801,218,,6.6,2.4,10.0,48,78.0,14.6,100.0,90.8,23
+Workforce Intelligence,1982,600,16,4.0,4.0,0.8,64.0,15,6.2,0.7,100.0,1.7,72
+Structure,1833,765,168,4.2,3.0,0.4,10.0,28,83.3,82.8,100.0,2.3,48
+Alpha Serve,1381,419,106,5.0,6.3,4.5,10.0,42,60.4,66.8,100.0,5.9,52
+Time Tracker,699,495,7,,0.8,1.8,10.0,2,71.4,24.2,100.0,5.0,78
+Other,429,276,17,,2.7,6.5,1.0,1,94.1,68.2,100.0,97.6,86
+Connector for Jira,236,32,3,,3.4,18.8,9.0,0,100.0,0.0,100.0,3.2,90
+Shared infra,161,79,38,,,3.8,9.0,10,73.7,48.6,100.0,,59
+Apps,39,31,6,,,3.2,9.0,1,83.3,,100.0,,91
+
+## Scorecard Team
+Team,Open findings,Open issues (distinct),M1 Actionable High/Crit open,M3 MTTR Critical (median days),M3 MTTR High (median days),M4 Noise rate (%),M5 Median detection age (days),M5 SLA breaches,M5 Hygiene score (0-100),M6 AI-verified (% of secrets),M7 Scanner coverage (%),"M8 AI cost per remediation (USD, monthly)",M9 Posture score (0-100)
+Unmapped,25310,11308,1239,,28.1,0.0,17.0,769,37.9,0.0,,92.2,3
+"Vanguard, The Rejects, Insights",12656,4744,38,13.0,13.0,1.0,46.0,31,18.4,1.0,,2.2,44
+Custom Charts,11414,1503,553,1.2,1.2,0.7,9.0,98,82.3,80.5,,10.2,20
+Avengers,6384,2424,336,58.1,6.3,0.7,64.0,299,11.0,30.4,,3.2,22
+Kenobi Mongoose Visualizations,3449,2522,105,,7.8,0.0,10.0,27,74.3,38.3,,63.3,16
+Kraken,2258,801,218,,6.6,2.4,10.0,48,78.0,14.6,,90.8,28
+Brazil / eCore,2018,1239,72,,0.8,2.1,10.0,6,91.7,48.2,,13.1,55
+X-Men,1981,599,15,4.0,4.0,0.8,64.0,14,6.7,0.7,,1.7,69
+All Structure,1716,681,165,3.0,3.0,0.3,10.0,28,83.0,82.7,,2.3,50
+"Kenobi, Mongoose, Visualizations",1664,1186,85,0.5,9.2,0.1,10.0,18,78.8,16.8,,16.1,23
+AlphaServe Cloud,1507,463,134,5.0,6.3,4.5,9.0,42,68.7,64.4,,6.5,59
+AlphaServe DC,686,321,24,,2.7,3.7,1.0,0,100.0,23.1,,8.2,85
+Structure DC,117,84,3,4.2,4.2,1.2,10.0,0,100.0,84.6,,3.0,88
+Dev,53,53,12,,,26.4,29.0,12,0.0,0.0,,,86
+TBA,1,1,1,,,0.0,56.0,1,0.0,,,,98
+
+## Scorecard Repository
+Repository,Open findings,Open issues (distinct),M1 Actionable High/Crit open,M3 MTTR Critical (median days),M3 MTTR High (median days),M4 Noise rate (%),M5 Median detection age (days),M5 SLA breaches,M5 Hygiene score (0-100),M6 AI-verified (% of secrets),M7 Scanner coverage (%),"M8 AI cost per remediation (USD, monthly)",M9 Posture score (0-100)
+custom-charts,7313.0,719.0,213.0,0.1,0.4,0.0,10.0,25.0,88.3,80.2,,15.8,5.0
+nexus,6473.0,4571.0,24.0,13.0,13.0,0.3,50.5,21.0,12.5,5.1,,3.3,8.0
+dolly,6256.0,2380.0,317.0,58.1,6.3,0.5,64.0,289.0,8.8,32.0,,6.8,3.0
+nexus-infra,6127.0,118.0,14.0,0.0,30.4,8.5,36.0,10.0,28.6,0.0,,1.9,48.0
+roadmapping,3449.0,2522.0,105.0,,7.8,0.0,10.0,27.0,74.3,38.3,,91.1,6.0
+custom-charts-dc,2257.0,508.0,183.0,1.2,1.2,1.0,9.0,44.0,76.0,77.4,,4.3,5.0
+workforce-intelligence,1943.0,578.0,9.0,4.0,4.0,0.7,64.0,8.0,11.1,0.7,,2.4,36.0
+cc-flux,1719.0,171.0,131.0,,,2.3,9.0,29.0,77.9,85.1,,,8.0
+relight,1705.0,565.0,171.0,,6.6,0.9,10.0,48.0,71.9,21.8,,99.7,6.0
+roadmunk,1664.0,1186.0,85.0,0.5,9.2,0.1,10.0,18.0,78.8,16.8,,23.2,8.0
+cloud,1505.0,532.0,147.0,3.0,3.0,0.0,10.0,25.0,83.0,82.9,,2.6,7.0
+tempo-server,1319.0,744.0,65.0,,6.6,2.3,10.0,4.0,93.8,59.3,,123.1,13.0
+cl-bi-connectors,933.0,258.0,76.0,5.0,6.3,1.2,10.0,42.0,44.7,60.4,,5.8,10.0
+pfm_terraform,490.0,226.0,42.0,,,4.9,3.0,0.0,100.0,12.1,,,13.0
+prime-cloudtimesheet,470.0,356.0,4.0,,0.8,2.5,10.0,1.0,75.0,23.7,,4.8,53.0
+terraform-pbi-cloud,382.0,96.0,19.0,,,7.3,9.0,0.0,100.0,73.0,,,41.0
+trains-noc,314.0,172.0,2.0,,2.7,0.0,3.0,0.0,100.0,88.9,,64.0,78.0
+dc-bi-connectors,236.0,32.0,3.0,,3.4,18.8,9.0,0.0,100.0,0.0,,4.6,79.0
+prime-timesheets-dc,229.0,139.0,3.0,,,0.0,10.0,1.0,66.7,50.0,,90.9,66.0
+structure,161.0,111.0,3.0,,1.9,0.0,10.0,0.0,100.0,68.8,,9.4,70.0
+as-ansible-infrastructure,126.0,44.0,28.0,,,4.6,9.0,0.0,100.0,49.0,,,36.0
+cc-terraform,125.0,105.0,26.0,,,1.9,3.0,0.0,100.0,37.5,,,30.0
+gantt,117.0,84.0,3.0,4.2,4.2,1.2,10.0,0.0,100.0,84.6,,4.3,69.0
+tj-infrastructure,114.0,32.0,11.0,,,15.6,64.0,10.0,9.1,1.2,,1.1,39.0
+monday-bi-core,98.0,87.0,14.0,,,5.8,1.0,0.0,100.0,53.8,,,45.0
+pfm_flux,63.0,10.0,5.0,,,30.0,3.0,0.0,100.0,0.0,,,55.0
+loop-brain,56.0,55.0,,,,43.6,,,,0.0,,10.4,93.0
+powerbi-connector-for-servicenow-frontend,40.0,39.0,2.0,,,12.8,1.0,0.0,100.0,,,,81.0
+workforce-intelligence-infra,38.0,21.0,6.0,,,4.8,64.0,6.0,0.0,0.0,,0.7,50.0
+jira-apps-2fa,38.0,30.0,5.0,,,3.3,9.0,0.0,100.0,,,,71.0
+shared-tf-infrastructure,35.0,35.0,10.0,,,2.9,29.0,10.0,0.0,0.0,,,37.0
+aws-infra,23.0,14.0,7.0,,,14.3,10.0,3.0,57.1,83.3,,,57.0
+flux,18.0,18.0,5.0,,,0.0,3.0,0.0,100.0,,,,74.0
+engineering-digest,16.0,16.0,,,,81.2,,,,,,,99.0
+as-flux,14.0,14.0,5.0,,,7.1,9.0,0.0,100.0,,,,75.0
+tj-flux-apps,14.0,12.0,8.0,,,0.0,3.0,0.0,100.0,100.0,,,67.0
+as-k8s-terraform,12.0,12.0,4.0,,,25.0,9.0,0.0,100.0,,,,79.0
+structure-bundle,9.0,6.0,3.0,,,0.0,8.0,0.0,100.0,,,,84.0
+dev-workgraph,1.0,1.0,1.0,,,0.0,51.0,1.0,0.0,,,,87.0
+testing,1.0,1.0,1.0,,,0.0,56.0,1.0,0.0,,,,87.0
+tokclaw-apps,1.0,1.0,1.0,,,0.0,56.0,1.0,0.0,,,,94.0
+TEMPO-JIRA-API,,,,,,,,,,,,,
+content-intelligence,,,,,,,,,,,,,
+
+## Notes
+Notes
+"Units: 'Open findings' and the M4 rate are Cycode ROWS (one per occurrence). 'Open issues (distinct)' and M1, M5, M6, M9 count DISTINCT ISSUES (repeats of the same secret/CVE+package/location merged); M3 and M8 count fixed issues. Compare rows with issues only knowingly."
+"M1: distinct open issues that are High/Critical risk, score >= 70, severity >= Medium."
+"M3: issues Cycode closed as 'Fixed' (linked via the audit log), earliest detection to last occurrence closed; blank = no data. Loop is skewed by bulk CI/CD closures."
+M4: share of distinct open ISSUES that are Noise (Low/Info and score < 30); the row-level rate is in the M4 detail.
+M5: per distinct actionable issue; age counts from first Cycode scan (initial scan 26-Aug); SLA days are placeholders.
+M6: AI-verified share is secrets only (row and issue versions in the M6 detail); auto-triage/reachability are org-level and blank until actor IDs are mapped.
+M7: Project view only. 100% = every repo Cycode scans is in product_map.csv; mapped repos Cycode has never reported are listed as not_onboarded_repos.
+"M8: remediations = fixed issues; AI cost is a 140,000/year PLACEHOLDER split by distinct-issue volume."
+"M9: exposure summed per distinct issue; 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group, relative not absolute."
+
+## X1-X6 by Project
+Project,actionable_rows,actionable_unique_issues,rows_per_issue,actionable_sca,actionable_sca_fix_available_pct,actionable_secrets,actionable_secrets_live,test_file_share_pct,secrets_ai_verified_pct,owner_named_pct_all,owner_named_pct_actionable,top5_policy_share_pct,top_policy
+Alpha Serve,420,106,4.0,13,100.0,58,10,0.0,66.8,43.0,53.8,70.7,Vulnerability found in dependency
+Apps,7,6,1.2,0,,0,0,0.0,,5.1,0.0,61.5,Unsanitized user input in redirect (Java)
+Connector for Jira,3,3,1.0,0,,0,0,0.0,0.0,4.7,0.0,97.5,Vulnerability found in dependency
+Custom Charts,9623,553,17.4,52,80.8,330,62,0.0,80.5,76.2,64.4,91.0,Generic Secret/Password
+Loop,100,38,2.6,12,100.0,5,4,0.0,1.0,19.0,36.8,96.2,AWS Access Key Id
+Other,24,17,1.4,2,100.0,6,1,0.0,68.2,8.9,29.4,89.3,Vulnerability Found In Container Image
+Portfolio Manager,421,218,1.9,102,96.1,20,13,0.0,14.6,16.3,11.9,86.1,Vulnerability found in dependency
+Shared infra,95,38,2.5,2,100.0,23,8,0.0,48.6,66.5,71.1,77.0,Generic Secret/Password
+Strategic Roadmaps,454,190,2.4,47,78.7,36,11,0.0,28.7,18.3,24.7,81.6,Vulnerability Found In Container Image
+Structure,1100,168,6.5,0,,51,38,0.0,82.8,50.3,38.7,71.4,Generic Secret/Password
+Tempo for Jira,1715,401,4.3,71,93.0,150,52,0.0,34.1,16.6,48.1,82.1,Vulnerability Found In Container Image
+Time Tracker,14,7,2.0,2,100.0,2,1,0.0,24.2,21.5,42.9,80.3,Leakage of information in logger message (JavaScript)
+Unmapped,4533,1239,3.7,0,,4,0,0.0,0.0,0.7,0.0,63.9,Vulnerability Found In Container Image
+Workforce Intelligence,32,16,2.0,2,100.0,3,3,0.0,0.7,22.5,25.0,96.4,Generic Secret/Password
+TOTAL,18541,3000,6.2,305,90.5,688,203,0.0,43.1,22.7,26.6,69.7,Vulnerability Found In Container Image
+
+## X1-X6 by Team
+Team,actionable_rows,actionable_unique_issues,rows_per_issue,actionable_sca,actionable_sca_fix_available_pct,actionable_secrets,actionable_secrets_live,test_file_share_pct,secrets_ai_verified_pct,owner_named_pct_all,owner_named_pct_actionable,top5_policy_share_pct,top_policy
+All Structure,1092,165,6.6,0,,51,38,0.0,82.7,51.7,39.4,73.4,Generic Secret/Password
+AlphaServe Cloud,505,134,3.8,15,100.0,81,18,0.0,64.4,44.5,56.7,70.1,Vulnerability found in dependency
+AlphaServe DC,32,24,1.3,2,100.0,6,1,0.0,23.1,5.5,20.8,87.8,Vulnerability Found In Container Image
+Avengers,1589,336,4.7,16,87.5,145,51,0.0,30.4,16.6,56.0,85.7,Vulnerability Found In Container Image
+Brazil / eCore,140,72,1.9,57,94.7,7,2,0.0,48.3,18.5,11.1,75.4,Vulnerability found in dependency
+Custom Charts,9623,553,17.4,52,80.8,330,62,0.0,80.5,76.2,64.4,91.0,Generic Secret/Password
+Dev,12,12,1.0,0,,0,0,0.0,0.0,84.9,75.0,49.1,Leakage of information in logger message (JavaScript)
+Kenobi Mongoose Visualizations,239,105,2.3,35,82.9,17,2,0.0,38.3,17.1,18.1,86.3,Vulnerability Found In Container Image
+"Kenobi, Mongoose, Visualizations",215,85,2.5,12,66.7,19,9,0.0,16.8,20.9,32.9,76.2,Leakage of information in logger message (JavaScript)
+Kraken,421,218,1.9,102,96.1,20,13,0.0,14.6,16.3,11.9,86.1,Vulnerability found in dependency
+Structure DC,8,3,2.7,0,,0,0,0.0,84.6,29.1,0.0,75.2,Generic Secret/Password
+TBA,1,1,1.0,0,,0,0,0.0,,0.0,0.0,100.0,Potential data leaks in public repositories
+Unmapped,4533,1239,3.7,0,,4,0,0.0,0.0,0.7,0.0,63.9,Vulnerability Found In Container Image
+"Vanguard, The Rejects, Insights",100,38,2.6,12,100.0,5,4,0.0,1.0,19.0,36.8,96.2,AWS Access Key Id
+X-Men,31,15,2.1,2,100.0,3,3,0.0,0.7,22.4,20.0,96.4,Generic Secret/Password
+TOTAL,18541,3000,6.2,305,90.5,688,203,0.0,43.1,22.7,26.6,69.7,Vulnerability Found In Container Image
+
+## X7 actionable by category
+Project,Bug Bounty,CI/CD Security,Cloud Security,DAST,Data Security,IaC,SAST,SCA,SecretDetection,TOTAL
+Alpha Serve,0,42,0,0,0,7,4,78,289,420
+Apps,0,6,0,0,1,0,0,0,0,7
+Connector for Jira,0,3,0,0,0,0,0,0,0,3
+Custom Charts,0,31,0,0,0,5,165,111,9311,9623
+Loop,0,37,0,0,0,2,0,23,38,100
+Other,0,5,0,0,1,3,0,2,13,24
+Portfolio Manager,0,23,0,0,0,47,33,246,72,421
+Shared infra,0,6,0,0,0,7,0,2,80,95
+Strategic Roadmaps,0,35,0,0,0,8,78,53,280,454
+Structure,0,54,0,0,0,9,79,0,958,1100
+Tempo for Jira,0,50,0,0,0,26,135,114,1390,1715
+Time Tracker,0,6,0,0,0,0,0,3,5,14
+Unmapped,4,0,4519,2,0,0,0,0,8,4533
+Workforce Intelligence,0,10,0,0,1,0,0,2,19,32
+TOTAL,4,308,4519,2,3,114,494,634,12463,18541
+
+## X9 noise after dedup by Project
+Project,rows,issues,repeat_factor,duplicate_share_pct,noise_rate_rows,noise_rate_issues,actionable_rows,actionable_issues
+TOTAL,71214,27929,2.5,60.8,6.5,0.6,18541,3000
+Unmapped,25310,11308,2.2,55.3,0.7,0.0,4533,1239
+Loop,12656,4744,2.7,62.5,29.1,1.0,100,38
+Custom Charts,11414,1503,7.6,86.8,2.0,0.7,9623,553
+Tempo for Jira,7703,3168,2.4,58.9,1.1,1.0,1715,401
+Strategic Roadmaps,5113,3708,1.4,27.5,0.0,0.1,454,190
+Portfolio Manager,2258,801,2.8,64.5,16.0,2.4,421,218
+Workforce Intelligence,1982,600,3.3,69.7,0.3,0.8,32,16
+Structure,1833,765,2.4,58.3,0.2,0.4,1100,168
+Alpha Serve,1381,419,3.3,69.7,2.0,4.5,420,106
+Time Tracker,699,495,1.4,29.2,2.1,1.8,14,7
+Other,429,276,1.6,35.7,4.2,6.5,24,17
+Connector for Jira,236,32,7.4,86.4,4.2,18.8,3,3
+Shared infra,161,79,2.0,50.9,1.9,3.8,95,38
+Apps,39,31,1.3,20.5,5.1,3.2,7,6
+
+## X9 noise after dedup by Team
+Team,rows,issues,repeat_factor,duplicate_share_pct,noise_rate_rows,noise_rate_issues,actionable_rows,actionable_issues
+TOTAL,71214,27929,2.5,60.8,6.5,0.6,18541,3000
+Unmapped,25310,11308,2.2,55.3,0.7,0.0,4533,1239
+"Vanguard, The Rejects, Insights",12656,4744,2.7,62.5,29.1,1.0,100,38
+Custom Charts,11414,1503,7.6,86.8,2.0,0.7,9623,553
+Avengers,6384,2424,2.6,62.0,0.8,0.7,1589,336
+Kenobi Mongoose Visualizations,3449,2522,1.4,26.9,0.0,0.0,239,105
+Kraken,2258,801,2.8,64.5,16.0,2.4,421,218
+Brazil / eCore,2018,1239,1.6,38.6,2.4,2.1,140,72
+X-Men,1981,599,3.3,69.8,0.3,0.8,31,15
+All Structure,1716,681,2.5,60.3,0.1,0.3,1092,165
+"Kenobi, Mongoose, Visualizations",1664,1186,1.4,28.7,0.1,0.1,215,85
+AlphaServe Cloud,1507,463,3.3,69.3,2.0,4.5,505,134
+AlphaServe DC,686,321,2.1,53.2,2.5,3.7,32,24
+Structure DC,117,84,1.4,28.2,0.9,1.2,8,3
+Dev,53,53,1.0,0.0,26.4,26.4,12,12
+TBA,1,1,1.0,0.0,0.0,0.0,1,1
+
+## X10 tuning by Project
+Project,issues,strict_noise_pct,actionable,review_before,deprioritised,review_after,focus_pct
+TOTAL,27929,0.6,3000,24750,10717,14033,17.6
+Unmapped,11308,0.0,1239,10066,5903,4163,22.9
+Loop,4744,1.0,38,4659,2608,2051,1.8
+Strategic Roadmaps,3708,0.1,190,3516,1256,2260,7.8
+Tempo for Jira,3168,1.0,401,2734,82,2652,13.1
+Custom Charts,1503,0.7,553,939,24,915,37.7
+Portfolio Manager,801,2.4,218,564,0,564,27.9
+Structure,765,0.4,168,594,27,567,22.9
+Workforce Intelligence,600,0.8,16,579,499,80,16.7
+Time Tracker,495,1.8,7,479,162,317,2.2
+Alpha Serve,419,4.5,106,294,14,280,27.5
+Other,276,6.5,17,241,142,99,14.7
+Shared infra,79,3.8,38,38,0,38,50.0
+Connector for Jira,32,18.8,3,23,0,23,11.5
+Apps,31,3.2,6,24,0,24,20.0
+
+## X10 tuning by Team
+Team,issues,strict_noise_pct,actionable,review_before,deprioritised,review_after,focus_pct
+TOTAL,27929,0.6,3000,24750,10717,14033,17.6
+Unmapped,11308,0.0,1239,10066,5903,4163,22.9
+"Vanguard, The Rejects, Insights",4744,1.0,38,4659,2608,2051,1.8
+Kenobi Mongoose Visualizations,2522,0.0,105,2416,943,1473,6.7
+Avengers,2424,0.7,336,2072,15,2057,14.0
+Custom Charts,1503,0.7,553,939,24,915,37.7
+Brazil / eCore,1239,2.1,72,1141,229,912,7.3
+"Kenobi, Mongoose, Visualizations",1186,0.1,85,1100,313,787,9.7
+Kraken,801,2.4,218,564,0,564,27.9
+All Structure,681,0.3,165,514,19,495,25.0
+X-Men,599,0.8,15,579,499,80,15.8
+AlphaServe Cloud,463,4.5,134,308,14,294,31.3
+AlphaServe DC,321,3.7,24,285,142,143,14.4
+Structure DC,84,1.2,3,80,8,72,4.0
+Dev,53,26.4,12,27,0,27,30.8
+TBA,1,0.0,1,0,0,0,100.0
+
+## X11 exclusion candidates
+,Project,repository,violation_category,policy,folder,tuned_tier,issues
+0,Unmapped,,Container Security,Vulnerability Found In Container Image,temposoftware,Deprioritised,1612
+1,Loop,nexus,SAST,Leakage of information in logger message (JavaScript),apps/dev-cli/src,Deprioritised,869
+2,Loop,nexus,Container Security,Vulnerability Found In Container Image,roadmap,Deprioritised,743
+3,Strategic Roadmaps,roadmapping,Container Security,Vulnerability Found In Container Image,roadmapping,Deprioritised,642
+4,Unmapped,,Container Security,Vulnerability Found In Container Image,devspace-dev,Deprioritised,636
+5,Workforce Intelligence,workforce-intelligence,SAST,Leakage of information in logger message (JavaScript),dev-cli/src/commands,Deprioritised,285
+6,Strategic Roadmaps,roadmapping,SAST,Leakage of information in logger message (JavaScript),app/server/scripts,Deprioritised,233
+7,Unmapped,,Container Security,Vulnerability Found In Container Image,smoke,Deprioritised,212
+8,Loop,nexus,SAST,Leakage of information in logger message (JavaScript),e2e/reporters/perf-reporter,Deprioritised,148
+9,Other,trains-noc,Container Security,Vulnerability Found In Container Image,temposoftware,Deprioritised,138
+10,Unmapped,,Container Security,Vulnerability Found In Container Image,serverless-serverless-selenium-prod,Deprioritised,137
+11,Unmapped,,Container Security,Vulnerability Found In Container Image,serverless-serverless-selenium-dev,Deprioritised,137
+12,Unmapped,,Container Security,Vulnerability Found In Container Image,loop-data-gen-dev,Deprioritised,134
+13,Unmapped,,Container Security,Vulnerability Found In Container Image,ecr-public/docker/library,Deprioritised,96
+14,Loop,nexus,SAST,Leakage of information in logger message (JavaScript),e2e/playwright/specs,Deprioritised,93
+15,Workforce Intelligence,workforce-intelligence,SAST,Leakage of information in logger message (JavaScript),dev-cli/src/setup,Deprioritised,78
+16,Unmapped,,Container Security,Vulnerability Found In Container Image,images/docker-hub/library,Deprioritised,75
+17,Loop,nexus,SAST,Leakage of information in logger message (JavaScript),e2e/utils,Deprioritised,68
+18,Unmapped,,Container Security,Vulnerability Found In Container Image,microapp-cicd-dev,Deprioritised,58
+19,Unmapped,,Container Security,Vulnerability Found In Container Image,images,Deprioritised,58
+20,Unmapped,,Container Security,Vulnerability Found In Container Image,datapipeline-repository,Deprioritised,57
+21,Loop,nexus,SAST,Leakage of information in logger message (JavaScript),scripts,Deprioritised,53
+22,Loop,nexus,Container Security,Vulnerability Found In Container Image,frontend,Deprioritised,51
+23,Unmapped,,Container Security,Vulnerability Found In Container Image,docker-hub/velero,Deprioritised,51
+24,Unmapped,,Container Security,Vulnerability Found In Container Image,feedback,Deprioritised,51
+
+## X14 daily flow
+,date,group,opened,resolved,dismissed,net,cumulative_net,open_backlog
+0,2026-08-13,All,99,0,0,99,99,99
+1,2026-08-14,All,0,0,0,0,99,99
+2,2026-08-15,All,0,0,0,0,99,99
+3,2026-08-16,All,0,0,0,0,99,99
+4,2026-08-17,All,0,0,0,0,99,99
+5,2026-08-18,All,0,1,0,-1,98,98
+6,2026-08-19,All,0,0,2,0,98,96
+7,2026-08-20,All,0,0,0,0,98,96
+8,2026-08-21,All,0,0,0,0,98,96
+9,2026-08-22,All,21,0,0,21,119,117
+10,2026-08-23,All,0,0,0,0,119,117
+11,2026-08-24,All,0,0,0,0,119,117
+12,2026-08-25,All,0,0,0,0,119,117
+13,2026-08-26,All,9182,17,2,9165,9284,9280
+14,2026-08-27,All,703,127,0,576,9860,9856
+15,2026-08-28,All,752,823,143,-71,9789,9642
+16,2026-08-29,All,23,25,0,-2,9787,9640
+17,2026-08-30,All,4,1,0,3,9790,9643
+18,2026-08-31,All,245,272,31,-27,9763,9585
+19,2026-09-01,All,208,5,8,203,9966,9780
+20,2026-09-02,All,242,1205,731,-963,9003,8086
+21,2026-09-03,All,107,222,23,-115,8888,7948
+22,2026-09-04,All,55,5,0,50,8938,7998
+23,2026-09-05,All,7774,138,13,7636,16574,15621
+24,2026-09-06,All,4410,16,9,4394,20968,20006
+25,2026-09-07,All,159,191,10,-32,20936,19964
+26,2026-09-08,All,200,936,1,-736,20200,19227
+27,2026-09-09,All,38,169,415,-131,20069,18681
+28,2026-09-10,All,45,45,2,0,20069,18679
+29,2026-09-11,All,65,25,1,40,20109,18718
+30,2026-09-12,All,37,27,0,10,20119,18728
+31,2026-09-13,All,0,0,0,0,20119,18728
+32,2026-09-14,All,1684,338,38,1346,21465,20036
+33,2026-09-15,All,40,65,7,-25,21440,20004
+34,2026-09-16,All,35,32,0,3,21443,20007
+35,2026-09-17,All,64,40,2,24,21467,20029
+36,2026-09-18,All,50,8,3,42,21509,20068
+37,2026-09-19,All,10,54,0,-44,21465,20024
+38,2026-09-20,All,42,8,0,34,21499,20058
+39,2026-09-21,All,100,114,0,-14,21485,20044
+40,2026-09-22,All,147,489,0,-342,21143,19702
+41,2026-09-23,All,37,303,0,-266,20877,19436
+42,2026-09-24,All,97,80,153,17,20894,19300
+43,2026-09-25,All,15,6,2,9,20903,19307
+44,2026-09-26,All,3,1,0,2,20905,19309
+45,2026-09-27,All,20,0,2,20,20925,19327
+46,2026-09-28,All,87,0,0,87,21012,19414
+47,2026-09-29,All,134,60,3,74,21086,19485
+48,2026-09-30,All,161,14,1,147,21233,19631
+49,2026-10-01,All,66,4,1,62,21295,19692
+50,2026-10-02,All,77,61,1,16,21311,19707
+51,2026-10-03,All,7,4,0,3,21314,19710
+52,2026-10-04,All,48,5,0,43,21357,19753
+53,2026-10-05,All,23,4,0,19,21376,19772
+54,2026-10-06,All,93,37,1,56,21432,19827
+55,2026-10-07,All,15,13,1,2,21434,19828
+56,2026-10-08,All,62,10,84,52,21486,19796
+57,2026-10-09,All,62,2,7,60,21546,19849
+58,2026-10-10,All,11,0,2,11,21557,19858
+59,2026-10-11,All,1,2,46,-1,21556,19811
+60,2026-10-12,All,502,13,0,489,22045,20300
+61,2026-10-13,All,43,1,0,42,22087,20342
+62,2026-10-14,All,79,4,1,75,22162,20416
+63,2026-10-15,All,44,50,0,-6,22156,20410
+64,2026-10-16,All,44,4,0,40,22196,20450
+65,2026-10-17,All,67,0,0,67,22263,20517
+66,2026-10-18,All,5,0,0,5,22268,20522
+67,2026-10-19,All,6398,659,606,5739,28007,25655
+68,2026-10-20,All,1147,70,1053,1077,29084,25679
+69,2026-10-21,All,236,23,5,213,29297,25887
+70,2026-10-22,All,159,211,28,-52,29245,25807
+71,2026-10-23,All,149,166,4,-17,29228,25786
+72,2026-10-24,All,51,0,1,51,29279,25836
+73,2026-10-25,All,1,1,2,0,29279,25834
+74,2026-10-26,All,393,117,3,276,29555,26107
+75,2026-10-27,All,246,68,89,178,29733,26196
+76,2026-10-28,All,738,35,5,703,30436,26894
+77,2026-10-29,All,1122,17,14,1105,31541,27985
+78,2026-10-30,All,5,55,6,-50,31491,27929
+
+## X14 daily flow by Project
+,date,group,opened,resolved,dismissed,net,cumulative_net,open_backlog
+0,2026-08-13,Alpha Serve,0,0,0,0,0,0
+1,2026-08-14,Alpha Serve,0,0,0,0,0,0
+2,2026-08-15,Alpha Serve,0,0,0,0,0,0
+3,2026-08-16,Alpha Serve,0,0,0,0,0,0
+4,2026-08-17,Alpha Serve,0,0,0,0,0,0
+5,2026-08-18,Alpha Serve,0,0,0,0,0,0
+6,2026-08-19,Alpha Serve,0,0,0,0,0,0
+7,2026-08-20,Alpha Serve,0,0,0,0,0,0
+8,2026-08-21,Alpha Serve,0,0,0,0,0,0
+9,2026-08-22,Alpha Serve,0,0,0,0,0,0
+10,2026-08-23,Alpha Serve,0,0,0,0,0,0
+11,2026-08-24,Alpha Serve,0,0,0,0,0,0
+12,2026-08-25,Alpha Serve,0,0,0,0,0,0
+13,2026-08-26,Alpha Serve,0,0,0,0,0,0
+14,2026-08-27,Alpha Serve,0,0,0,0,0,0
+15,2026-08-28,Alpha Serve,0,0,0,0,0,0
+16,2026-08-29,Alpha Serve,0,0,0,0,0,0
+17,2026-08-30,Alpha Serve,0,0,0,0,0,0
+18,2026-08-31,Alpha Serve,0,0,0,0,0,0
+19,2026-09-01,Alpha Serve,0,0,0,0,0,0
+20,2026-09-02,Alpha Serve,1,0,0,1,1,1
+21,2026-09-03,Alpha Serve,0,0,0,0,1,1
+22,2026-09-04,Alpha Serve,0,0,0,0,1,1
+23,2026-09-05,Alpha Serve,11,0,0,11,12,12
+24,2026-09-06,Alpha Serve,12,0,0,12,24,24
+25,2026-09-07,Alpha Serve,0,0,0,0,24,24
+26,2026-09-08,Alpha Serve,0,0,0,0,24,24
+27,2026-09-09,Alpha Serve,0,0,0,0,24,24
+28,2026-09-10,Alpha Serve,0,0,0,0,24,24
+29,2026-09-11,Alpha Serve,0,0,0,0,24,24
+30,2026-09-12,Alpha Serve,0,0,0,0,24,24
+31,2026-09-13,Alpha Serve,0,0,0,0,24,24
+32,2026-09-14,Alpha Serve,0,0,0,0,24,24
+33,2026-09-15,Alpha Serve,0,0,0,0,24,24
+34,2026-09-16,Alpha Serve,0,0,0,0,24,24
+35,2026-09-17,Alpha Serve,0,0,0,0,24,24
+36,2026-09-18,Alpha Serve,0,0,0,0,24,24
+37,2026-09-19,Alpha Serve,0,0,0,0,24,24
+38,2026-09-20,Alpha Serve,0,0,0,0,24,24
+39,2026-09-21,Alpha Serve,0,0,0,0,24,24
+40,2026-09-22,Alpha Serve,0,0,0,0,24,24
+41,2026-09-23,Alpha Serve,0,0,0,0,24,24
+42,2026-09-24,Alpha Serve,0,0,0,0,24,24
+43,2026-09-25,Alpha Serve,0,0,0,0,24,24
+44,2026-09-26,Alpha Serve,0,0,0,0,24,24
+45,2026-09-27,Alpha Serve,0,0,0,0,24,24
+46,2026-09-28,Alpha Serve,0,0,0,0,24,24
+47,2026-09-29,Alpha Serve,0,0,0,0,24,24
+48,2026-09-30,Alpha Serve,0,0,0,0,24,24
+49,2026-10-01,Alpha Serve,0,0,0,0,24,24
+50,2026-10-02,Alpha Serve,0,0,0,0,24,24
+51,2026-10-03,Alpha Serve,0,0,0,0,24,24
+52,2026-10-04,Alpha Serve,0,0,0,0,24,24
+53,2026-10-05,Alpha Serve,0,0,0,0,24,24
+54,2026-10-06,Alpha Serve,0,0,0,0,24,24
+55,2026-10-07,Alpha Serve,0,0,0,0,24,24
+56,2026-10-08,Alpha Serve,0,0,0,0,24,24
+57,2026-10-09,Alpha Serve,0,0,0,0,24,24
+58,2026-10-10,Alpha Serve,0,0,0,0,24,24
+59,2026-10-11,Alpha Serve,0,0,0,0,24,24
+60,2026-10-12,Alpha Serve,0,0,0,0,24,24
+61,2026-10-13,Alpha Serve,0,0,0,0,24,24
+62,2026-10-14,Alpha Serve,0,0,0,0,24,24
+63,2026-10-15,Alpha Serve,0,0,0,0,24,24
+64,2026-10-16,Alpha Serve,0,0,0,0,24,24
+65,2026-10-17,Alpha Serve,0,0,0,0,24,24
+66,2026-10-18,Alpha Serve,0,0,0,0,24,24
+67,2026-10-19,Alpha Serve,226,0,0,226,250,250
+68,2026-10-20,Alpha Serve,135,0,39,135,385,346
+69,2026-10-21,Alpha Serve,9,0,0,9,394,355
+70,2026-10-22,Alpha Serve,4,1,0,3,397,358
+71,2026-10-23,Alpha Serve,7,0,0,7,404,365
+72,2026-10-24,Alpha Serve,4,0,0,4,408,369
+73,2026-10-25,Alpha Serve,1,0,0,1,409,370
+74,2026-10-26,Alpha Serve,10,4,1,6,415,375
+75,2026-10-27,Alpha Serve,17,11,2,6,421,379
+76,2026-10-28,Alpha Serve,39,0,0,39,460,418
+77,2026-10-29,Alpha Serve,6,0,0,6,466,424
+78,2026-10-30,Alpha Serve,0,4,1,-4,462,419
+79,2026-08-13,Apps,0,0,0,0,0,0
+80,2026-08-14,Apps,0,0,0,0,0,0
+81,2026-08-15,Apps,0,0,0,0,0,0
+82,2026-08-16,Apps,0,0,0,0,0,0
+83,2026-08-17,Apps,0,0,0,0,0,0
+84,2026-08-18,Apps,0,0,0,0,0,0
+85,2026-08-19,Apps,0,0,0,0,0,0
+86,2026-08-20,Apps,0,0,0,0,0,0
+87,2026-08-21,Apps,0,0,0,0,0,0
+88,2026-08-22,Apps,0,0,0,0,0,0
+89,2026-08-23,Apps,0,0,0,0,0,0
+90,2026-08-24,Apps,0,0,0,0,0,0
+91,2026-08-25,Apps,0,0,0,0,0,0
+92,2026-08-26,Apps,0,0,0,0,0,0
+93,2026-08-27,Apps,0,0,0,0,0,0
+94,2026-08-28,Apps,0,0,0,0,0,0
+95,2026-08-29,Apps,0,0,0,0,0,0
+96,2026-08-30,Apps,0,0,0,0,0,0
+97,2026-08-31,Apps,0,0,0,0,0,0
+98,2026-09-01,Apps,0,0,0,0,0,0
+99,2026-09-02,Apps,0,0,0,0,0,0
+100,2026-09-03,Apps,1,0,0,1,1,1
+101,2026-09-04,Apps,0,0,0,0,1,1
+102,2026-09-05,Apps,0,0,0,0,1,1
+103,2026-09-06,Apps,0,0,0,0,1,1
+104,2026-09-07,Apps,0,0,0,0,1,1
+105,2026-09-08,Apps,0,0,0,0,1,1
+106,2026-09-09,Apps,0,0,0,0,1,1
+107,2026-09-10,Apps,0,0,0,0,1,1
+108,2026-09-11,Apps,0,0,0,0,1,1
+109,2026-09-12,Apps,0,0,0,0,1,1
+110,2026-09-13,Apps,0,0,0,0,1,1
+111,2026-09-14,Apps,0,0,0,0,1,1
+112,2026-09-15,Apps,0,0,0,0,1,1
+113,2026-09-16,Apps,0,0,0,0,1,1
+114,2026-09-17,Apps,0,0,0,0,1,1
+115,2026-09-18,Apps,0,0,0,0,1,1
+116,2026-09-19,Apps,0,0,0,0,1,1
+117,2026-09-20,Apps,0,0,0,0,1,1
+118,2026-09-21,Apps,0,0,0,0,1,1
+119,2026-09-22,Apps,0,0,0,0,1,1
+120,2026-09-23,Apps,0,0,0,0,1,1
+121,2026-09-24,Apps,0,0,0,0,1,1
+122,2026-09-25,Apps,0,0,0,0,1,1
+123,2026-09-26,Apps,0,0,0,0,1,1
+124,2026-09-27,Apps,0,0,0,0,1,1
+125,2026-09-28,Apps,0,0,0,0,1,1
+126,2026-09-29,Apps,0,0,0,0,1,1
+127,2026-09-30,Apps,0,0,0,0,1,1
+128,2026-10-01,Apps,0,0,0,0,1,1
+129,2026-10-02,Apps,0,0,0,0,1,1
+130,2026-10-03,Apps,0,0,0,0,1,1
+131,2026-10-04,Apps,0,0,0,0,1,1
+132,2026-10-05,Apps,0,0,0,0,1,1
+133,2026-10-06,Apps,0,0,0,0,1,1
+134,2026-10-07,Apps,0,0,0,0,1,1
+135,2026-10-08,Apps,0,0,0,0,1,1
+136,2026-10-09,Apps,0,0,0,0,1,1
+137,2026-10-10,Apps,0,0,0,0,1,1
+138,2026-10-11,Apps,0,0,0,0,1,1
+139,2026-10-12,Apps,0,0,0,0,1,1
+140,2026-10-13,Apps,0,0,0,0,1,1
+141,2026-10-14,Apps,0,0,0,0,1,1
+142,2026-10-15,Apps,0,0,0,0,1,1
+143,2026-10-16,Apps,0,0,0,0,1,1
+144,2026-10-17,Apps,0,0,0,0,1,1
+145,2026-10-18,Apps,0,0,0,0,1,1
+146,2026-10-19,Apps,0,0,0,0,1,1
+147,2026-10-20,Apps,28,0,0,28,29,29
+148,2026-10-21,Apps,0,0,0,0,29,29
+149,2026-10-22,Apps,1,0,0,1,30,30
+150,2026-10-23,Apps,0,0,0,0,30,30
+151,2026-10-24,Apps,0,0,0,0,30,30
+152,2026-10-25,Apps,0,0,0,0,30,30
+153,2026-10-26,Apps,0,0,0,0,30,30
+154,2026-10-27,Apps,0,0,0,0,30,30
+155,2026-10-28,Apps,0,0,0,0,30,30
+156,2026-10-29,Apps,1,0,0,1,31,31
+157,2026-10-30,Apps,0,0,0,0,31,31
+158,2026-08-13,Connector for Jira,0,0,0,0,0,0
+159,2026-08-14,Connector for Jira,0,0,0,0,0,0
+160,2026-08-15,Connector for Jira,0,0,0,0,0,0
+161,2026-08-16,Connector for Jira,0,0,0,0,0,0
+162,2026-08-17,Connector for Jira,0,0,0,0,0,0
+163,2026-08-18,Connector for Jira,0,0,0,0,0,0
+164,2026-08-19,Connector for Jira,0,0,0,0,0,0
+165,2026-08-20,Connector for Jira,0,0,0,0,0,0
+166,2026-08-21,Connector for Jira,0,0,0,0,0,0
+167,2026-08-22,Connector for Jira,0,0,0,0,0,0
+168,2026-08-23,Connector for Jira,0,0,0,0,0,0
+169,2026-08-24,Connector for Jira,0,0,0,0,0,0
+170,2026-08-25,Connector for Jira,0,0,0,0,0,0
+171,2026-08-26,Connector for Jira,0,0,0,0,0,0
+172,2026-08-27,Connector for Jira,0,0,0,0,0,0
+173,2026-08-28,Connector for Jira,0,0,0,0,0,0
+174,2026-08-29,Connector for Jira,0,0,0,0,0,0
+175,2026-08-30,Connector for Jira,0,0,0,0,0,0
+176,2026-08-31,Connector for Jira,0,0,0,0,0,0
+177,2026-09-01,Connector for Jira,0,0,0,0,0,0
+178,2026-09-02,Connector for Jira,0,0,0,0,0,0
+179,2026-09-03,Connector for Jira,0,0,0,0,0,0
+180,2026-09-04,Connector for Jira,0,0,0,0,0,0
+181,2026-09-05,Connector for Jira,0,0,0,0,0,0
+182,2026-09-06,Connector for Jira,0,0,0,0,0,0
+183,2026-09-07,Connector for Jira,0,0,0,0,0,0
+184,2026-09-08,Connector for Jira,0,0,0,0,0,0
+185,2026-09-09,Connector for Jira,0,0,0,0,0,0
+186,2026-09-10,Connector for Jira,0,0,0,0,0,0
+187,2026-09-11,Connector for Jira,0,0,0,0,0,0
+188,2026-09-12,Connector for Jira,0,0,0,0,0,0
+189,2026-09-13,Connector for Jira,0,0,0,0,0,0
+190,2026-09-14,Connector for Jira,0,0,0,0,0,0
+191,2026-09-15,Connector for Jira,0,0,0,0,0,0
+192,2026-09-16,Connector for Jira,0,0,0,0,0,0
+193,2026-09-17,Connector for Jira,0,0,0,0,0,0
+194,2026-09-18,Connector for Jira,0,0,0,0,0,0
+195,2026-09-19,Connector for Jira,0,0,0,0,0,0
+196,2026-09-20,Connector for Jira,0,0,0,0,0,0
+197,2026-09-21,Connector for Jira,0,0,0,0,0,0
+198,2026-09-22,Connector for Jira,0,0,0,0,0,0
+199,2026-09-23,Connector for Jira,0,0,0,0,0,0
+200,2026-09-24,Connector for Jira,0,0,0,0,0,0
+201,2026-09-25,Connector for Jira,0,0,0,0,0,0
+202,2026-09-26,Connector for Jira,0,0,0,0,0,0
+203,2026-09-27,Connector for Jira,0,0,0,0,0,0
+204,2026-09-28,Connector for Jira,0,0,0,0,0,0
+205,2026-09-29,Connector for Jira,0,0,0,0,0,0
+206,2026-09-30,Connector for Jira,0,0,0,0,0,0
+207,2026-10-01,Connector for Jira,0,0,0,0,0,0
+208,2026-10-02,Connector for Jira,0,0,0,0,0,0
+209,2026-10-03,Connector for Jira,0,0,0,0,0,0
+210,2026-10-04,Connector for Jira,0,0,0,0,0,0
+211,2026-10-05,Connector for Jira,0,0,0,0,0,0
+212,2026-10-06,Connector for Jira,0,0,0,0,0,0
+213,2026-10-07,Connector for Jira,0,0,0,0,0,0
+214,2026-10-08,Connector for Jira,0,0,0,0,0,0
+215,2026-10-09,Connector for Jira,0,0,0,0,0,0
+216,2026-10-10,Connector for Jira,0,0,0,0,0,0
+217,2026-10-11,Connector for Jira,0,0,0,0,0,0
+218,2026-10-12,Connector for Jira,0,0,0,0,0,0
+219,2026-10-13,Connector for Jira,0,0,0,0,0,0
+220,2026-10-14,Connector for Jira,0,0,0,0,0,0
+221,2026-10-15,Connector for Jira,0,0,0,0,0,0
+222,2026-10-16,Connector for Jira,0,0,0,0,0,0
+223,2026-10-17,Connector for Jira,0,0,0,0,0,0
+224,2026-10-18,Connector for Jira,0,0,0,0,0,0
+225,2026-10-19,Connector for Jira,0,0,0,0,0,0
+226,2026-10-20,Connector for Jira,116,0,4,116,116,112
+227,2026-10-21,Connector for Jira,4,0,0,4,120,116
+228,2026-10-22,Connector for Jira,2,58,19,-56,64,41
+229,2026-10-23,Connector for Jira,0,0,0,0,64,41
+230,2026-10-24,Connector for Jira,0,0,0,0,64,41
+231,2026-10-25,Connector for Jira,0,0,0,0,64,41
+232,2026-10-26,Connector for Jira,0,0,0,0,64,41
+233,2026-10-27,Connector for Jira,2,0,0,2,66,43
+234,2026-10-28,Connector for Jira,0,0,0,0,66,43
+235,2026-10-29,Connector for Jira,1,0,0,1,67,44
+236,2026-10-30,Connector for Jira,0,12,0,-12,55,32
+237,2026-08-13,Custom Charts,0,0,0,0,0,0
+238,2026-08-14,Custom Charts,0,0,0,0,0,0
+239,2026-08-15,Custom Charts,0,0,0,0,0,0
+240,2026-08-16,Custom Charts,0,0,0,0,0,0
+241,2026-08-17,Custom Charts,0,0,0,0,0,0
+242,2026-08-18,Custom Charts,0,0,0,0,0,0
+243,2026-08-19,Custom Charts,0,0,0,0,0,0
+244,2026-08-20,Custom Charts,0,0,0,0,0,0
+245,2026-08-21,Custom Charts,0,0,0,0,0,0
+246,2026-08-22,Custom Charts,0,0,0,0,0,0
+247,2026-08-23,Custom Charts,0,0,0,0,0,0
+248,2026-08-24,Custom Charts,0,0,0,0,0,0
+249,2026-08-25,Custom Charts,0,0,0,0,0,0
+250,2026-08-26,Custom Charts,0,0,0,0,0,0
+251,2026-08-27,Custom Charts,0,0,0,0,0,0
+252,2026-08-28,Custom Charts,0,0,0,0,0,0
+253,2026-08-29,Custom Charts,0,0,0,0,0,0
+254,2026-08-30,Custom Charts,0,0,0,0,0,0
+255,2026-08-31,Custom Charts,0,0,0,0,0,0
+256,2026-09-01,Custom Charts,0,0,0,0,0,0
+257,2026-09-02,Custom Charts,16,4,4,12,12,8
+258,2026-09-03,Custom Charts,0,0,0,0,12,8
+259,2026-09-04,Custom Charts,0,0,0,0,12,8
+260,2026-09-05,Custom Charts,322,0,0,322,334,330
+261,2026-09-06,Custom Charts,329,0,2,329,663,657
+262,2026-09-07,Custom Charts,13,0,0,13,676,670
+263,2026-09-08,Custom Charts,0,0,0,0,676,670
+264,2026-09-09,Custom Charts,0,0,406,0,676,264
+265,2026-09-10,Custom Charts,0,0,0,0,676,264
+266,2026-09-11,Custom Charts,0,0,0,0,676,264
+267,2026-09-12,Custom Charts,0,0,0,0,676,264
+268,2026-09-13,Custom Charts,0,0,0,0,676,264
+269,2026-09-14,Custom Charts,0,0,0,0,676,264
+270,2026-09-15,Custom Charts,0,0,0,0,676,264
+271,2026-09-16,Custom Charts,0,0,0,0,676,264
+272,2026-09-17,Custom Charts,0,0,0,0,676,264
+273,2026-09-18,Custom Charts,0,0,0,0,676,264
+274,2026-09-19,Custom Charts,0,0,0,0,676,264
+275,2026-09-20,Custom Charts,0,0,0,0,676,264
+276,2026-09-21,Custom Charts,0,0,0,0,676,264
+277,2026-09-22,Custom Charts,0,0,0,0,676,264
+278,2026-09-23,Custom Charts,0,0,0,0,676,264
+279,2026-09-24,Custom Charts,0,0,0,0,676,264
+280,2026-09-25,Custom Charts,0,0,0,0,676,264
+281,2026-09-26,Custom Charts,0,0,0,0,676,264
+282,2026-09-27,Custom Charts,0,0,0,0,676,264
+283,2026-09-28,Custom Charts,0,0,0,0,676,264
+284,2026-09-29,Custom Charts,0,0,0,0,676,264
+285,2026-09-30,Custom Charts,0,0,0,0,676,264
+286,2026-10-01,Custom Charts,0,0,0,0,676,264
+287,2026-10-02,Custom Charts,0,0,0,0,676,264
+288,2026-10-03,Custom Charts,0,0,0,0,676,264
+289,2026-10-04,Custom Charts,0,0,0,0,676,264
+290,2026-10-05,Custom Charts,0,0,0,0,676,264
+291,2026-10-06,Custom Charts,0,0,0,0,676,264
+292,2026-10-07,Custom Charts,0,0,0,0,676,264
+293,2026-10-08,Custom Charts,0,0,0,0,676,264
+294,2026-10-09,Custom Charts,0,0,0,0,676,264
+295,2026-10-10,Custom Charts,0,0,0,0,676,264
+296,2026-10-11,Custom Charts,0,0,0,0,676,264
+297,2026-10-12,Custom Charts,0,0,0,0,676,264
+298,2026-10-13,Custom Charts,0,0,0,0,676,264
+299,2026-10-14,Custom Charts,0,0,0,0,676,264
+300,2026-10-15,Custom Charts,0,0,0,0,676,264
+301,2026-10-16,Custom Charts,0,0,0,0,676,264
+302,2026-10-17,Custom Charts,0,0,0,0,676,264
+303,2026-10-18,Custom Charts,0,0,0,0,676,264
+304,2026-10-19,Custom Charts,527,39,0,488,1164,752
+305,2026-10-20,Custom Charts,664,0,62,664,1828,1354
+306,2026-10-21,Custom Charts,6,2,1,4,1832,1357
+307,2026-10-22,Custom Charts,18,6,0,12,1844,1369
+308,2026-10-23,Custom Charts,10,15,2,-5,1839,1362
+309,2026-10-24,Custom Charts,8,0,0,8,1847,1370
+310,2026-10-25,Custom Charts,0,0,0,0,1847,1370
+311,2026-10-26,Custom Charts,91,2,1,89,1936,1458
+312,2026-10-27,Custom Charts,43,17,5,26,1962,1479
+313,2026-10-28,Custom Charts,17,6,4,11,1973,1486
+314,2026-10-29,Custom Charts,31,3,11,28,2001,1503
+315,2026-10-30,Custom Charts,0,0,0,0,2001,1503
+316,2026-08-13,Loop,0,0,0,0,0,0
+317,2026-08-14,Loop,0,0,0,0,0,0
+318,2026-08-15,Loop,0,0,0,0,0,0
+319,2026-08-16,Loop,0,0,0,0,0,0
+320,2026-08-17,Loop,0,0,0,0,0,0
+321,2026-08-18,Loop,0,0,0,0,0,0
+322,2026-08-19,Loop,0,0,0,0,0,0
+323,2026-08-20,Loop,0,0,0,0,0,0
+324,2026-08-21,Loop,0,0,0,0,0,0
+325,2026-08-22,Loop,0,0,0,0,0,0
+326,2026-08-23,Loop,0,0,0,0,0,0
+327,2026-08-24,Loop,0,0,0,0,0,0
+328,2026-08-25,Loop,0,0,0,0,0,0
+329,2026-08-26,Loop,5357,17,0,5340,5340,5340
+330,2026-08-27,Loop,524,35,0,489,5829,5829
+331,2026-08-28,Loop,750,823,142,-73,5756,5614
+332,2026-08-29,Loop,17,25,0,-8,5748,5606
+333,2026-08-30,Loop,4,1,0,3,5751,5609
+334,2026-08-31,Loop,209,272,3,-63,5688,5543
+335,2026-09-01,Loop,54,4,8,50,5738,5585
+336,2026-09-02,Loop,42,562,266,-520,5218,4799
+337,2026-09-03,Loop,93,98,0,-5,5213,4794
+338,2026-09-04,Loop,44,3,0,41,5254,4835
+339,2026-09-05,Loop,1136,0,0,1136,6390,5971
+340,2026-09-06,Loop,393,0,0,393,6783,6364
+341,2026-09-07,Loop,64,141,10,-77,6706,6277
+342,2026-09-08,Loop,168,598,1,-430,6276,5846
+343,2026-09-09,Loop,29,162,0,-133,6143,5713
+344,2026-09-10,Loop,38,40,2,-2,6141,5709
+345,2026-09-11,Loop,20,24,1,-4,6137,5704
+346,2026-09-12,Loop,36,27,0,9,6146,5713
+347,2026-09-13,Loop,0,0,0,0,6146,5713
+348,2026-09-14,Loop,70,276,38,-206,5940,5469
+349,2026-09-15,Loop,34,42,7,-8,5932,5454
+350,2026-09-16,Loop,28,32,0,-4,5928,5450
+351,2026-09-17,Loop,55,40,2,15,5943,5463
+352,2026-09-18,Loop,43,7,3,36,5979,5496
+353,2026-09-19,Loop,9,42,0,-33,5946,5463
+354,2026-09-20,Loop,28,8,0,20,5966,5483
+355,2026-09-21,Loop,69,61,0,8,5974,5491
+356,2026-09-22,Loop,142,193,0,-51,5923,5440
+357,2026-09-23,Loop,36,90,0,-54,5869,5386
+358,2026-09-24,Loop,79,79,153,0,5869,5233
+359,2026-09-25,Loop,14,6,2,8,5877,5239
+360,2026-09-26,Loop,1,0,0,1,5878,5240
+361,2026-09-27,Loop,2,0,2,2,5880,5240
+362,2026-09-28,Loop,73,0,0,73,5953,5313
+363,2026-09-29,Loop,63,36,3,27,5980,5337
+364,2026-09-30,Loop,72,5,1,67,6047,5403
+365,2026-10-01,Loop,44,4,1,40,6087,5442
+366,2026-10-02,Loop,31,42,1,-11,6076,5430
+367,2026-10-03,Loop,1,0,0,1,6077,5431
+368,2026-10-04,Loop,1,0,0,1,6078,5432
+369,2026-10-05,Loop,17,4,0,13,6091,5445
+370,2026-10-06,Loop,55,8,1,47,6138,5491
+371,2026-10-07,Loop,9,10,0,-1,6137,5490
+372,2026-10-08,Loop,17,6,80,11,6148,5421
+373,2026-10-09,Loop,17,2,1,15,6163,5435
+374,2026-10-10,Loop,0,0,0,0,6163,5435
+375,2026-10-11,Loop,0,0,46,0,6163,5389
+376,2026-10-12,Loop,5,11,0,-6,6157,5383
+377,2026-10-13,Loop,25,0,0,25,6182,5408
+378,2026-10-14,Loop,2,3,0,-1,6181,5407
+379,2026-10-15,Loop,26,42,0,-16,6165,5391
+380,2026-10-16,Loop,9,0,0,9,6174,5400
+381,2026-10-17,Loop,1,0,0,1,6175,5401
+382,2026-10-18,Loop,1,0,0,1,6176,5402
+383,2026-10-19,Loop,96,193,583,-97,6079,4722
+384,2026-10-20,Loop,36,41,48,-5,6074,4669
+385,2026-10-21,Loop,20,1,4,19,6093,4684
+386,2026-10-22,Loop,29,8,2,21,6114,4703
+387,2026-10-23,Loop,23,4,0,19,6133,4722
+388,2026-10-24,Loop,6,0,1,6,6139,4727
+389,2026-10-25,Loop,0,0,1,0,6139,4726
+390,2026-10-26,Loop,55,67,0,-12,6127,4714
+391,2026-10-27,Loop,29,20,79,9,6136,4644
+392,2026-10-28,Loop,55,5,0,50,6186,4694
+393,2026-10-29,Loop,64,2,0,62,6248,4756
+394,2026-10-30,Loop,0,11,1,-11,6237,4744
+395,2026-08-13,Other,0,0,0,0,0,0
+396,2026-08-14,Other,0,0,0,0,0,0
+397,2026-08-15,Other,0,0,0,0,0,0
+398,2026-08-16,Other,0,0,0,0,0,0
+399,2026-08-17,Other,0,0,0,0,0,0
+400,2026-08-18,Other,0,0,0,0,0,0
+401,2026-08-19,Other,0,0,0,0,0,0
+402,2026-08-20,Other,0,0,0,0,0,0
+403,2026-08-21,Other,0,0,0,0,0,0
+404,2026-08-22,Other,0,0,0,0,0,0
+405,2026-08-23,Other,0,0,0,0,0,0
+406,2026-08-24,Other,0,0,0,0,0,0
+407,2026-08-25,Other,0,0,0,0,0,0
+408,2026-08-26,Other,0,0,0,0,0,0
+409,2026-08-27,Other,0,0,0,0,0,0
+410,2026-08-28,Other,0,0,0,0,0,0
+411,2026-08-29,Other,0,0,0,0,0,0
+412,2026-08-30,Other,0,0,0,0,0,0
+413,2026-08-31,Other,0,0,0,0,0,0
+414,2026-09-01,Other,0,0,0,0,0,0
+415,2026-09-02,Other,0,0,0,0,0,0
+416,2026-09-03,Other,1,0,0,1,1,1
+417,2026-09-04,Other,0,0,0,0,1,1
+418,2026-09-05,Other,96,0,0,96,97,97
+419,2026-09-06,Other,66,0,0,66,163,163
+420,2026-09-07,Other,0,0,0,0,163,163
+421,2026-09-08,Other,0,0,0,0,163,163
+422,2026-09-09,Other,0,0,0,0,163,163
+423,2026-09-10,Other,0,0,0,0,163,163
+424,2026-09-11,Other,0,0,0,0,163,163
+425,2026-09-12,Other,0,0,0,0,163,163
+426,2026-09-13,Other,0,0,0,0,163,163
+427,2026-09-14,Other,0,0,0,0,163,163
+428,2026-09-15,Other,0,0,0,0,163,163
+429,2026-09-16,Other,0,0,0,0,163,163
+430,2026-09-17,Other,0,0,0,0,163,163
+431,2026-09-18,Other,0,0,0,0,163,163
+432,2026-09-19,Other,0,0,0,0,163,163
+433,2026-09-20,Other,0,0,0,0,163,163
+434,2026-09-21,Other,0,0,0,0,163,163
+435,2026-09-22,Other,0,0,0,0,163,163
+436,2026-09-23,Other,0,0,0,0,163,163
+437,2026-09-24,Other,0,0,0,0,163,163
+438,2026-09-25,Other,0,0,0,0,163,163
+439,2026-09-26,Other,0,0,0,0,163,163
+440,2026-09-27,Other,0,0,0,0,163,163
+441,2026-09-28,Other,0,0,0,0,163,163
+442,2026-09-29,Other,0,0,0,0,163,163
+443,2026-09-30,Other,4,0,0,4,167,167
+444,2026-10-01,Other,0,0,0,0,167,167
+445,2026-10-02,Other,1,0,0,1,168,168
+446,2026-10-03,Other,1,0,0,1,169,169
+447,2026-10-04,Other,1,0,0,1,170,170
+448,2026-10-05,Other,0,0,0,0,170,170
+449,2026-10-06,Other,2,0,0,2,172,172
+450,2026-10-07,Other,2,0,0,2,174,174
+451,2026-10-08,Other,0,0,0,0,174,174
+452,2026-10-09,Other,0,0,0,0,174,174
+453,2026-10-10,Other,0,0,0,0,174,174
+454,2026-10-11,Other,0,0,0,0,174,174
+455,2026-10-12,Other,0,0,0,0,174,174
+456,2026-10-13,Other,0,0,0,0,174,174
+457,2026-10-14,Other,0,0,0,0,174,174
+458,2026-10-15,Other,0,0,0,0,174,174
+459,2026-10-16,Other,0,0,0,0,174,174
+460,2026-10-17,Other,0,0,0,0,174,174
+461,2026-10-18,Other,0,0,0,0,174,174
+462,2026-10-19,Other,0,1,4,-1,173,169
+463,2026-10-20,Other,0,0,1,0,173,168
+464,2026-10-21,Other,0,0,0,0,173,168
+465,2026-10-22,Other,8,0,0,8,181,176
+466,2026-10-23,Other,0,0,0,0,181,176
+467,2026-10-24,Other,0,0,0,0,181,176
+468,2026-10-25,Other,0,0,0,0,181,176
+469,2026-10-26,Other,11,0,0,11,192,187
+470,2026-10-27,Other,0,0,0,0,192,187
+471,2026-10-28,Other,82,0,0,82,274,269
+472,2026-10-29,Other,10,1,2,9,283,276
+473,2026-10-30,Other,0,0,0,0,283,276
+474,2026-08-13,Portfolio Manager,0,0,0,0,0,0
+475,2026-08-14,Portfolio Manager,0,0,0,0,0,0
+476,2026-08-15,Portfolio Manager,0,0,0,0,0,0
+477,2026-08-16,Portfolio Manager,0,0,0,0,0,0
+478,2026-08-17,Portfolio Manager,0,0,0,0,0,0
+479,2026-08-18,Portfolio Manager,0,0,0,0,0,0
+480,2026-08-19,Portfolio Manager,0,0,0,0,0,0
+481,2026-08-20,Portfolio Manager,0,0,0,0,0,0
+482,2026-08-21,Portfolio Manager,0,0,0,0,0,0
+483,2026-08-22,Portfolio Manager,0,0,0,0,0,0
+484,2026-08-23,Portfolio Manager,0,0,0,0,0,0
+485,2026-08-24,Portfolio Manager,0,0,0,0,0,0
+486,2026-08-25,Portfolio Manager,0,0,0,0,0,0
+487,2026-08-26,Portfolio Manager,0,0,0,0,0,0
+488,2026-08-27,Portfolio Manager,0,0,0,0,0,0
+489,2026-08-28,Portfolio Manager,0,0,0,0,0,0
+490,2026-08-29,Portfolio Manager,0,0,0,0,0,0
+491,2026-08-30,Portfolio Manager,0,0,0,0,0,0
+492,2026-08-31,Portfolio Manager,0,0,0,0,0,0
+493,2026-09-01,Portfolio Manager,0,0,0,0,0,0
+494,2026-09-02,Portfolio Manager,0,0,0,0,0,0
+495,2026-09-03,Portfolio Manager,0,0,0,0,0,0
+496,2026-09-04,Portfolio Manager,0,0,0,0,0,0
+497,2026-09-05,Portfolio Manager,84,0,0,84,84,84
+498,2026-09-06,Portfolio Manager,74,0,0,74,158,158
+499,2026-09-07,Portfolio Manager,3,0,0,3,161,161
+500,2026-09-08,Portfolio Manager,0,0,0,0,161,161
+501,2026-09-09,Portfolio Manager,0,0,0,0,161,161
+502,2026-09-10,Portfolio Manager,0,0,0,0,161,161
+503,2026-09-11,Portfolio Manager,0,0,0,0,161,161
+504,2026-09-12,Portfolio Manager,0,0,0,0,161,161
+505,2026-09-13,Portfolio Manager,0,0,0,0,161,161
+506,2026-09-14,Portfolio Manager,0,0,0,0,161,161
+507,2026-09-15,Portfolio Manager,0,0,0,0,161,161
+508,2026-09-16,Portfolio Manager,0,0,0,0,161,161
+509,2026-09-17,Portfolio Manager,0,0,0,0,161,161
+510,2026-09-18,Portfolio Manager,0,0,0,0,161,161
+511,2026-09-19,Portfolio Manager,0,0,0,0,161,161
+512,2026-09-20,Portfolio Manager,0,0,0,0,161,161
+513,2026-09-21,Portfolio Manager,0,0,0,0,161,161
+514,2026-09-22,Portfolio Manager,0,0,0,0,161,161
+515,2026-09-23,Portfolio Manager,0,0,0,0,161,161
+516,2026-09-24,Portfolio Manager,0,0,0,0,161,161
+517,2026-09-25,Portfolio Manager,0,0,0,0,161,161
+518,2026-09-26,Portfolio Manager,0,0,0,0,161,161
+519,2026-09-27,Portfolio Manager,0,0,0,0,161,161
+520,2026-09-28,Portfolio Manager,0,0,0,0,161,161
+521,2026-09-29,Portfolio Manager,0,0,0,0,161,161
+522,2026-09-30,Portfolio Manager,0,0,0,0,161,161
+523,2026-10-01,Portfolio Manager,0,0,0,0,161,161
+524,2026-10-02,Portfolio Manager,0,0,0,0,161,161
+525,2026-10-03,Portfolio Manager,0,0,0,0,161,161
+526,2026-10-04,Portfolio Manager,0,0,0,0,161,161
+527,2026-10-05,Portfolio Manager,0,0,0,0,161,161
+528,2026-10-06,Portfolio Manager,0,0,0,0,161,161
+529,2026-10-07,Portfolio Manager,0,0,0,0,161,161
+530,2026-10-08,Portfolio Manager,0,0,0,0,161,161
+531,2026-10-09,Portfolio Manager,0,0,0,0,161,161
+532,2026-10-10,Portfolio Manager,0,0,0,0,161,161
+533,2026-10-11,Portfolio Manager,0,0,0,0,161,161
+534,2026-10-12,Portfolio Manager,0,0,0,0,161,161
+535,2026-10-13,Portfolio Manager,0,0,0,0,161,161
+536,2026-10-14,Portfolio Manager,0,0,0,0,161,161
+537,2026-10-15,Portfolio Manager,0,0,0,0,161,161
+538,2026-10-16,Portfolio Manager,0,0,0,0,161,161
+539,2026-10-17,Portfolio Manager,0,0,0,0,161,161
+540,2026-10-18,Portfolio Manager,0,0,0,0,161,161
+541,2026-10-19,Portfolio Manager,438,0,0,438,599,599
+542,2026-10-20,Portfolio Manager,4,0,88,4,603,515
+543,2026-10-21,Portfolio Manager,110,0,0,110,713,625
+544,2026-10-22,Portfolio Manager,1,1,0,0,713,625
+545,2026-10-23,Portfolio Manager,2,0,0,2,715,627
+546,2026-10-24,Portfolio Manager,1,0,0,1,716,628
+547,2026-10-25,Portfolio Manager,0,0,0,0,716,628
+548,2026-10-26,Portfolio Manager,172,0,0,172,888,800
+549,2026-10-27,Portfolio Manager,2,4,0,-2,886,798
+550,2026-10-28,Portfolio Manager,4,1,0,3,889,801
+551,2026-10-29,Portfolio Manager,1,0,0,1,890,802
+552,2026-10-30,Portfolio Manager,0,0,1,0,890,801
+553,2026-08-13,Shared infra,0,0,0,0,0,0
+554,2026-08-14,Shared infra,0,0,0,0,0,0
+555,2026-08-15,Shared infra,0,0,0,0,0,0
+556,2026-08-16,Shared infra,0,0,0,0,0,0
+557,2026-08-17,Shared infra,0,0,0,0,0,0
+558,2026-08-18,Shared infra,0,0,0,0,0,0
+559,2026-08-19,Shared infra,0,0,0,0,0,0
+560,2026-08-20,Shared infra,0,0,0,0,0,0
+561,2026-08-21,Shared infra,0,0,0,0,0,0
+562,2026-08-22,Shared infra,0,0,0,0,0,0
+563,2026-08-23,Shared infra,0,0,0,0,0,0
+564,2026-08-24,Shared infra,0,0,0,0,0,0
+565,2026-08-25,Shared infra,0,0,0,0,0,0
+566,2026-08-26,Shared infra,0,0,0,0,0,0
+567,2026-08-27,Shared infra,0,0,0,0,0,0
+568,2026-08-28,Shared infra,0,0,0,0,0,0
+569,2026-08-29,Shared infra,0,0,0,0,0,0
+570,2026-08-30,Shared infra,0,0,0,0,0,0
+571,2026-08-31,Shared infra,0,0,0,0,0,0
+572,2026-09-01,Shared infra,0,0,0,0,0,0
+573,2026-09-02,Shared infra,0,0,0,0,0,0
+574,2026-09-03,Shared infra,0,0,0,0,0,0
+575,2026-09-04,Shared infra,0,0,0,0,0,0
+576,2026-09-05,Shared infra,0,0,0,0,0,0
+577,2026-09-06,Shared infra,0,0,0,0,0,0
+578,2026-09-07,Shared infra,0,0,0,0,0,0
+579,2026-09-08,Shared infra,0,0,0,0,0,0
+580,2026-09-09,Shared infra,0,0,0,0,0,0
+581,2026-09-10,Shared infra,0,0,0,0,0,0
+582,2026-09-11,Shared infra,0,0,0,0,0,0
+583,2026-09-12,Shared infra,0,0,0,0,0,0
+584,2026-09-13,Shared infra,0,0,0,0,0,0
+585,2026-09-14,Shared infra,0,0,0,0,0,0
+586,2026-09-15,Shared infra,0,0,0,0,0,0
+587,2026-09-16,Shared infra,0,0,0,0,0,0
+588,2026-09-17,Shared infra,0,0,0,0,0,0
+589,2026-09-18,Shared infra,0,0,0,0,0,0
+590,2026-09-19,Shared infra,0,0,0,0,0,0
+591,2026-09-20,Shared infra,0,0,0,0,0,0
+592,2026-09-21,Shared infra,0,0,0,0,0,0
+593,2026-09-22,Shared infra,0,0,0,0,0,0
+594,2026-09-23,Shared infra,0,0,0,0,0,0
+595,2026-09-24,Shared infra,0,0,0,0,0,0
+596,2026-09-25,Shared infra,0,0,0,0,0,0
+597,2026-09-26,Shared infra,0,0,0,0,0,0
+598,2026-09-27,Shared infra,0,0,0,0,0,0
+599,2026-09-28,Shared infra,0,0,0,0,0,0
+600,2026-09-29,Shared infra,0,0,0,0,0,0
+601,2026-09-30,Shared infra,29,0,0,29,29,29
+602,2026-10-01,Shared infra,1,0,0,1,30,30
+603,2026-10-02,Shared infra,1,0,0,1,31,31
+604,2026-10-03,Shared infra,1,0,0,1,32,32
+605,2026-10-04,Shared infra,0,0,0,0,32,32
+606,2026-10-05,Shared infra,2,0,0,2,34,34
+607,2026-10-06,Shared infra,1,0,0,1,35,35
+608,2026-10-07,Shared infra,1,0,0,1,36,36
+609,2026-10-08,Shared infra,3,0,0,3,39,39
+610,2026-10-09,Shared infra,0,0,0,0,39,39
+611,2026-10-10,Shared infra,0,0,0,0,39,39
+612,2026-10-11,Shared infra,0,0,0,0,39,39
+613,2026-10-12,Shared infra,7,0,0,7,46,46
+614,2026-10-13,Shared infra,0,0,0,0,46,46
+615,2026-10-14,Shared infra,0,0,0,0,46,46
+616,2026-10-15,Shared infra,0,0,0,0,46,46
+617,2026-10-16,Shared infra,0,0,0,0,46,46
+618,2026-10-17,Shared infra,0,0,0,0,46,46
+619,2026-10-18,Shared infra,0,0,0,0,46,46
+620,2026-10-19,Shared infra,2,10,0,-8,38,38
+621,2026-10-20,Shared infra,38,0,0,38,76,76
+622,2026-10-21,Shared infra,3,0,0,3,79,79
+623,2026-10-22,Shared infra,0,0,0,0,79,79
+624,2026-10-23,Shared infra,5,0,0,5,84,84
+625,2026-10-24,Shared infra,0,0,0,0,84,84
+626,2026-10-25,Shared infra,0,0,0,0,84,84
+627,2026-10-26,Shared infra,0,0,0,0,84,84
+628,2026-10-27,Shared infra,0,0,0,0,84,84
+629,2026-10-28,Shared infra,0,0,0,0,84,84
+630,2026-10-29,Shared infra,0,0,0,0,84,84
+631,2026-10-30,Shared infra,0,5,0,-5,79,79
+632,2026-08-13,Strategic Roadmaps,0,0,0,0,0,0
+633,2026-08-14,Strategic Roadmaps,0,0,0,0,0,0
+634,2026-08-15,Strategic Roadmaps,0,0,0,0,0,0
+635,2026-08-16,Strategic Roadmaps,0,0,0,0,0,0
+636,2026-08-17,Strategic Roadmaps,0,0,0,0,0,0
+637,2026-08-18,Strategic Roadmaps,0,0,0,0,0,0
+638,2026-08-19,Strategic Roadmaps,0,0,0,0,0,0
+639,2026-08-20,Strategic Roadmaps,0,0,0,0,0,0
+640,2026-08-21,Strategic Roadmaps,0,0,0,0,0,0
+641,2026-08-22,Strategic Roadmaps,0,0,0,0,0,0
+642,2026-08-23,Strategic Roadmaps,0,0,0,0,0,0
+643,2026-08-24,Strategic Roadmaps,0,0,0,0,0,0
+644,2026-08-25,Strategic Roadmaps,0,0,0,0,0,0
+645,2026-08-26,Strategic Roadmaps,0,0,0,0,0,0
+646,2026-08-27,Strategic Roadmaps,0,0,0,0,0,0
+647,2026-08-28,Strategic Roadmaps,0,0,0,0,0,0
+648,2026-08-29,Strategic Roadmaps,0,0,0,0,0,0
+649,2026-08-30,Strategic Roadmaps,0,0,0,0,0,0
+650,2026-08-31,Strategic Roadmaps,0,0,0,0,0,0
+651,2026-09-01,Strategic Roadmaps,0,0,0,0,0,0
+652,2026-09-02,Strategic Roadmaps,10,0,9,10,10,1
+653,2026-09-03,Strategic Roadmaps,0,0,0,0,10,1
+654,2026-09-04,Strategic Roadmaps,0,0,0,0,10,1
+655,2026-09-05,Strategic Roadmaps,791,0,1,791,801,791
+656,2026-09-06,Strategic Roadmaps,331,0,0,331,1132,1122
+657,2026-09-07,Strategic Roadmaps,0,0,0,0,1132,1122
+658,2026-09-08,Strategic Roadmaps,0,0,0,0,1132,1122
+659,2026-09-09,Strategic Roadmaps,0,0,0,0,1132,1122
+660,2026-09-10,Strategic Roadmaps,0,0,0,0,1132,1122
+661,2026-09-11,Strategic Roadmaps,0,0,0,0,1132,1122
+662,2026-09-12,Strategic Roadmaps,0,0,0,0,1132,1122
+663,2026-09-13,Strategic Roadmaps,0,0,0,0,1132,1122
+664,2026-09-14,Strategic Roadmaps,0,0,0,0,1132,1122
+665,2026-09-15,Strategic Roadmaps,0,0,0,0,1132,1122
+666,2026-09-16,Strategic Roadmaps,0,0,0,0,1132,1122
+667,2026-09-17,Strategic Roadmaps,0,0,0,0,1132,1122
+668,2026-09-18,Strategic Roadmaps,0,0,0,0,1132,1122
+669,2026-09-19,Strategic Roadmaps,0,0,0,0,1132,1122
+670,2026-09-20,Strategic Roadmaps,0,0,0,0,1132,1122
+671,2026-09-21,Strategic Roadmaps,0,0,0,0,1132,1122
+672,2026-09-22,Strategic Roadmaps,0,0,0,0,1132,1122
+673,2026-09-23,Strategic Roadmaps,0,0,0,0,1132,1122
+674,2026-09-24,Strategic Roadmaps,0,0,0,0,1132,1122
+675,2026-09-25,Strategic Roadmaps,0,0,0,0,1132,1122
+676,2026-09-26,Strategic Roadmaps,0,0,0,0,1132,1122
+677,2026-09-27,Strategic Roadmaps,0,0,0,0,1132,1122
+678,2026-09-28,Strategic Roadmaps,0,0,0,0,1132,1122
+679,2026-09-29,Strategic Roadmaps,0,0,0,0,1132,1122
+680,2026-09-30,Strategic Roadmaps,0,0,0,0,1132,1122
+681,2026-10-01,Strategic Roadmaps,0,0,0,0,1132,1122
+682,2026-10-02,Strategic Roadmaps,0,0,0,0,1132,1122
+683,2026-10-03,Strategic Roadmaps,0,0,0,0,1132,1122
+684,2026-10-04,Strategic Roadmaps,0,0,0,0,1132,1122
+685,2026-10-05,Strategic Roadmaps,0,0,0,0,1132,1122
+686,2026-10-06,Strategic Roadmaps,0,0,0,0,1132,1122
+687,2026-10-07,Strategic Roadmaps,0,0,0,0,1132,1122
+688,2026-10-08,Strategic Roadmaps,0,0,0,0,1132,1122
+689,2026-10-09,Strategic Roadmaps,0,0,0,0,1132,1122
+690,2026-10-10,Strategic Roadmaps,0,0,0,0,1132,1122
+691,2026-10-11,Strategic Roadmaps,0,0,0,0,1132,1122
+692,2026-10-12,Strategic Roadmaps,0,0,0,0,1132,1122
+693,2026-10-13,Strategic Roadmaps,0,0,0,0,1132,1122
+694,2026-10-14,Strategic Roadmaps,0,0,0,0,1132,1122
+695,2026-10-15,Strategic Roadmaps,0,0,0,0,1132,1122
+696,2026-10-16,Strategic Roadmaps,0,0,0,0,1132,1122
+697,2026-10-17,Strategic Roadmaps,0,0,0,0,1132,1122
+698,2026-10-18,Strategic Roadmaps,0,0,0,0,1132,1122
+699,2026-10-19,Strategic Roadmaps,2918,0,0,2918,4050,4040
+700,2026-10-20,Strategic Roadmaps,19,0,396,19,4069,3663
+701,2026-10-21,Strategic Roadmaps,4,0,0,4,4073,3667
+702,2026-10-22,Strategic Roadmaps,9,9,1,0,4073,3666
+703,2026-10-23,Strategic Roadmaps,18,2,0,16,4089,3682
+704,2026-10-24,Strategic Roadmaps,7,0,0,7,4096,3689
+705,2026-10-25,Strategic Roadmaps,0,0,1,0,4096,3688
+706,2026-10-26,Strategic Roadmaps,1,8,0,-7,4089,3681
+707,2026-10-27,Strategic Roadmaps,23,0,1,23,4112,3703
+708,2026-10-28,Strategic Roadmaps,16,4,0,12,4124,3715
+709,2026-10-29,Strategic Roadmaps,2,5,0,-3,4121,3712
+710,2026-10-30,Strategic Roadmaps,0,2,2,-2,4119,3708
+711,2026-08-13,Structure,0,0,0,0,0,0
+712,2026-08-14,Structure,0,0,0,0,0,0
+713,2026-08-15,Structure,0,0,0,0,0,0
+714,2026-08-16,Structure,0,0,0,0,0,0
+715,2026-08-17,Structure,0,0,0,0,0,0
+716,2026-08-18,Structure,0,0,0,0,0,0
+717,2026-08-19,Structure,0,0,0,0,0,0
+718,2026-08-20,Structure,0,0,0,0,0,0
+719,2026-08-21,Structure,0,0,0,0,0,0
+720,2026-08-22,Structure,0,0,0,0,0,0
+721,2026-08-23,Structure,0,0,0,0,0,0
+722,2026-08-24,Structure,0,0,0,0,0,0
+723,2026-08-25,Structure,0,0,0,0,0,0
+724,2026-08-26,Structure,0,0,0,0,0,0
+725,2026-08-27,Structure,0,0,0,0,0,0
+726,2026-08-28,Structure,0,0,0,0,0,0
+727,2026-08-29,Structure,0,0,0,0,0,0
+728,2026-08-30,Structure,0,0,0,0,0,0
+729,2026-08-31,Structure,0,0,0,0,0,0
+730,2026-09-01,Structure,0,0,0,0,0,0
+731,2026-09-02,Structure,1,0,0,1,1,1
+732,2026-09-03,Structure,0,0,0,0,1,1
+733,2026-09-04,Structure,0,0,0,0,1,1
+734,2026-09-05,Structure,20,0,0,20,21,21
+735,2026-09-06,Structure,14,0,0,14,35,35
+736,2026-09-07,Structure,0,0,0,0,35,35
+737,2026-09-08,Structure,0,0,0,0,35,35
+738,2026-09-09,Structure,0,0,0,0,35,35
+739,2026-09-10,Structure,0,0,0,0,35,35
+740,2026-09-11,Structure,0,0,0,0,35,35
+741,2026-09-12,Structure,0,0,0,0,35,35
+742,2026-09-13,Structure,0,0,0,0,35,35
+743,2026-09-14,Structure,0,0,0,0,35,35
+744,2026-09-15,Structure,0,0,0,0,35,35
+745,2026-09-16,Structure,0,0,0,0,35,35
+746,2026-09-17,Structure,0,0,0,0,35,35
+747,2026-09-18,Structure,0,0,0,0,35,35
+748,2026-09-19,Structure,0,0,0,0,35,35
+749,2026-09-20,Structure,0,0,0,0,35,35
+750,2026-09-21,Structure,0,0,0,0,35,35
+751,2026-09-22,Structure,0,0,0,0,35,35
+752,2026-09-23,Structure,0,0,0,0,35,35
+753,2026-09-24,Structure,0,0,0,0,35,35
+754,2026-09-25,Structure,0,0,0,0,35,35
+755,2026-09-26,Structure,0,0,0,0,35,35
+756,2026-09-27,Structure,0,0,0,0,35,35
+757,2026-09-28,Structure,0,0,0,0,35,35
+758,2026-09-29,Structure,0,0,0,0,35,35
+759,2026-09-30,Structure,0,0,0,0,35,35
+760,2026-10-01,Structure,0,0,0,0,35,35
+761,2026-10-02,Structure,0,0,0,0,35,35
+762,2026-10-03,Structure,0,0,0,0,35,35
+763,2026-10-04,Structure,0,0,0,0,35,35
+764,2026-10-05,Structure,0,0,0,0,35,35
+765,2026-10-06,Structure,0,0,0,0,35,35
+766,2026-10-07,Structure,0,0,0,0,35,35
+767,2026-10-08,Structure,0,0,0,0,35,35
+768,2026-10-09,Structure,0,0,0,0,35,35
+769,2026-10-10,Structure,0,0,0,0,35,35
+770,2026-10-11,Structure,0,0,0,0,35,35
+771,2026-10-12,Structure,0,0,0,0,35,35
+772,2026-10-13,Structure,0,0,0,0,35,35
+773,2026-10-14,Structure,0,0,0,0,35,35
+774,2026-10-15,Structure,0,0,0,0,35,35
+775,2026-10-16,Structure,0,0,0,0,35,35
+776,2026-10-17,Structure,0,0,0,0,35,35
+777,2026-10-18,Structure,0,0,0,0,35,35
+778,2026-10-19,Structure,831,0,0,831,866,866
+779,2026-10-20,Structure,5,2,52,3,869,817
+780,2026-10-21,Structure,10,3,0,7,876,824
+781,2026-10-22,Structure,9,85,2,-76,800,746
+782,2026-10-23,Structure,13,1,0,12,812,758
+783,2026-10-24,Structure,5,0,0,5,817,763
+784,2026-10-25,Structure,0,0,0,0,817,763
+785,2026-10-26,Structure,20,24,1,-4,813,758
+786,2026-10-27,Structure,6,0,0,6,819,764
+787,2026-10-28,Structure,2,2,0,0,819,764
+788,2026-10-29,Structure,2,0,0,2,821,766
+789,2026-10-30,Structure,0,0,1,0,821,765
+790,2026-08-13,Tempo for Jira,0,0,0,0,0,0
+791,2026-08-14,Tempo for Jira,0,0,0,0,0,0
+792,2026-08-15,Tempo for Jira,0,0,0,0,0,0
+793,2026-08-16,Tempo for Jira,0,0,0,0,0,0
+794,2026-08-17,Tempo for Jira,0,0,0,0,0,0
+795,2026-08-18,Tempo for Jira,0,0,0,0,0,0
+796,2026-08-19,Tempo for Jira,0,0,0,0,0,0
+797,2026-08-20,Tempo for Jira,0,0,0,0,0,0
+798,2026-08-21,Tempo for Jira,0,0,0,0,0,0
+799,2026-08-22,Tempo for Jira,0,0,0,0,0,0
+800,2026-08-23,Tempo for Jira,0,0,0,0,0,0
+801,2026-08-24,Tempo for Jira,0,0,0,0,0,0
+802,2026-08-25,Tempo for Jira,0,0,0,0,0,0
+803,2026-08-26,Tempo for Jira,2543,0,2,2543,2543,2541
+804,2026-08-27,Tempo for Jira,14,37,0,-23,2520,2518
+805,2026-08-28,Tempo for Jira,1,0,0,1,2521,2519
+806,2026-08-29,Tempo for Jira,3,0,0,3,2524,2522
+807,2026-08-30,Tempo for Jira,0,0,0,0,2524,2522
+808,2026-08-31,Tempo for Jira,8,0,28,8,2532,2502
+809,2026-09-01,Tempo for Jira,9,0,0,9,2541,2511
+810,2026-09-02,Tempo for Jira,13,256,328,-243,2298,1940
+811,2026-09-03,Tempo for Jira,10,124,23,-114,2184,1803
+812,2026-09-04,Tempo for Jira,4,2,0,2,2186,1805
+813,2026-09-05,Tempo for Jira,1260,138,0,1122,3308,2927
+814,2026-09-06,Tempo for Jira,391,15,0,376,3684,3303
+815,2026-09-07,Tempo for Jira,14,50,0,-36,3648,3267
+816,2026-09-08,Tempo for Jira,20,175,0,-155,3493,3112
+817,2026-09-09,Tempo for Jira,2,7,0,-5,3488,3107
+818,2026-09-10,Tempo for Jira,1,2,0,-1,3487,3106
+819,2026-09-11,Tempo for Jira,3,1,0,2,3489,3108
+820,2026-09-12,Tempo for Jira,1,0,0,1,3490,3109
+821,2026-09-13,Tempo for Jira,0,0,0,0,3490,3109
+822,2026-09-14,Tempo for Jira,0,62,0,-62,3428,3047
+823,2026-09-15,Tempo for Jira,4,0,0,4,3432,3051
+824,2026-09-16,Tempo for Jira,1,0,0,1,3433,3052
+825,2026-09-17,Tempo for Jira,2,0,0,2,3435,3054
+826,2026-09-18,Tempo for Jira,2,1,0,1,3436,3055
+827,2026-09-19,Tempo for Jira,0,12,0,-12,3424,3043
+828,2026-09-20,Tempo for Jira,0,0,0,0,3424,3043
+829,2026-09-21,Tempo for Jira,2,6,0,-4,3420,3039
+830,2026-09-22,Tempo for Jira,0,81,0,-81,3339,2958
+831,2026-09-23,Tempo for Jira,0,2,0,-2,3337,2956
+832,2026-09-24,Tempo for Jira,0,1,0,-1,3336,2955
+833,2026-09-25,Tempo for Jira,0,0,0,0,3336,2955
+834,2026-09-26,Tempo for Jira,0,0,0,0,3336,2955
+835,2026-09-27,Tempo for Jira,0,0,0,0,3336,2955
+836,2026-09-28,Tempo for Jira,4,0,0,4,3340,2959
+837,2026-09-29,Tempo for Jira,14,2,0,12,3352,2971
+838,2026-09-30,Tempo for Jira,34,9,0,25,3377,2996
+839,2026-10-01,Tempo for Jira,16,0,0,16,3393,3012
+840,2026-10-02,Tempo for Jira,6,7,0,-1,3392,3011
+841,2026-10-03,Tempo for Jira,0,4,0,-4,3388,3007
+842,2026-10-04,Tempo for Jira,0,0,0,0,3388,3007
+843,2026-10-05,Tempo for Jira,0,0,0,0,3388,3007
+844,2026-10-06,Tempo for Jira,16,28,0,-12,3376,2995
+845,2026-10-07,Tempo for Jira,1,3,0,-2,3374,2993
+846,2026-10-08,Tempo for Jira,8,4,4,4,3378,2993
+847,2026-10-09,Tempo for Jira,0,0,0,0,3378,2993
+848,2026-10-10,Tempo for Jira,0,0,0,0,3378,2993
+849,2026-10-11,Tempo for Jira,0,0,0,0,3378,2993
+850,2026-10-12,Tempo for Jira,0,2,0,-2,3376,2991
+851,2026-10-13,Tempo for Jira,0,0,0,0,3376,2991
+852,2026-10-14,Tempo for Jira,7,0,0,7,3383,2998
+853,2026-10-15,Tempo for Jira,15,8,0,7,3390,3005
+854,2026-10-16,Tempo for Jira,7,4,0,3,3393,3008
+855,2026-10-17,Tempo for Jira,0,0,0,0,3393,3008
+856,2026-10-18,Tempo for Jira,0,0,0,0,3393,3008
+857,2026-10-19,Tempo for Jira,907,407,6,500,3893,3502
+858,2026-10-20,Tempo for Jira,23,1,296,22,3915,3228
+859,2026-10-21,Tempo for Jira,13,17,0,-4,3911,3224
+860,2026-10-22,Tempo for Jira,40,43,0,-3,3908,3221
+861,2026-10-23,Tempo for Jira,41,112,2,-71,3837,3148
+862,2026-10-24,Tempo for Jira,14,0,0,14,3851,3162
+863,2026-10-25,Tempo for Jira,0,0,0,0,3851,3162
+864,2026-10-26,Tempo for Jira,11,12,0,-1,3850,3161
+865,2026-10-27,Tempo for Jira,25,15,0,10,3860,3171
+866,2026-10-28,Tempo for Jira,17,13,0,4,3864,3175
+867,2026-10-29,Tempo for Jira,2,1,0,1,3865,3176
+868,2026-10-30,Tempo for Jira,0,8,0,-8,3857,3168
+869,2026-08-13,Time Tracker,0,0,0,0,0,0
+870,2026-08-14,Time Tracker,0,0,0,0,0,0
+871,2026-08-15,Time Tracker,0,0,0,0,0,0
+872,2026-08-16,Time Tracker,0,0,0,0,0,0
+873,2026-08-17,Time Tracker,0,0,0,0,0,0
+874,2026-08-18,Time Tracker,0,0,0,0,0,0
+875,2026-08-19,Time Tracker,0,0,0,0,0,0
+876,2026-08-20,Time Tracker,0,0,0,0,0,0
+877,2026-08-21,Time Tracker,0,0,0,0,0,0
+878,2026-08-22,Time Tracker,0,0,0,0,0,0
+879,2026-08-23,Time Tracker,0,0,0,0,0,0
+880,2026-08-24,Time Tracker,0,0,0,0,0,0
+881,2026-08-25,Time Tracker,0,0,0,0,0,0
+882,2026-08-26,Time Tracker,0,0,0,0,0,0
+883,2026-08-27,Time Tracker,0,0,0,0,0,0
+884,2026-08-28,Time Tracker,0,0,0,0,0,0
+885,2026-08-29,Time Tracker,0,0,0,0,0,0
+886,2026-08-30,Time Tracker,0,0,0,0,0,0
+887,2026-08-31,Time Tracker,0,0,0,0,0,0
+888,2026-09-01,Time Tracker,0,0,0,0,0,0
+889,2026-09-02,Time Tracker,0,0,0,0,0,0
+890,2026-09-03,Time Tracker,0,0,0,0,0,0
+891,2026-09-04,Time Tracker,0,0,0,0,0,0
+892,2026-09-05,Time Tracker,0,0,0,0,0,0
+893,2026-09-06,Time Tracker,0,0,0,0,0,0
+894,2026-09-07,Time Tracker,0,0,0,0,0,0
+895,2026-09-08,Time Tracker,0,0,0,0,0,0
+896,2026-09-09,Time Tracker,0,0,0,0,0,0
+897,2026-09-10,Time Tracker,0,0,0,0,0,0
+898,2026-09-11,Time Tracker,0,0,0,0,0,0
+899,2026-09-12,Time Tracker,0,0,0,0,0,0
+900,2026-09-13,Time Tracker,0,0,0,0,0,0
+901,2026-09-14,Time Tracker,0,0,0,0,0,0
+902,2026-09-15,Time Tracker,0,0,0,0,0,0
+903,2026-09-16,Time Tracker,0,0,0,0,0,0
+904,2026-09-17,Time Tracker,0,0,0,0,0,0
+905,2026-09-18,Time Tracker,0,0,0,0,0,0
+906,2026-09-19,Time Tracker,0,0,0,0,0,0
+907,2026-09-20,Time Tracker,0,0,0,0,0,0
+908,2026-09-21,Time Tracker,0,0,0,0,0,0
+909,2026-09-22,Time Tracker,0,0,0,0,0,0
+910,2026-09-23,Time Tracker,0,0,0,0,0,0
+911,2026-09-24,Time Tracker,0,0,0,0,0,0
+912,2026-09-25,Time Tracker,0,0,0,0,0,0
+913,2026-09-26,Time Tracker,0,0,0,0,0,0
+914,2026-09-27,Time Tracker,0,0,0,0,0,0
+915,2026-09-28,Time Tracker,0,0,0,0,0,0
+916,2026-09-29,Time Tracker,0,0,0,0,0,0
+917,2026-09-30,Time Tracker,0,0,0,0,0,0
+918,2026-10-01,Time Tracker,0,0,0,0,0,0
+919,2026-10-02,Time Tracker,0,0,0,0,0,0
+920,2026-10-03,Time Tracker,0,0,0,0,0,0
+921,2026-10-04,Time Tracker,0,0,0,0,0,0
+922,2026-10-05,Time Tracker,0,0,0,0,0,0
+923,2026-10-06,Time Tracker,0,0,0,0,0,0
+924,2026-10-07,Time Tracker,0,0,0,0,0,0
+925,2026-10-08,Time Tracker,0,0,0,0,0,0
+926,2026-10-09,Time Tracker,0,0,0,0,0,0
+927,2026-10-10,Time Tracker,0,0,0,0,0,0
+928,2026-10-11,Time Tracker,0,0,0,0,0,0
+929,2026-10-12,Time Tracker,0,0,0,0,0,0
+930,2026-10-13,Time Tracker,0,0,0,0,0,0
+931,2026-10-14,Time Tracker,0,0,0,0,0,0
+932,2026-10-15,Time Tracker,0,0,0,0,0,0
+933,2026-10-16,Time Tracker,0,0,0,0,0,0
+934,2026-10-17,Time Tracker,0,0,0,0,0,0
+935,2026-10-18,Time Tracker,0,0,0,0,0,0
+936,2026-10-19,Time Tracker,452,0,0,452,452,452
+937,2026-10-20,Time Tracker,67,26,41,41,493,452
+938,2026-10-21,Time Tracker,14,0,0,14,507,466
+939,2026-10-22,Time Tracker,7,0,0,7,514,473
+940,2026-10-23,Time Tracker,7,0,0,7,521,480
+941,2026-10-24,Time Tracker,2,0,0,2,523,482
+942,2026-10-25,Time Tracker,0,0,0,0,523,482
+943,2026-10-26,Time Tracker,0,0,0,0,523,482
+944,2026-10-27,Time Tracker,10,0,0,10,533,492
+945,2026-10-28,Time Tracker,3,4,1,-1,532,490
+946,2026-10-29,Time Tracker,7,1,1,6,538,495
+947,2026-10-30,Time Tracker,0,0,0,0,538,495
+948,2026-08-13,Unmapped,99,0,0,99,99,99
+949,2026-08-14,Unmapped,0,0,0,0,99,99
+950,2026-08-15,Unmapped,0,0,0,0,99,99
+951,2026-08-16,Unmapped,0,0,0,0,99,99
+952,2026-08-17,Unmapped,0,0,0,0,99,99
+953,2026-08-18,Unmapped,0,1,0,-1,98,98
+954,2026-08-19,Unmapped,0,0,2,0,98,96
+955,2026-08-20,Unmapped,0,0,0,0,98,96
+956,2026-08-21,Unmapped,0,0,0,0,98,96
+957,2026-08-22,Unmapped,21,0,0,21,119,117
+958,2026-08-23,Unmapped,0,0,0,0,119,117
+959,2026-08-24,Unmapped,0,0,0,0,119,117
+960,2026-08-25,Unmapped,0,0,0,0,119,117
+961,2026-08-26,Unmapped,24,0,0,24,143,141
+962,2026-08-27,Unmapped,13,0,0,13,156,154
+963,2026-08-28,Unmapped,1,0,0,1,157,155
+964,2026-08-29,Unmapped,0,0,0,0,157,155
+965,2026-08-30,Unmapped,0,0,0,0,157,155
+966,2026-08-31,Unmapped,25,0,0,25,182,180
+967,2026-09-01,Unmapped,118,0,0,118,300,298
+968,2026-09-02,Unmapped,145,103,62,42,342,278
+969,2026-09-03,Unmapped,0,0,0,0,342,278
+970,2026-09-04,Unmapped,0,0,0,0,342,278
+971,2026-09-05,Unmapped,4024,0,12,4024,4366,4290
+972,2026-09-06,Unmapped,2786,1,7,2785,7151,7068
+973,2026-09-07,Unmapped,65,0,0,65,7216,7133
+974,2026-09-08,Unmapped,0,1,0,-1,7215,7132
+975,2026-09-09,Unmapped,0,0,8,0,7215,7124
+976,2026-09-10,Unmapped,6,0,0,6,7221,7130
+977,2026-09-11,Unmapped,42,0,0,42,7263,7172
+978,2026-09-12,Unmapped,0,0,0,0,7263,7172
+979,2026-09-13,Unmapped,0,0,0,0,7263,7172
+980,2026-09-14,Unmapped,1614,0,0,1614,8877,8786
+981,2026-09-15,Unmapped,2,0,0,2,8879,8788
+982,2026-09-16,Unmapped,4,0,0,4,8883,8792
+983,2026-09-17,Unmapped,1,0,0,1,8884,8793
+984,2026-09-18,Unmapped,1,0,0,1,8885,8794
+985,2026-09-19,Unmapped,1,0,0,1,8886,8795
+986,2026-09-20,Unmapped,14,0,0,14,8900,8809
+987,2026-09-21,Unmapped,3,0,0,3,8903,8812
+988,2026-09-22,Unmapped,3,0,0,3,8906,8815
+989,2026-09-23,Unmapped,1,1,0,0,8906,8815
+990,2026-09-24,Unmapped,16,0,0,16,8922,8831
+991,2026-09-25,Unmapped,1,0,0,1,8923,8832
+992,2026-09-26,Unmapped,2,0,0,2,8925,8834
+993,2026-09-27,Unmapped,18,0,0,18,8943,8852
+994,2026-09-28,Unmapped,8,0,0,8,8951,8860
+995,2026-09-29,Unmapped,53,22,0,31,8982,8891
+996,2026-09-30,Unmapped,16,0,0,16,8998,8907
+997,2026-10-01,Unmapped,1,0,0,1,8999,8908
+998,2026-10-02,Unmapped,36,12,0,24,9023,8932
+999,2026-10-03,Unmapped,4,0,0,4,9027,8936
+1000,2026-10-04,Unmapped,24,0,0,24,9051,8960
+1001,2026-10-05,Unmapped,4,0,0,4,9055,8964
+1002,2026-10-06,Unmapped,1,1,0,0,9055,8964
+1003,2026-10-07,Unmapped,1,0,1,1,9056,8964
+1004,2026-10-08,Unmapped,23,0,0,23,9079,8987
+1005,2026-10-09,Unmapped,39,0,3,39,9118,9023
+1006,2026-10-10,Unmapped,11,0,2,11,9129,9032
+1007,2026-10-11,Unmapped,1,2,0,-1,9128,9031
+1008,2026-10-12,Unmapped,490,0,0,490,9618,9521
+1009,2026-10-13,Unmapped,7,0,0,7,9625,9528
+1010,2026-10-14,Unmapped,70,1,1,69,9694,9596
+1011,2026-10-15,Unmapped,1,0,0,1,9695,9597
+1012,2026-10-16,Unmapped,26,0,0,26,9721,9623
+1013,2026-10-17,Unmapped,66,0,0,66,9787,9689
+1014,2026-10-18,Unmapped,4,0,0,4,9791,9693
+1015,2026-10-19,Unmapped,1,3,0,-2,9789,9691
+1016,2026-10-20,Unmapped,4,0,1,4,9793,9694
+1017,2026-10-21,Unmapped,14,0,0,14,9807,9708
+1018,2026-10-22,Unmapped,22,0,0,22,9829,9730
+1019,2026-10-23,Unmapped,14,0,0,14,9843,9744
+1020,2026-10-24,Unmapped,3,0,0,3,9846,9747
+1021,2026-10-25,Unmapped,0,0,0,0,9846,9747
+1022,2026-10-26,Unmapped,5,0,0,5,9851,9752
+1023,2026-10-27,Unmapped,85,1,2,84,9935,9834
+1024,2026-10-28,Unmapped,498,0,0,498,10433,10332
+1025,2026-10-29,Unmapped,980,0,0,980,11413,11312
+1026,2026-10-30,Unmapped,5,9,0,-4,11409,11308
+1027,2026-08-13,Workforce Intelligence,0,0,0,0,0,0
+1028,2026-08-14,Workforce Intelligence,0,0,0,0,0,0
+1029,2026-08-15,Workforce Intelligence,0,0,0,0,0,0
+1030,2026-08-16,Workforce Intelligence,0,0,0,0,0,0
+1031,2026-08-17,Workforce Intelligence,0,0,0,0,0,0
+1032,2026-08-18,Workforce Intelligence,0,0,0,0,0,0
+1033,2026-08-19,Workforce Intelligence,0,0,0,0,0,0
+1034,2026-08-20,Workforce Intelligence,0,0,0,0,0,0
+1035,2026-08-21,Workforce Intelligence,0,0,0,0,0,0
+1036,2026-08-22,Workforce Intelligence,0,0,0,0,0,0
+1037,2026-08-23,Workforce Intelligence,0,0,0,0,0,0
+1038,2026-08-24,Workforce Intelligence,0,0,0,0,0,0
+1039,2026-08-25,Workforce Intelligence,0,0,0,0,0,0
+1040,2026-08-26,Workforce Intelligence,1258,0,0,1258,1258,1258
+1041,2026-08-27,Workforce Intelligence,152,55,0,97,1355,1355
+1042,2026-08-28,Workforce Intelligence,0,0,1,0,1355,1354
+1043,2026-08-29,Workforce Intelligence,3,0,0,3,1358,1357
+1044,2026-08-30,Workforce Intelligence,0,0,0,0,1358,1357
+1045,2026-08-31,Workforce Intelligence,3,0,0,3,1361,1360
+1046,2026-09-01,Workforce Intelligence,27,1,0,26,1387,1386
+1047,2026-09-02,Workforce Intelligence,14,280,62,-266,1121,1058
+1048,2026-09-03,Workforce Intelligence,2,0,0,2,1123,1060
+1049,2026-09-04,Workforce Intelligence,7,0,0,7,1130,1067
+1050,2026-09-05,Workforce Intelligence,30,0,0,30,1160,1097
+1051,2026-09-06,Workforce Intelligence,14,0,0,14,1174,1111
+1052,2026-09-07,Workforce Intelligence,0,0,0,0,1174,1111
+1053,2026-09-08,Workforce Intelligence,12,162,0,-150,1024,961
+1054,2026-09-09,Workforce Intelligence,7,0,1,7,1031,967
+1055,2026-09-10,Workforce Intelligence,0,3,0,-3,1028,964
+1056,2026-09-11,Workforce Intelligence,0,0,0,0,1028,964
+1057,2026-09-12,Workforce Intelligence,0,0,0,0,1028,964
+1058,2026-09-13,Workforce Intelligence,0,0,0,0,1028,964
+1059,2026-09-14,Workforce Intelligence,0,0,0,0,1028,964
+1060,2026-09-15,Workforce Intelligence,0,23,0,-23,1005,941
+1061,2026-09-16,Workforce Intelligence,2,0,0,2,1007,943
+1062,2026-09-17,Workforce Intelligence,6,0,0,6,1013,949
+1063,2026-09-18,Workforce Intelligence,4,0,0,4,1017,953
+1064,2026-09-19,Workforce Intelligence,0,0,0,0,1017,953
+1065,2026-09-20,Workforce Intelligence,0,0,0,0,1017,953
+1066,2026-09-21,Workforce Intelligence,26,47,0,-21,996,932
+1067,2026-09-22,Workforce Intelligence,2,215,0,-213,783,719
+1068,2026-09-23,Workforce Intelligence,0,210,0,-210,573,509
+1069,2026-09-24,Workforce Intelligence,2,0,0,2,575,511
+1070,2026-09-25,Workforce Intelligence,0,0,0,0,575,511
+1071,2026-09-26,Workforce Intelligence,0,1,0,-1,574,510
+1072,2026-09-27,Workforce Intelligence,0,0,0,0,574,510
+1073,2026-09-28,Workforce Intelligence,2,0,0,2,576,512
+1074,2026-09-29,Workforce Intelligence,4,0,0,4,580,516
+1075,2026-09-30,Workforce Intelligence,6,0,0,6,586,522
+1076,2026-10-01,Workforce Intelligence,4,0,0,4,590,526
+1077,2026-10-02,Workforce Intelligence,2,0,0,2,592,528
+1078,2026-10-03,Workforce Intelligence,0,0,0,0,592,528
+1079,2026-10-04,Workforce Intelligence,22,5,0,17,609,545
+1080,2026-10-05,Workforce Intelligence,0,0,0,0,609,545
+1081,2026-10-06,Workforce Intelligence,18,0,0,18,627,563
+1082,2026-10-07,Workforce Intelligence,1,0,0,1,628,564
+1083,2026-10-08,Workforce Intelligence,11,0,0,11,639,575
+1084,2026-10-09,Workforce Intelligence,6,0,3,6,645,578
+1085,2026-10-10,Workforce Intelligence,0,0,0,0,645,578
+1086,2026-10-11,Workforce Intelligence,0,0,0,0,645,578
+1087,2026-10-12,Workforce Intelligence,0,0,0,0,645,578
+1088,2026-10-13,Workforce Intelligence,11,1,0,10,655,588
+1089,2026-10-14,Workforce Intelligence,0,0,0,0,655,588
+1090,2026-10-15,Workforce Intelligence,2,0,0,2,657,590
+1091,2026-10-16,Workforce Intelligence,2,0,0,2,659,592
+1092,2026-10-17,Workforce Intelligence,0,0,0,0,659,592
+1093,2026-10-18,Workforce Intelligence,0,0,0,0,659,592
+1094,2026-10-19,Workforce Intelligence,0,6,13,-6,653,573
+1095,2026-10-20,Workforce Intelligence,8,0,25,8,661,556
+1096,2026-10-21,Workforce Intelligence,29,0,0,29,690,585
+1097,2026-10-22,Workforce Intelligence,9,0,4,9,699,590
+1098,2026-10-23,Workforce Intelligence,9,32,0,-23,676,567
+1099,2026-10-24,Workforce Intelligence,1,0,0,1,677,568
+1100,2026-10-25,Workforce Intelligence,0,1,0,-1,676,567
+1101,2026-10-26,Workforce Intelligence,17,0,0,17,693,584
+1102,2026-10-27,Workforce Intelligence,4,0,0,4,697,588
+1103,2026-10-28,Workforce Intelligence,5,0,0,5,702,593
+1104,2026-10-29,Workforce Intelligence,15,4,0,11,713,604
+1105,2026-10-30,Workforce Intelligence,0,4,0,-4,709,600
+
+## X15 SLA risk by Project
+_g,open_actionable,breached,high_risk_of_miss,medium_risk_of_miss,expected_misses,no_estimate,expected_miss_pct
+TOTAL,2941,1361,1409,171,2849.0,0,96.9
+Unmapped,1239,770,469,0,1219.3,0,98.4
+Custom Charts,549,88,438,23,533.0,0,97.1
+Tempo for Jira,394,309,36,49,377.3,0,95.8
+Portfolio Manager,194,42,90,62,172.7,0,89.0
+Strategic Roadmaps,178,41,115,22,169.4,0,95.2
+Structure,168,28,140,0,166.2,0,98.9
+Alpha Serve,103,26,68,9,98.7,0,95.8
+Loop,34,28,4,2,33.2,0,97.6
+Shared infra,34,10,22,2,32.9,0,96.8
+Other,17,1,15,1,15.9,0,93.5
+Workforce Intelligence,15,15,0,0,15.0,0,100.0
+Time Tracker,7,2,4,1,6.6,0,94.3
+Apps,6,1,5,0,5.9,0,98.3
+Connector for Jira,3,0,3,0,2.9,0,96.7
+
+## X15 SLA risk by Team
+_g,open_actionable,breached,high_risk_of_miss,medium_risk_of_miss,expected_misses,no_estimate,expected_miss_pct
+TOTAL,2941,1361,1409,171,2849.0,0,96.9
+Unmapped,1239,770,469,0,1219.3,0,98.4
+Custom Charts,549,88,438,23,533.0,0,97.1
+Avengers,334,305,29,0,333.4,0,99.8
+Kraken,194,42,90,62,172.7,0,89.0
+All Structure,165,28,137,0,163.2,0,98.9
+AlphaServe Cloud,127,26,90,11,121.6,0,95.7
+Kenobi Mongoose Visualizations,97,24,57,16,90.9,0,93.7
+"Kenobi, Mongoose, Visualizations",81,17,58,6,78.4,0,96.8
+Brazil / eCore,67,6,11,50,50.6,0,75.5
+"Vanguard, The Rejects, Insights",34,28,4,2,33.2,0,97.6
+AlphaServe DC,24,0,23,1,22.7,0,94.6
+X-Men,14,14,0,0,14.0,0,100.0
+Dev,12,12,0,0,12.0,0,100.0
+Structure DC,3,0,3,0,3.0,0,100.0
+TBA,1,1,0,0,1.0,0,100.0
+
+## X16 SLA at-risk issues
+,issue_key,risk_level,category,age_days,sla_days,days_to_sla,p_miss_sla,risk_band,stratum,stratum_events,Project,Team,repository
+0,cc-terraform|CI/CD Security:Branch protection rules are not enforced on administrators/custom roles.||nan,critical,CI/CD Security,2.3,3,0.7,1.0,High,critical / CI/CD Security,1136,Custom Charts,Custom Charts,tempo-io/cc-terraform
+1,cc-terraform|CI/CD Security:Uncertified CI/CD modules are allowed to run||nan,critical,CI/CD Security,2.3,3,0.7,1.0,High,critical / CI/CD Security,1136,Custom Charts,Custom Charts,tempo-io/cc-terraform
+2,pfm_flux|CI/CD Security:Uncertified CI/CD modules are allowed to run||nan,critical,CI/CD Security,2.3,3,0.7,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_flux
+3,pfm_terraform|CI/CD Security:Branch protection rules are not enforced on administrators/custom roles.||nan,critical,CI/CD Security,2.3,3,0.7,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+4,pfm_terraform|CI/CD Security:Uncertified CI/CD modules are allowed to run||nan,critical,CI/CD Security,2.3,3,0.7,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+5,pfm_flux|CI/CD Security:GitHub workflows use uncertified CI/CD modules|/tempo-io/pfm_flux/.github/workflows/flux-local.yamlflux-local.yaml|137.0,critical,CI/CD Security,2.2,3,0.8,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_flux
+6,pfm_flux|CI/CD Security:GitHub workflows use uncertified CI/CD modules|/tempo-io/pfm_flux/.github/workflows/flux-local.yamlflux-local.yaml|170.0,critical,CI/CD Security,2.2,3,0.8,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_flux
+7,pfm_flux|CI/CD Security:GitHub workflows use uncertified CI/CD modules|/tempo-io/pfm_flux/.github/workflows/flux-local.yamlflux-local.yaml|25.0,critical,CI/CD Security,2.2,3,0.8,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_flux
+8,pfm_terraform|CI/CD Security:GitHub workflows use uncertified CI/CD modules|/tempo-io/pfm_terraform/.github/workflows/run_terraform.ymlrun_terraform.yml|58.0,critical,CI/CD Security,2.2,3,0.8,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+9,pfm_flux|CI/CD Security:Branch protection rules are not enforced on administrators/custom roles.||nan,critical,CI/CD Security,2.1,3,0.9,1.0,High,critical / CI/CD Security,1136,Portfolio Manager,Kraken,tempo-io/pfm_flux
+10,cc-terraform|6e0f3165efb686df9bfe2caf3c1b1124633237a53a9543ffe1f0fb3f1c89cf41,critical,SecretDetection,2.3,3,0.7,0.999,High,critical,1209,Custom Charts,Custom Charts,tempo-io/cc-terraform
+11,pfm_terraform|1705e66d5dec2d75b9eef4c3acd9249ea6f2cb0be3f6859e900386cfb4721a14,critical,SecretDetection,2.3,3,0.7,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+12,pfm_terraform|2f21455e587c7698cd0019f87c66c6a64a3bdd68d7e47b98a4dfb7476455750f,critical,SecretDetection,2.3,3,0.7,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+13,cc-terraform|IaC:AWS EKS Cluster Public Endpoint Has Extensive Access|/tempo-io/cc-terraform/bootstrap/module/cluster/aws_eks.tfbootstrapmodule/cluster/aws_eks.tf|7.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Custom Charts,Custom Charts,tempo-io/cc-terraform
+14,pfm_terraform|IaC:AWS EKS Cluster Public Endpoint Has Extensive Access|/tempo-io/pfm_terraform/modules/rl/eks_cluster/main.tfmodulesrl/eks_cluster/main.tf|15.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+15,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/modules/lpx/nagios/main.tfmoduleslpx/nagios/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+16,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/modules/lpx/vpc/bastion.tfmoduleslpx/vpc/bastion.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+17,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/modules/lpx/web/alb.tfmoduleslpx/web/alb.tf|111.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+18,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/modules/lpx/web/api.tfmoduleslpx/web/api.tf|48.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+19,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/modules/lpx/web/main.tfmoduleslpx/web/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+20,pfm_terraform|IaC:AWS Security Group Has Unidentified Port Exposed To Internet|/tempo-io/pfm_terraform/prod-lpx/staging.tfprod-lpxstaging.tf|221.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+21,pfm_terraform|IaC:Detected AWS S3 Bucket without Public Access Restriction|/tempo-io/pfm_terraform/modules/lpx/s3_files/main.tfmoduleslpx/s3_files/main.tf|124.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+22,pfm_terraform|IaC:Detected AWS S3 Bucket without Public Access Restriction|/tempo-io/pfm_terraform/modules/lpx/s3_files/replication.tfmoduleslpx/s3_files/replication.tf|109.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+23,pfm_terraform|IaC:Detected AWS S3 Bucket without Public Access Restriction|/tempo-io/pfm_terraform/modules/rl/cloudfront_rl_environment/s3-static.tfmodulesrl/cloudfront_rl_environment/s3-static.tf|71.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+24,pfm_terraform|IaC:Detected AWS S3 Bucket without Public Access Restriction|/tempo-io/pfm_terraform/modules/rl/eks_rl_environment/s3.tfmodulesrl/eks_rl_environment/s3.tf|68.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+25,pfm_terraform|IaC:Excessive Use of Kubernetes Cluster Admin Role Detected|/tempo-io/pfm_terraform/modules/rl/eks_cluster/iam-sso.tfmodulesrl/eks_cluster/iam-sso.tf|19.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+26,pfm_terraform|IaC:HTTP Port Open in AWS Security Group|/tempo-io/pfm_terraform/modules/lpx/nagios/main.tfmoduleslpx/nagios/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+27,pfm_terraform|IaC:HTTP Port Open in AWS Security Group|/tempo-io/pfm_terraform/modules/lpx/web/alb.tfmoduleslpx/web/alb.tf|111.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+28,pfm_terraform|IaC:HTTP Port Open in AWS Security Group|/tempo-io/pfm_terraform/modules/lpx/web/api.tfmoduleslpx/web/api.tf|48.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+29,pfm_terraform|IaC:HTTP Port Open in AWS Security Group|/tempo-io/pfm_terraform/modules/lpx/web/main.tfmoduleslpx/web/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+30,pfm_terraform|IaC:HTTP Port Open in AWS Security Group|/tempo-io/pfm_terraform/prod-lpx/staging.tfprod-lpxstaging.tf|221.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+31,pfm_terraform|IaC:Public Policy Configuration Missing or Misconfigured for AWS S3 Bucket|/tempo-io/pfm_terraform/modules/rl/cloudfront_rl_environment/s3-static.tfmodulesrl/cloudfront_rl_environment/s3-static.tf|69.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+32,pfm_terraform|IaC:S3 Bucket ACL Grants Public Read or Write Permissions|/tempo-io/pfm_terraform/modules/rl/cloudfront_rl_environment/s3-static.tfmodulesrl/cloudfront_rl_environment/s3-static.tf|19.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+33,pfm_terraform|IaC:S3 Bucket ACL Grants Public Read or Write Permissions|/tempo-io/pfm_terraform/prod-lpn/main.tfprod-lpnmain.tf|112.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+34,pfm_terraform|IaC:S3 Bucket Without Restriction of Public Access Detected|/tempo-io/pfm_terraform/modules/lpx/s3_files/main.tfmoduleslpx/s3_files/main.tf|124.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+35,pfm_terraform|IaC:S3 Bucket Without Restriction of Public Access Detected|/tempo-io/pfm_terraform/modules/lpx/s3_files/replication.tfmoduleslpx/s3_files/replication.tf|109.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+36,pfm_terraform|IaC:S3 Bucket Without Restriction of Public Access Detected|/tempo-io/pfm_terraform/modules/rl/cloudfront_rl_environment/s3-static.tfmodulesrl/cloudfront_rl_environment/s3-static.tf|71.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+37,pfm_terraform|IaC:S3 Bucket Without Restriction of Public Access Detected|/tempo-io/pfm_terraform/modules/rl/eks_rl_environment/s3.tfmodulesrl/eks_rl_environment/s3.tf|68.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+38,pfm_terraform|IaC:Specific user should be defined|/tempo-io/pfm_terraform/Dockerfile.productionDockerfile.production|1.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+39,pfm_terraform|IaC:Specific user should be defined|/tempo-io/pfm_terraform/DockerfileDockerfile|1.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+40,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/modules/lpx/nagios/main.tfmoduleslpx/nagios/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+41,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/modules/lpx/vpc/bastion.tfmoduleslpx/vpc/bastion.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+42,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/modules/lpx/web/alb.tfmoduleslpx/web/alb.tf|111.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+43,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/modules/lpx/web/api.tfmoduleslpx/web/api.tf|48.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+44,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/modules/lpx/web/main.tfmoduleslpx/web/main.tf|56.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+45,pfm_terraform|IaC:Unrestricted AWS Security Group Ingress Detected|/tempo-io/pfm_terraform/prod-lpx/staging.tfprod-lpxstaging.tf|221.0,critical,IaC,2.2,3,0.8,0.999,High,critical,1209,Portfolio Manager,Kraken,tempo-io/pfm_terraform
+46,cc-flux|IaC:Secrets Detected as Environment Variables in Kubernetes Containers|/tempo-io/cc-flux/apps/base/cc-oncall-dashboard/cc-oncall-dashboard/deployment.yamlappsbase/cc-oncall-dashboard/cc-oncall-dashboard/deployment.yaml|54.0,critical,IaC,1.1,3,1.9,0.997,High,critical,1209,Custom Charts,Custom Charts,tempo-io/cc-flux
+47,tj-infrastructure|SAST:Unsanitized user input in file path (Python)|/tempo-io/tj-infrastructure/.agents/scripts/ci-build-burst-analyze.pyci-build-burst-analyze.py|15.0,high,SAST,12.3,14,1.7,0.993,High,high / SAST,75,Tempo for Jira,Avengers,tempo-io/tj-infrastructure
+48,cl-bi-connectors|SAST:Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript)|/tempo-io/cl-bi-connectors/connect-app/src/shared/hooks/useProgressiveImg.tsuseProgressiveImg.ts|16.0,high,SAST,9.3,14,4.7,0.993,High,high / SAST,75,Alpha Serve,AlphaServe Cloud,tempo-io/cl-bi-connectors
+49,cl-bi-connectors|SAST:Unsanitized user input in dynamic HTML insertion (XSS) (JavaScript)|/tempo-io/cl-bi-connectors/web-app/src/shared/hooks/useProgressiveImg.tsuseProgressiveImg.ts|16.0,high,SAST,9.3,14,4.7,0.993,High,high / SAST,75,Alpha Serve,AlphaServe Cloud,tempo-io/cl-bi-connectors
+
+## X8 triage activity
+week_start,detection_changes,automated,config_changes,human_changes,automation_share_pct
+2026-08-10,0,0,51,0,
+2026-08-17,3,0,2,3,0.0
+2026-08-24,2007,0,4,2007,0.0
+2026-08-31,20034,90,179,19944,0.4
+2026-09-07,7334,0,358,7334,0.0
+2026-09-14,1823,0,86322,1823,0.0
+2026-09-21,4593,0,5051,4593,0.0
+2026-09-28,1298,22,4161,1276,1.7
+2026-10-05,2066,1,5316,2065,0.0
+2026-10-12,1880,10,22364,1870,0.5
+2026-10-19,50362,1,6573,50361,0.0
+2026-10-26,15999,0,21289,15999,0.0
+
