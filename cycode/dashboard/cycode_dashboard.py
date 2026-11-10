@@ -191,27 +191,27 @@ def show_popup(insights: list[str]):
     st.caption("Most important first. The full list is under the title on the page.")
     for insight in insights:
         st.markdown(f"- {insight}")
-    render_next_steps("popup")
+    # render_next_steps("popup")
     if st.button("Close", key="insights_close"):
         st.rerun()
 
 
-def render_next_steps(key: str) -> None:
-    """
-    'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
-    playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
-    kept in session state), and sends only aggregate numbers and group names.
-    """
-    state_key = f"next_steps_{source}_{dimension}"
-    st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
-    if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
-        with st.spinner("Working out next steps..."):
-            st.session_state[state_key] = recommend_next_steps(
-                anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
-    result = st.session_state.get(state_key)
-    if result:
-        st.markdown(result["text"])
-        st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
+# def render_next_steps(key: str) -> None:
+#     """
+#     'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
+#     playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
+#     kept in session state), and sends only aggregate numbers and group names.
+#     """
+#     state_key = f"next_steps_{source}_{dimension}"
+#     st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
+#     if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
+#         with st.spinner("Working out next steps..."):
+#             st.session_state[state_key] = recommend_next_steps(
+#                 anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
+#     result = st.session_state.get(state_key)
+#     if result:
+#         st.markdown(result["text"])
+#         st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
 
 st.title("Cycode Security Metrics Dashboard")
 st.caption(f"Report: {source}  |  Grouped by {dimension}  |  Cycode is the source of truth for resolution")
@@ -341,7 +341,7 @@ if anomalies or insight_lines:
             st.markdown(f"- {line}")
         st.caption(f"Compared with {previous_label}. Thresholds are placeholders (ANOMALY_RULES in cycode_pipeline.py)."
                    if previous_label else "No earlier report to compare with.")
-        render_next_steps("page")
+        # render_next_steps("page")
     _popup_key = f"insights_popup_{source}_{dimension}"
     if st.sidebar.button("Show insights popup", key="insights_button") or (
             _needs_attention and not st.session_state.get(_popup_key)):
