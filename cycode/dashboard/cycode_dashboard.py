@@ -339,7 +339,7 @@ if anomalies or insight_lines:
     with st.expander(f"What changed or looks unusual ({len(anomalies)})", expanded=bool(_needs_attention)):
         for line in insight_lines:
             st.markdown(f"- {line}")
-        st.caption(f"Compared with {previous_label}. Thresholds are placeholders (ANOMALY_RULES in cycode_pipeline.py)."
+        st.caption(f"Compared with {previous_label}."
                    if previous_label else "No earlier report to compare with.")
         # render_next_steps("page")
     _popup_key = f"insights_popup_{source}_{dimension}"
@@ -381,7 +381,7 @@ if HIDE_UNMAPPED and not _has_unmapped:
 
 tabs = st.tabs([
     "Scorecard", "Backlog (M1)", "Remediation (M3)", "Noise (M4)", "Age (M5)",
-    "AI & cost (M6, M8)", "Coverage (M7)", "Posture (M9)", "Extras (X)", "Caveats", "Flow & SLA",
+    "AI & cost (M6, M8)", "Coverage (M7)", "Posture (M9)", "Extras (X)", "Flow & SLA",
 ])
 
 # ----------------------------------------------------------------------------
@@ -606,25 +606,9 @@ with tabs[8]:
         st.caption("Automation share reads 0% until audit actor IDs are mapped to service accounts.")
 
 # ----------------------------------------------------------------------------
-# Caveats
-# ----------------------------------------------------------------------------
-with tabs[9]:
-    st.subheader("Data caveats and metric status")
-    notes = frames.get("Notes")
-    if notes is not None:
-        for line in notes.iloc[:, 0].dropna():
-            st.markdown(f"- {line}")
-    st.markdown("**Metric status in this report**")
-    st.table(pd.DataFrame(
-        [{"Metric": m, "Status": status_badge(frames, m)} for m in
-         ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9"]]
-    ))
-    st.markdown("- M2 (backlog trend) needs a previous snapshot, so it is not charted yet.")
-
-# ----------------------------------------------------------------------------
 # Flow & SLA (X14-X16)
 # ----------------------------------------------------------------------------
-with tabs[10]:
+with tabs[9]:
     st.subheader("Issues opened vs resolved per day")
     flow = frames.get("X14 daily flow by Project" if dimension == "Project" else "X14 daily flow")
     flow_all = frames.get("X14 daily flow")
