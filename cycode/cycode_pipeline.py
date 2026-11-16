@@ -16,21 +16,18 @@ import re
 import sys
 import traceback
 import warnings
-from pathlib import Path
-
 import pandas as pd
 import numpy as np
-
-_ROOT_DIR = Path(__file__).resolve().parents[1]
-if str(_ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(_ROOT_DIR))
-
+# scikit-learn is imported lazily inside the ML functions (the deployed dashboard does not install it).
 NaN = float("nan")
+from pathlib import Path
 
-try:
-    from .merge_api_closing_times import *
-except ImportError:  # pragma: no cover - support direct script execution
-    from merge_api_closing_times import *
+# Sibling modules (vuln_intelligence_pipeline, merge_api_closing_times, …) live in this
+# directory. When imported as `cycode.cycode_pipeline` from the project root, only the
+# parent is on sys.path, so put this folder first.
+_CYCODE_DIR = Path(__file__).resolve().parent
+if str(_CYCODE_DIR) not in sys.path:
+    sys.path.insert(0, str(_CYCODE_DIR))
 
 # This batch script only needs Stage 1. Importing app.py would execute the
 # Streamlit application in bare Python and emit missing ScriptRunContext warnings.
@@ -91,6 +88,10 @@ def load_violations(path: str | Path, snapshot_ts: str) -> pd.DataFrame:
         # export has neither. They let M3/M8 classify a closing without the audit log.
         row["status_reason"] = raw.get("Status Reason")
         row["status_updated_by_id"] = raw.get("Status Updated By Id")
+        # Container / cloud / web findings have no repository; these identify the asset (see add_asset_key).
+        row["container_repository"] = raw.get("Container repository")
+        row["location"] = raw.get("Location")
+        row["resource_name"] = raw.get("Resource Name")
         rows.append(row)
     return pd.DataFrame(rows)
 
@@ -103,7 +104,7 @@ _IDENTITY_COLUMNS = [
 _EXPECTED_STATUS = {"open": {"open"}, "closed": {"resolved", "dismissed"}}
 
 def load_all_violations(
-    paths: dict[str, str | Path], snapshot_ts: str, ui_path: str | Path, api_path: str | Path
+    paths: dict[str, str | Path], snapshot_ts: str
 ) -> pd.DataFrame:
     """
     Load several Cycode violations exports and concatenate them into one frame.
@@ -123,24 +124,22 @@ def load_all_violations(
         is not "open" (a closed copy is the later state); a warning says how
         many rows were dropped.
     The caller then applies the usual add_triage_and_age / mapping steps.
+
+    API closing times belong in the closed UI export itself (see
+    merge_api_closing_times.py), not in a second path argument here.
     """
     frames = []
     for label, path in paths.items():
-        if label == "closed":
-            ui = load_violations(ui_path, snapshot_ts)
-            api = load_violations(api_path, snapshot_ts)
-            frame = merge(ui, api)
-        else:
-            frame = load_violations(path, snapshot_ts)
-            frame["export_source"] = label
-            expected = _EXPECTED_STATUS.get(label)
-            if expected is not None and not frame.empty:
-                seen = set(frame["status_raw"].dropna().astype(str).str.lower())
-                unexpected = seen - expected
-                if unexpected:
-                    warnings.warn(
-                        f"export '{label}' contains unexpected statuses {sorted(unexpected)}"
-                    )
+        frame = load_violations(path, snapshot_ts)
+        frame["export_source"] = label
+        expected = _EXPECTED_STATUS.get(label)
+        if expected is not None and not frame.empty:
+            seen = set(frame["status_raw"].dropna().astype(str).str.lower())
+            unexpected = seen - expected
+            if unexpected:
+                warnings.warn(
+                    f"export '{label}' contains unexpected statuses {sorted(unexpected)}"
+                )
         frames.append(frame)
     combined = pd.concat(frames, ignore_index=True, sort=False)
 
@@ -362,7 +361,16 @@ def audit_coverage_warnings(violations_df: pd.DataFrame, events_df: pd.DataFrame
             "Re-fetch the audit log from the first scan date to today."
         )
     if other:
-        out.append(f"{other:,} other Resolved findings have no matching audit event (excluded from M3 and M8).")
+        no_time = int(unlinked["resolved_at"].isna().sum()) if "resolved_at" in unlinked.columns else 0
+        no_reason = other - no_time if other >= no_time else other
+        parts = []
+        if no_time:
+            parts.append(f"{no_time:,} have neither a closing time nor a Status Reason in the export, so they cannot be "
+                         "classified as fixed or timed (re-export with Status Reason and Last Status Change populated)")
+        if no_reason > 0:
+            parts.append(f"{no_reason:,} have a closing time but no resolution reason, so they are not counted as fixes")
+        out.append(f"{other:,} other Resolved findings are excluded from M3 and M8: " + "; ".join(parts)
+                   + ". The audit log is only a fallback; the export's own Status Reason is used first.")
     return out
 
 
@@ -513,10 +521,96 @@ def _cached_map(path: Path) -> pd.DataFrame:
     return _PRODUCT_MAP_CACHE[stamp]
 
 
+ASSET_MAP_PATH = PRODUCT_MAP_PATH.parent / "asset_map.csv"
+_ASSET_MAP_CACHE: dict = {}
+
+
+def _blank(series: pd.Series) -> pd.Series:
+    text = series.astype(str).str.strip()
+    return series.isna() | text.isin(["", "-", "nan", "None", "<NA>"])
+
+
+def add_asset_key(frame: pd.DataFrame) -> pd.DataFrame:
+    """
+    asset_key for findings that have NO repository (container images, Kubernetes/AWS
+    resources, CI/CD, bug bounty, DAST, SCA with no source): the product map is keyed by
+    repository so it cannot place them. Keys (lower-cased on lookup):
+      container:<container repository>      Container Security, secrets inside images
+      k8s:<cluster>/<namespace>             Cloud Security / secrets in Kubernetes
+      aws:<account id>                      other Cloud Security
+      github-org                            CI/CD Security, Data Security
+      web:<host>                            Bug Bounty, DAST
+      sca-no-repository                     SCA rows whose export has no repository at all
+    Rows that do have a repository get an empty key. Map the keys in asset_map.csv.
+    """
+    out = frame.copy()
+    n = len(out)
+
+    def col(name):
+        return out[name] if name in out.columns else pd.Series(pd.NA, index=out.index)
+
+    no_repo = _blank(col(_repository_column(out)) if any(c in out.columns for c in ("repository", "Repository")) else pd.Series(pd.NA, index=out.index))
+    category = out["violation_category"].astype(str) if "violation_category" in out.columns else pd.Series("", index=out.index)
+    container, location, resource = col("container_repository"), col("location"), col("resource_name")
+    cluster_ns = resource.astype(str).str.extract(r"^(\d+/[^/]+)/", expand=False)
+    host = resource.astype(str).str.replace(r"^https?://", "", regex=True).str.split("/").str[0].str.replace("*", "", regex=False)
+
+    key = pd.Series("", index=out.index, dtype="object")
+    has_container = ~_blank(container)
+    key[has_container] = "container:" + container[has_container].astype(str).str.strip()
+    ns_rows = ~has_container & cluster_ns.notna()
+    key[ns_rows] = "k8s:" + cluster_ns[ns_rows]
+    loc_rows = (key == "") & category.isin(["Cloud Security", "SecretDetection"]) & ~_blank(location)
+    key[loc_rows] = "aws:" + location[loc_rows].astype(str).str.strip()
+    key[(key == "") & category.isin(["CI/CD Security", "Data Security"])] = "github-org"
+    web = (key == "") & category.isin(["Bug Bounty", "DAST"]) & ~_blank(resource)
+    key[web] = "web:" + host[web].str.strip()
+    key[(key == "") & category.eq("SCA")] = "sca-no-repository"
+    key[(key == "")] = "unknown:" + category[(key == "")]
+    out["asset_key"] = key.where(no_repo, "")
+    return out
+
+
+def _read_asset_map(path: Path) -> pd.DataFrame:
+    """
+    Read asset_map.csv tolerantly. Spreadsheet edits can leave a row with extra trailing
+    commas (more fields than the header), which makes pandas.read_csv fail; extra empty
+    fields are dropped and short rows are padded, so one bad row never stops the report.
+    """
+    import csv
+    with open(path, newline="", encoding="utf-8-sig") as fh:
+        rows = list(csv.reader(fh))
+    if not rows:
+        return pd.DataFrame(columns=["asset_key", "product_line", "team"])
+    header = [h.strip() for h in rows[0]]
+    body = [(r + [""] * len(header))[:len(header)] for r in rows[1:] if any(x.strip() for x in r)]
+    return pd.DataFrame(body, columns=header, dtype=str).fillna("")
+
+
+def _asset_lookup(column: str) -> dict:
+    """asset_key (lower) -> product_line (column 'Project') or team ('Team'), blanks ignored."""
+    if not ASSET_MAP_PATH.exists():
+        return {}
+    stamp = (str(ASSET_MAP_PATH), ASSET_MAP_PATH.stat().st_mtime_ns)
+    if stamp not in _ASSET_MAP_CACHE:
+        _ASSET_MAP_CACHE.clear()
+        _ASSET_MAP_CACHE[stamp] = _read_asset_map(ASSET_MAP_PATH)
+    frame = _ASSET_MAP_CACHE[stamp]
+    value = "product_line" if column == "Project" else "team"
+    frame = frame[frame["asset_key"].str.strip().ne("") & frame[value].str.strip().ne("")]
+    return dict(zip(frame["asset_key"].str.strip().str.lower(), frame[value].str.strip()))
+
+
 def _assign_lookup(frame: pd.DataFrame, column: str, lookup: dict[str, str]) -> pd.DataFrame:
     out = frame.copy()
     slugs = out[_repository_column(out)].map(_repo_slug)
-    out[column] = slugs.map(lambda slug: lookup.get(str(slug).lower()) if slug else None).fillna(UNMAPPED)
+    mapped = slugs.map(lambda slug: lookup.get(str(slug).lower()) if slug else None)
+    if "asset_key" in out.columns:
+        # repository-less findings fall back to asset_map.csv
+        assets = _asset_lookup(column)
+        by_asset = out["asset_key"].map(lambda k: assets.get(str(k).lower()) if isinstance(k, str) and k else None)
+        mapped = mapped.where(~_blank(slugs), by_asset)
+    out[column] = mapped.fillna(UNMAPPED)
     return out
 
 
@@ -531,9 +625,48 @@ def map_repository_to_team(violations_df: pd.DataFrame, product_map: pd.DataFram
 
 
 def unmapped_repositories(violations_df: pd.DataFrame) -> pd.Series:
-    """Repos with findings that have no product line yet, with their row counts (largest first)."""
+    """
+    Repos (or, for findings with no repository, asset keys) that still have no product line,
+    with their row counts, largest first. Needs add_asset_key() for the repository-less ones.
+    """
     slugs = violations_df[_repository_column(violations_df)].map(_repo_slug)
-    return slugs[violations_df["Project"].eq(UNMAPPED)].value_counts()
+    label = slugs
+    if "asset_key" in violations_df.columns:
+        label = slugs.where(~_blank(slugs), violations_df["asset_key"].replace("", pd.NA))
+    return label[violations_df["Project"].eq(UNMAPPED)].value_counts()
+
+def write_asset_worksheet(all_df: pd.DataFrame, product_map: pd.DataFrame | None = None, path: str | Path | None = None) -> pd.DataFrame:
+    """
+    Create or extend asset_map.csv: one row per asset_key among repository-less findings
+    (asset_key, category, findings, open_findings, product_line, team, suggested_product_line,
+    suggested_team, notes). Your product_line/team/notes are kept on re-runs. The suggestions are
+    only exact name matches with a repo in the product map (container repo "roadmapping" =
+    repo roadmapping) and are NOT applied: copy them into product_line/team once confirmed.
+    Rows with a blank product_line stay Unmapped.
+    """
+    path = Path(path) if path else ASSET_MAP_PATH
+    keyed = add_asset_key(all_df)
+    keyed = keyed[keyed["asset_key"].ne("")]
+    status = keyed["status_raw"].astype(str).str.lower()
+    table = keyed.assign(_open=status.eq("open")).groupby("asset_key").agg(
+        category=("violation_category", lambda s: s.mode().iat[0]), findings=("asset_key", "size"),
+        open_findings=("_open", "sum")).reset_index()
+    repos = _lookups(product_map)[0] if product_map is not None else _lookups()[0]
+    teams = _lookups(product_map)[1] if product_map is not None else _lookups()[1]
+    name = table["asset_key"].str.split(":", n=1).str[-1].str.split("/").str[-1].str.lower()
+    table["product_line"] = ""
+    table["team"] = ""
+    table["suggested_product_line"] = name.map(repos).fillna("")
+    table["suggested_team"] = name.map(teams).fillna("")
+    table["notes"] = ""
+    if path.exists():
+        old = _read_asset_map(path).set_index("asset_key")
+        for column in ("product_line", "team", "notes"):
+            kept = table["asset_key"].map(old[column]) if column in old.columns else pd.Series(pd.NA, index=table.index)
+            table[column] = kept.where(kept.notna() & kept.ne(""), table[column])
+    table = table.sort_values("open_findings", ascending=False)
+    table.to_csv(path, index=False)
+    return table
 
 def _column(frame: pd.DataFrame, *names: str) -> str:
     for name in names:
@@ -551,7 +684,7 @@ TIER_ORDER = ["Actionable", "Review", "Noise"]
 
 # Thresholds (document these on the executive page).
 ACTIONABLE_MIN_SCORE = 70
-NOISE_MAX_SCORE = 25
+NOISE_MAX_SCORE = 10
 
 # Suggestions for NEW repos only. Labels (set in Cycode) are the stronger signal;
 # repo-name prefixes are the fallback. A suggestion never changes product_line by
@@ -1241,7 +1374,14 @@ def _dimension_series(frame: pd.DataFrame, dimension: str) -> pd.Series | None:
     if column not in frame.columns:
         return None
     values = frame[column]
-    return values.map(_repo_slug) if dimension == "Repository" else values
+    if dimension != "Repository":
+        return values
+    slugs = values.map(_repo_slug)
+    if "asset_key" in frame.columns:
+        # repository-less findings (containers, cloud, ...) are grouped by their asset, so the
+        # Repository view covers every finding and totals match Project and Team
+        slugs = slugs.where(~_blank(slugs), frame["asset_key"].replace("", pd.NA))
+    return slugs
 
 def metric_noise_reduction(
     violations_df: pd.DataFrame,
@@ -1621,9 +1761,16 @@ def _avg_per_period(closing_times: pd.Series, freq: str) -> float:
     span = pd.period_range(periods.min(), periods.max())
     return float(counts.reindex(span, fill_value=0).mean())
 
+def _n_periods(closing_times: pd.Series, freq: str) -> int:
+    """Number of calendar periods from the first to the last closing (the span _avg_per_period averages over)."""
+    periods = closing_times.dt.tz_convert("UTC").dt.tz_localize(None).dt.to_period(freq)
+    return len(pd.period_range(periods.min(), periods.max()))
+
+
 def metric_remediations_vs_ai_cost(
     resolved_df: pd.DataFrame,
     annual_ai_cost: float = AI_COST_PLACEHOLDER_USD,
+    include_unclassified: bool = True,
 ) -> pd.DataFrame:
     """
     M8. Average remediations per week / month / quarter vs. AI cost.
@@ -1646,6 +1793,11 @@ def metric_remediations_vs_ai_cost(
     driver; agree on a real one (triage volume, AI actions per product) before
     comparing groups. Splitting by remediations would make every group's
     ratio identical, so that is deliberately not used.
+    include_unclassified (default True): Resolved issues with NO resolution reason (and usually no
+    closing time) are counted as remediations too, spread evenly over the periods of the platform
+    window because they have no date of their own. They may include removals rather than fixes, so
+    the count is an upper bound: the column unclassified_resolved shows how many were added, and
+    False gives the strict Fixed-only figures.
     Data: PARTIAL until the real AI spend is known (see AI_COST_PLACEHOLDER_USD).
     Note: the qmd asks for "AI cost as a percentage"; confirm the denominator.
     """
@@ -1664,8 +1816,15 @@ def metric_remediations_vs_ai_cost(
     if fixes.empty:
         return pd.DataFrame()
 
+    # Resolved issues with no reason (and so no usable closing time): an issue that also has a Fixed row is already in `fixes`.
+    keyed = resolved_df if "issue_key" in resolved_df.columns else add_issue_key(resolved_df)
+    unclass = keyed[keyed["status_raw"].astype(str).str.lower().eq("resolved") & keyed["resolution_reason"].isna()
+                    & ~keyed["issue_key"].isin(fixes["issue_key"])].drop_duplicates("issue_key")
+    n_periods = {period: _n_periods(fixes["resolved_at"], freq) for period, (freq, _) in _COST_PERIODS.items()}
+    extra = (lambda n, period: n / n_periods[period]) if include_unclassified else (lambda n, period: 0.0)
+
     platform_avg = {
-        period: _avg_per_period(fixes["resolved_at"], freq)
+        period: _avg_per_period(fixes["resolved_at"], freq) + extra(len(unclass), period)
         for period, (freq, _) in _COST_PERIODS.items()
     }
 
@@ -1677,12 +1836,15 @@ def metric_remediations_vs_ai_cost(
         weights = reduced_resolved_df.groupby(key, dropna=True).size()
         shares = weights / weights.sum()
         fix_key = _dimension_series(fixes, dim)
+        unclass_key = _dimension_series(unclass, dim)
         for group, share in shares.items():
             group_fixes = fixes[fix_key == group]
+            group_unclass = int((unclass_key == group).sum()) if unclass_key is not None else 0
             for period, (freq, per_year) in _COST_PERIODS.items():
                 platform_cost = annual_ai_cost / per_year
                 cost = platform_cost * share
-                avg = _avg_per_period(group_fixes["resolved_at"], freq) if len(group_fixes) else 0.0
+                avg = (_avg_per_period(group_fixes["resolved_at"], freq) if len(group_fixes) else 0.0) \
+                    + extra(group_unclass, period)
                 rows.append({
                     "snapshot_date": snapshot,
                     "metric": "remediations_vs_ai_cost",
@@ -1691,13 +1853,16 @@ def metric_remediations_vs_ai_cost(
                     "period": period,
                     "cost": cost,
                     "cost_share_pct": round(100 * share, 2),
-                    "remediations": int(len(group_fixes)),
+                    "remediations": int(len(group_fixes)) + (group_unclass if include_unclassified else 0),
+                    "unclassified_resolved": group_unclass,
                     "avg_remediations": avg,
                     "cost_per_remediation": cost / avg if avg > 0 else float("nan"),
                     "general_cost_per_remediation": platform_cost / platform_avg[period],
                     "n": int(weights[group]),
                     "status": "PARTIAL",
-                    "note": f"AI cost is a {annual_ai_cost:,.0f}/year placeholder split by findings volume",
+                    "note": f"AI cost is a {annual_ai_cost:,.0f}/year placeholder split by findings volume"
+                            + ("; remediations include Resolved issues with no reason, spread evenly over the periods"
+                               if include_unclassified else ""),
                 })
     return pd.DataFrame(rows)
 
@@ -1808,7 +1973,7 @@ SUMMARY_FOOTNOTES = [
     "M5: per distinct actionable issue; age counts from first Cycode scan (initial scan 26-Aug); SLA days are placeholders.",
     "M6: AI-verified share is secrets only (row and issue versions in the M6 detail); auto-triage/reachability are org-level and blank until actor IDs are mapped.",
     "M7: Project view only. 100% = every repo Cycode scans is in product_map.csv; mapped repos Cycode has never reported are listed as not_onboarded_repos.",
-    "M8: remediations = fixed issues; AI cost is a 140,000/year PLACEHOLDER split by distinct-issue volume.",
+    "M8: remediations = fixed issues plus Resolved issues with no reason (spread evenly over the periods; an upper bound); AI cost is a 140,000/year PLACEHOLDER split by distinct-issue volume.",
     "M9: exposure summed per distinct issue; 100 / (1 + exposure per repo / median exposure per repo); 50 = typical group, relative not absolute.",
 ]
 
@@ -1946,12 +2111,49 @@ def compute_all_metrics(
             results[spec["id"]] = blocked(spec, f"error: {exc}")
     return results
 
+def drop_rows_without_repository(violations_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
+    """
+    Remove findings that carry no repository (container images, cloud resources, CI/CD
+    assets and some SCA rows). They cannot be mapped to a product line or team, so they
+    would only show up as "Unmapped" and distort every rate. Returns (kept rows, the
+    removed rows' count by violation category) so the caller can report what was left out.
+    """
+    slug = violations_df[_repository_column(violations_df)].map(_repo_slug)
+    blank = slug.isna() | slug.astype(str).str.strip().str.lower().isin(["", "nan", "none", "n/a", "<na>"])
+    dropped = violations_df.loc[blank, "violation_category"].fillna("(none)").value_counts()
+    return violations_df[~blank].copy(), dropped
+
+
+def find_previous_snapshot_label(parent: Path, date_label: str, target_gap: int = 7, window: tuple = (3, 11)) -> str:
+    """
+    Date label of the export folder to compare with. Exports are not always exactly 7 days
+    apart (05-Nov then 13-Nov), so take the folder with both violation files whose age is
+    nearest to target_gap days within `window`; fall back to exactly 7 days earlier (which
+    may not exist, and then M2 is simply skipped).
+    """
+    current = datetime.strptime(date_label, "%d-%b-%Y")
+    best = None
+    for child in Path(parent).glob("*"):
+        try:
+            when = datetime.strptime(child.name, "%d-%b-%Y")
+        except ValueError:
+            continue
+        gap = (current - when).days
+        files = [child / f"Cycode - All violations - {child.name}.csv",
+                 child / f"Cycode - All violations (closed) - {child.name}.csv"]
+        if window[0] <= gap <= window[1] and all(f.exists() for f in files):
+            if best is None or abs(gap - target_gap) < abs(best[0] - target_gap):
+                best = (gap, child.name)
+    return best[1] if best else (current - timedelta(days=target_gap)).strftime("%d-%b-%Y")
+
+
 def run_report(
     folder: str | Path,
     date_label: str,
     product_map_path: str | Path = "product_map.csv",
     inventory_path: str | Path | None = None,
     out_dir: str | Path = "reports",
+    include_repoless: bool = True,
 ) -> dict:
     """
     End to end: load exports -> link audit -> tier/age -> map -> M1-M9 -> scorecards.
@@ -1964,6 +2166,11 @@ def run_report(
     M1-M9 detail and extras X1-X8 stacked as sections. Each section starts with
     a "## <name>" line, then its header and rows, then a blank line.
     Returns {"metrics", "summaries", "extras"}.
+
+    include_repoless (default True): findings with no repository (containers, Kubernetes/AWS,
+    CI/CD, some SCA) stay in every metric and are placed by asset_map.csv (see add_asset_key
+    / write_asset_worksheet); an asset_key not yet mapped there shows as "Unmapped".
+    False drops them instead, as the older reports did.
     """
     folder, out_dir = Path(folder), Path(out_dir)
     snapshot_ts = datetime.strptime(date_label, "%d-%b-%Y").strftime("%Y-%m-%dT00:00:00Z")
@@ -1973,10 +2180,17 @@ def run_report(
             "closed": str(folder / f"Cycode - All violations (closed) - {date_label}.csv"),
         },
         snapshot_ts,
-        f"{folder} / Cycode - All violations - {date_label}.csv",
-        f"{folder}_api / Cycode - All violations (closed) - {date_label}.csv",
     )
-    previous_date_label = (datetime.strptime(date_label, "%d-%b-%Y") - timedelta(days=7)).strftime("%d-%b-%Y")
+    # Repository-less findings are kept by default and placed through asset_map.csv.
+    no_repo = pd.Series(dtype=int)
+    if not include_repoless:
+        all_df, no_repo = drop_rows_without_repository(all_df)
+    if len(no_repo):
+        warnings.warn(
+            f"{int(no_repo.sum()):,} findings have no repository and are excluded from all metrics "
+            f"({', '.join(f'{k}: {v:,}' for k, v in no_repo.items())})."
+        )
+    previous_date_label = find_previous_snapshot_label(folder.parent, date_label)
     previous_folder = folder.parent / previous_date_label
     previous_snapshot_ts = datetime.strptime(previous_date_label, "%d-%b-%Y").strftime("%Y-%m-%dT00:00:00Z")
     previous_df = None
@@ -1988,9 +2202,9 @@ def run_report(
                     "closed": str(previous_folder / f"Cycode - All violations (closed) - {previous_date_label}.csv"),
                 },
                 previous_snapshot_ts,
-                f"{previous_folder} / Cycode - All violations - {previous_date_label}.csv",
-                f"{previous_folder}_api / Cycode - All violations (closed) - {previous_date_label}.csv",
             )
+            if not include_repoless:
+                previous_df, _ = drop_rows_without_repository(previous_df)
         except FileNotFoundError:
             warnings.warn(f"previous snapshot {previous_date_label} incomplete; M2 will be PARTIAL")
     events_df = load_audit_detection_events(str(folder / f"Cycode - Audit Logs - {date_label}.csv"))
@@ -2014,14 +2228,21 @@ def run_report(
                 f"({', '.join(added[:8])}{'...' if len(added) > 8 else ''}). "
                 f"Set product_line/team (or re-run with suggested values confirmed)."
             )
+    all_df = add_asset_key(all_df)
     all_df = map_repository_to_team(map_repository_to_project(all_df, product_map), product_map)
     if previous_df is not None and not previous_df.empty:
+        previous_df = add_asset_key(previous_df)
         # Same maps so M2 can attribute new/resolved to Project / Team / Repository.
         previous_df = map_repository_to_team(map_repository_to_project(previous_df, product_map), product_map)
+    try:
+        write_asset_worksheet(all_df, product_map)
+    except Exception as exc:  # the worksheet is a convenience; never stop the report
+        warnings.warn(f"asset_map.csv not updated: {exc}")
     unmapped = unmapped_repositories(all_df)
     if len(unmapped):
         warnings.warn(
-            f"{len(unmapped)} repositories still have product_line=Unmapped "
+            f"{len(unmapped)} repositories/assets still have product_line=Unmapped (repos: product_map.csv; "
+            f"findings with no repository: asset_map.csv) "
             f"({', '.join(f'{r} ({n:,} rows)' for r, n in unmapped.head(8).items())}"
             f"{'...' if len(unmapped) > 8 else ''}). Confirm them in the product map."
         )
@@ -2054,13 +2275,30 @@ def run_report(
     except Exception as exc:  # the flow/SLA extras must not stop the report
         warnings.warn(f"X14-X16 failed: {exc}")
     try:
+        bursts = detect_scan_bursts(all_df, "Project")
+        if not bursts.empty:
+            extras["X17 Isolation Forest"] = bursts
+    except ImportError:
+        warnings.warn("X17 skipped: scikit-learn is not installed (pip install scikit-learn)")
+    except Exception as exc:
+        warnings.warn(f"X17 failed: {exc}")
+    try:
         audits_df = load_audits(str(folder / f"Cycode - Audit Logs - {date_label}.csv"), snapshot_ts)
         extras["X8 triage activity"] = summarize_triage_activity(audits_df)
     except Exception as exc:  # audit log shape problems must not stop the report
         warnings.warn(f"X8 failed: {exc}")
+    try:
+        fp_review_candidates = pd.read_csv("~/Documents/CyCode Project/false_positive_analysis/fp_review_candidates.csv").set_index("policy").sort_values("is_false_positive_probability", ascending=False)
+        extras["FP review candidates"] = fp_review_candidates
+    except Exception as exc:  # false positive review candidates shape problems must not stop the report
+        warnings.warn(f"FP review candidates failed: {exc}")
 
     sheets = {f"Scorecard {dim}": (table, True) for dim, table in summaries.items()}
-    sheets["Notes"] = (pd.DataFrame({"Notes": SUMMARY_FOOTNOTES}), False)
+    notes = list(SUMMARY_FOOTNOTES)
+    if len(no_repo):
+        notes.append(f"{int(no_repo.sum()):,} findings with no repository (" + ", ".join(f"{k}: {v:,}" for k, v in no_repo.items())
+                     + ") are excluded from every metric: they cannot be assigned to a product line or team.")
+    sheets["Notes"] = (pd.DataFrame({"Notes": notes}), False)
     # sheets.update({f"{k} detail": (v, False) for k, v in metrics.items()})
     sheets.update({name: (table, True) for name, table in extras.items()})
 
@@ -3299,7 +3537,34 @@ def scan_burst_features(df: pd.DataFrame, dimension: str = "Project") -> pd.Data
                               aggfunc="size", fill_value=0)
     counts["total"] = counts.sum(axis=1)
     counts["high_risk_share"] = work.groupby(["_g", "_wk"])["_hi"].mean()
-    return counts.reset_index().rename(columns={"_g": "group", "_wk": "week"})
+    return counts.rename_axis(columns=None).reset_index().rename(columns={"_g": "group", "_wk": "week"})
+
+
+def detect_scan_bursts(all_df: pd.DataFrame, dimension: str = "Project", contamination: float = 0.05,
+                       min_rows: int = 30) -> pd.DataFrame:
+    """
+    X17. Unusual group-weeks of newly detected findings (Isolation Forest, advisory).
+
+    One row per group and ISO week from scan_burst_features(): findings per category, total
+    and the high/critical share, log-scaled before fitting so one huge week does not hide
+    the rest. Adds anomaly_score (lower = stranger) and is_outlier (about `contamination`
+    of the rows). The first-scan import (26-Aug) will show as an outlier: that is the
+    initial load, not new risk. Needs scikit-learn; returns an empty frame with fewer than
+    `min_rows` group-weeks, because the forest has nothing to compare against.
+    """
+    feats = scan_burst_features(all_df, dimension)
+    if len(feats) < min_rows:
+        return pd.DataFrame()
+    numeric = feats.drop(columns=["group", "week"])
+    counts = [c for c in numeric.columns if c != "high_risk_share"]
+    model_input = numeric.copy()
+    model_input[counts] = np.log1p(model_input[counts])
+    result = generate_isolation_forest(model_input, contamination=contamination)
+    out = feats.copy()
+    out["anomaly_score"] = result["score"].round(4)
+    out["is_outlier"] = result["is_outlier"]
+    out["high_risk_share"] = out["high_risk_share"].round(3)
+    return out.sort_values("anomaly_score").reset_index(drop=True)
 
 
 def display_isolation_forest(result: dict, data: pd.DataFrame, x: str = "total", y: str = "high_risk_share"):
@@ -3617,6 +3882,203 @@ def sla_at_risk_list(scored: pd.DataFrame, limit: int = 50) -> pd.DataFrame:
         return pd.DataFrame()
     live = scored[~scored["risk_band"].isin(["Breached", "Insufficient data"])]
     return live.sort_values(["p_miss_sla", "days_to_sla"], ascending=[False, True]).head(limit).reset_index(drop=True)
+
+# ---------------------------------------------------------------------------
+# False-positive model (logistic regression on text + numeric + categorical)
+# ---------------------------------------------------------------------------
+# What counts as a "false positive" in the export. Status Reason on closed rows is:
+#   FalsePositive (85 rows) | NoReasonSpecified (84k) | ExclusionLogic (75k, a Cycode rule,
+#   not a judgement) | Deprecated | Fixed | SourceRemoved | ChangedInExternalSource ...
+# Only 85 rows say FalsePositive, so the default also counts NoReasonSpecified: a person
+# dismissed it without recording a reason. That is a PROXY (it mixes false positives with
+# accepted risk and bulk clean-ups); say so when presenting the result.
+# ExclusionLogic is excluded from training: open issues have by definition survived the
+# exclusion rules, so learning them would teach the model a case it never sees.
+FP_POSITIVE_REASONS = ("FalsePositive", "NoReasonSpecified", "ExcludeSpecificViolation")
+FP_NEGATIVE_REASONS = ("Fixed",)           # a real fix is the clearest "not a false positive"
+FP_TEXT_FEATURES = 5000
+_FP_CATEGORICAL = ["category", "severity", "risk_level", "ext", "repo"]
+_FP_NUMERIC = ["risk_score", "severity_rank", "path_depth", "non_prod", "test_file", "fix_available",
+               "has_package", "ai_verified", "latest_code", "text_len"]
+_SEVERITY_RANK = {"info": 0, "low": 1, "medium": 2, "high": 3, "critical": 4}
+
+
+def build_fp_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    One feature row per input row (index kept). Detection-time information only:
+    never the status, status reason, closing time or anything derived from them.
+      text         policy + path/package/identifier words + tags, for TfidfVectorizer
+      categorical  category, severity, risk level, file extension, repository (one-hot)
+      numeric      risk score, severity rank, path depth, flags, text length (StandardScaler)
+    """
+    base = build_ml_features(df)
+
+    def col(name):
+        return df[name].fillna("").astype(str) if name in df.columns else pd.Series("", index=df.index)
+
+    # split paths and identifiers into words: "src/utils/http_client.ts" -> "src utils http client ts"
+    split = lambda s: s.str.replace(r"[/\\._:\-]+", " ", regex=True)
+    text = (col("policy") + " " + split(col("file_path")) + " " + split(col("package_name")) + " "
+            + split(col("identifier")) + " " + col("tags")).str.lower()
+    # secret SHAs and commit hashes are unique per finding: pure noise for the vocabulary
+    text = text.str.replace(r"\b[0-9a-f]{16,}\b", " ", regex=True).str.replace(r"\s+", " ", regex=True).str.strip()
+    out = base[_FP_CATEGORICAL[:4]].copy()
+    out["repo"] = base["repo"]
+    out["risk_score"] = base["risk_score"]
+    out["severity_rank"] = base["severity"].map(_SEVERITY_RANK).fillna(-1)
+    for name in ("path_depth", "non_prod", "test_file", "fix_available", "has_package"):
+        out[name] = base[name]
+    out["ai_verified"] = df["tag_ai_verified"].fillna(False).astype(bool).astype(int) if "tag_ai_verified" in df else 0
+    out["latest_code"] = df["tag_latest_code"].fillna(False).astype(bool).astype(int) if "tag_latest_code" in df else 0
+    out["text"] = text
+    out["text_len"] = text.str.len()
+    return out
+
+
+def _fp_labels(all_df: pd.DataFrame, positive_reasons=FP_POSITIVE_REASONS, negative_reasons=FP_NEGATIVE_REASONS) -> pd.DataFrame:
+    """
+    One row per closed ISSUE with is_false_positive (1/0) and its earliest detection time.
+    Positive = Dismissed with a positive reason; negative = Resolved with a negative reason.
+    Issues with both kinds of rows are ambiguous and dropped; other reasons are unlabelled.
+    """
+    df = all_df if "issue_key" in all_df.columns else add_issue_key(all_df)
+    status = df["status_raw"].astype(str).str.lower()
+    reason = df["status_reason"].astype(str) if "status_reason" in df.columns else pd.Series("", index=df.index)
+    pos = status.eq("dismissed") & reason.isin(positive_reasons)
+    neg = status.eq("resolved") & reason.isin(negative_reasons)
+    labelled = df[pos | neg]
+    if labelled.empty:
+        return pd.DataFrame()
+    detected = _to_utc(labelled["detected_at"] if "detected_at" in labelled.columns else labelled["first_detected_at"])
+    work = pd.DataFrame({"issue_key": labelled["issue_key"], "pos": pos[labelled.index], "neg": neg[labelled.index],
+                         "detected_at": detected}, index=labelled.index)
+    agg = work.groupby("issue_key").agg(pos=("pos", "max"), neg=("neg", "max"), detected_at=("detected_at", "min"))
+    agg = agg[agg["pos"] != agg["neg"]]                      # drop issues labelled both ways
+    first = labelled.drop_duplicates("issue_key").set_index("issue_key").loc[agg.index]
+    feats = build_fp_features(first.reset_index(drop=True))
+    feats.index = agg.index
+    feats["is_false_positive"] = agg["pos"].astype(int)
+    feats["detected_at"] = agg["detected_at"]
+    return feats.dropna(subset=["detected_at"]).reset_index()
+
+
+def _make_fp_pipeline(C: float = 1.0):
+    """TF-IDF on the text, StandardScaler on the numbers, one-hot on the categories, then logistic regression."""
+    _sk()
+    from sklearn.compose import ColumnTransformer
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import Pipeline
+    from sklearn.preprocessing import OneHotEncoder, StandardScaler
+    prep = ColumnTransformer([
+        ("text", TfidfVectorizer(max_features=FP_TEXT_FEATURES, ngram_range=(1, 2), min_df=3,
+                                 sublinear_tf=True, strip_accents="unicode"), "text"),
+        ("num", StandardScaler(), _FP_NUMERIC),
+        ("cat", OneHotEncoder(handle_unknown="ignore", min_frequency=20), _FP_CATEGORICAL),
+    ])
+    return Pipeline([("prep", prep),
+                     ("lr", LogisticRegression(C=C, class_weight="balanced", max_iter=2000, random_state=42))])
+
+
+def train_false_positive(all_df: pd.DataFrame, positive_reasons=FP_POSITIVE_REASONS,
+                         negative_reasons=FP_NEGATIVE_REASONS, test_fraction: float = 0.2) -> dict:
+    """
+    Learn which findings are dismissed as false positives, from the open + closed exports
+    (all_df = load_all_violations(...) after add_resolution_columns, one row per finding).
+
+    Training rows are closed ISSUES (repeats collapsed, see _fp_labels). The split is by
+    TIME: the newest 20% of issues are held out, so the metrics answer "would this have
+    worked on the next batch of findings?". The flag threshold is the lowest probability
+    whose held-out precision is >= ML_MIN_PRECISION; if none is, threshold is None and
+    nothing is flagged. The final model is refit on all labelled issues.
+
+    Returns {"model", "threshold", "metrics", "top_terms", "ok", "message"}. top_terms lists
+    the words and features pushing a finding toward / away from "false positive" so the
+    model can be sanity-checked by a person.
+    """
+    _sk()
+    from sklearn.metrics import average_precision_score, precision_recall_curve, roc_auc_score
+    result = {"model": None, "threshold": None, "metrics": {}, "top_terms": pd.DataFrame(), "ok": False, "message": ""}
+    data = _fp_labels(all_df, positive_reasons, negative_reasons)
+    if len(data) < ML_MIN_TRAIN_ROWS or data["is_false_positive"].value_counts().reindex([0, 1]).fillna(0).min() < ML_MIN_CLASS_ROWS:
+        result["message"] = "not enough labelled closed issues in both classes (need Fixed and dismissed-as-false-positive)"
+        return result
+    data = data.sort_values("detected_at")
+    cut = int(len(data) * (1 - test_fraction))
+    train, test = data.iloc[:cut], data.iloc[cut:]
+    if train["is_false_positive"].nunique() < 2 or test["is_false_positive"].nunique() < 2:
+        result["message"] = "train or test split holds only one class"
+        return result
+    cols = _FP_CATEGORICAL + _FP_NUMERIC + ["text"]
+    model = _make_fp_pipeline().fit(train[cols], train["is_false_positive"])
+    prob = model.predict_proba(test[cols])[:, list(model.classes_).index(1)]
+    y = test["is_false_positive"].to_numpy()
+    precision, recall, thresholds = precision_recall_curve(y, prob)
+    ok = np.where(precision[:-1] >= ML_MIN_PRECISION)[0]
+    threshold = float(thresholds[ok[0]]) if len(ok) else None
+    flagged = (prob >= threshold) if threshold is not None else np.zeros(len(prob), bool)
+    result["metrics"] = {
+        "labelled_issues": int(len(data)), "train_issues": int(len(train)), "test_issues": int(len(test)),
+        "base_rate_false_positive": round(float(y.mean()), 3),
+        "roc_auc": round(float(roc_auc_score(y, prob)), 3),
+        "avg_precision": round(float(average_precision_score(y, prob)), 3),
+        "flagged_test_issues": int(flagged.sum()),
+        "precision_at_threshold": round(float(y[flagged].mean()), 3) if flagged.any() else None,
+        "recall_at_threshold": round(float(flagged[y == 1].mean()), 3),
+    }
+    final = _make_fp_pipeline().fit(data[cols], data["is_false_positive"])    # refit on everything
+    names = final.named_steps["prep"].get_feature_names_out()
+    coef = final.named_steps["lr"].coef_[0]
+    terms = pd.DataFrame({"feature": names, "weight": coef}).sort_values("weight")
+    result["top_terms"] = pd.concat([terms.head(15).assign(pushes="toward real issue"),
+                                     terms.tail(15).iloc[::-1].assign(pushes="toward false positive")], ignore_index=True)
+    result.update(model=final, threshold=threshold, ok=threshold is not None,
+                  message="ok" if threshold is not None
+                  else f"no threshold reaches {ML_MIN_PRECISION:.0%} precision on held-out data; nothing will be flagged")
+    return result
+
+
+def predict_false_positive(model, new_data: pd.DataFrame, open_only: bool = True) -> pd.DataFrame:
+    """
+    Score findings with the bundle from train_false_positive() (a bare fitted pipeline also works).
+
+    Returns ONE ROW PER ISSUE (new_data is not modified) with:
+      is_false_positive_probability   0-1 from the model
+      is_false_positive               True when probability >= the trained threshold
+      fp_protected                    Cycode risk or scanner severity is High/Critical
+    and, for a flagged issue that is not protected, fp_review_candidate = True: a suggestion to
+    look at it for dismissal. A flagged issue that IS protected (High/Critical) gets
+    fp_verify_first = True instead: a person should confirm it first, it is never suppressed.
+    Nothing here changes triage tiers or closes anything.
+    """
+    out = new_data if "issue_key" in new_data.columns else add_issue_key(new_data)
+    if open_only and "status_raw" in out.columns:
+        out = out[out["status_raw"].astype(str).str.lower().eq("open")]
+    out = out.drop_duplicates("issue_key").copy()
+    out["is_false_positive_probability"] = np.nan
+    out["is_false_positive"] = False
+    out["fp_protected"] = False
+    out["fp_review_candidate"] = False
+    out["fp_verify_first"] = False
+    if out.empty or model is None:
+        return out
+    bundle = model if isinstance(model, dict) else {"model": model, "threshold": 0.5}
+    pipe = bundle["model"]
+    if pipe is None:
+        return out
+    cols = _FP_CATEGORICAL + _FP_NUMERIC + ["text"]
+    prob = pipe.predict_proba(build_fp_features(out)[cols])[:, list(pipe.classes_).index(1)]
+    out["is_false_positive_probability"] = prob.round(4)
+    threshold = bundle.get("threshold")
+    if threshold is not None:
+        out["is_false_positive"] = prob >= threshold
+    level = out["risk_level"].astype(str).str.lower() if "risk_level" in out.columns else pd.Series("", index=out.index)
+    out["fp_protected"] = level.isin(["high", "critical"]) | _sev_str(out["severity"]).isin(["high", "critical"])
+    out["fp_review_candidate"] = out["is_false_positive"] & ~out["fp_protected"]
+    # High/Critical findings the model thinks are false positives: never auto-suppressed, but they are
+    # the most valuable to verify first (a quick human "yes, false positive" frees the most triage time).
+    out["fp_verify_first"] = out["is_false_positive"] & out["fp_protected"]
+    return out
 
 
 if __name__ == "__main__":

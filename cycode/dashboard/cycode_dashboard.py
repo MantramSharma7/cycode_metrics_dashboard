@@ -18,9 +18,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-_REPO_DIR = Path(__file__).resolve().parents[1]
-_PACKAGE_DIR = _REPO_DIR / "cycode"
-for _p in (str(_REPO_DIR), str(_PACKAGE_DIR), str(Path(__file__).resolve().parent)):
+_CYCODE_DIR = Path(__file__).resolve().parent.parent
+for _p in (str(_CYCODE_DIR), str(Path(__file__).resolve().parent)):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 # Streamlit keeps modules in sys.modules across reruns; reload so new helpers
@@ -28,7 +27,7 @@ for _p in (str(_REPO_DIR), str(_PACKAGE_DIR), str(Path(__file__).resolve().paren
 import importlib
 import cycode_pipeline as _cycode_pipeline
 importlib.reload(_cycode_pipeline)
-from cycode_pipeline import attain_insights, identify_anomalies, recommend_next_steps  # noqa: E402
+from cycode_pipeline import attain_insights, display_isolation_forest, identify_anomalies, recommend_next_steps  # noqa: E402
 
 REPORT_DIR = Path(__file__).resolve().parent.parent / "reports"
 DIMENSIONS = ["Project", "Team", "Repository"]
@@ -133,7 +132,7 @@ SOURCE = st.sidebar.radio("Source", ["Cycode", "Ecoscanner"], horizontal=True)
 if SOURCE == "Ecoscanner":
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from cycode.dashboard.ecoscanner_view import render as render_ecoscanner
+    from ecoscanner_view import render as render_ecoscanner
     render_ecoscanner(REPORT_DIR, parse_report)
     st.stop()
 files = sorted(
@@ -164,10 +163,24 @@ else:
     st.sidebar.warning("No *_detail.csv found: most charts need it. Re-run the pipeline.")
 dimension = st.sidebar.radio("Group by", DIMENSIONS, index=0)
 hide_empty = st.sidebar.checkbox("Hide groups with no open findings", value=True)
-HIDE_UNMAPPED = st.sidebar.checkbox(
-    "Hide 'Unmapped' group (experiment)", value=False,
-    help="Removes the Unmapped group from the charts, tables and the headline numbers. The headline "
-         "then shows how far each figure moves compared with keeping Unmapped (reference only).")
+# With every repository and asset mapped there is no 'Unmapped' group, so nothing about it is shown.
+# If a report still has one (a new repo or asset appeared), say how much and offer to hide it.
+_unmapped_open, _unmapped_group = 0, False
+for _dim in DIMENSIONS:
+    _sc = frames.get(f"Scorecard {_dim}")
+    if _sc is not None and not _sc.empty:
+        _hit = _sc[_sc.iloc[:, 0].astype(str).str.lower() == UNMAPPED_LABEL.lower()]
+        if len(_hit):
+            _unmapped_group = True
+            _unmapped_open = max(_unmapped_open, int(pd.to_numeric(_hit["Open findings"], errors="coerce").fillna(0).sum()))
+HIDE_UNMAPPED = False
+if _unmapped_group:
+    st.sidebar.warning(f"{_unmapped_open:,} open findings are still Unmapped. Add the repo to product_map.csv "
+                       "or the asset to asset_map.csv and re-run the pipeline.")
+    HIDE_UNMAPPED = st.sidebar.checkbox(
+        "Hide 'Unmapped' group", value=False,
+        help="Removes the Unmapped group from the charts, tables and the headline numbers. The headline "
+             "then shows how far each figure moves compared with keeping Unmapped (reference only).")
 st.sidebar.caption(f"Source: {source}")
 
 score = frames.get(f"Scorecard {dimension}")
@@ -191,27 +204,27 @@ def show_popup(insights: list[str]):
     st.caption("Most important first. The full list is under the title on the page.")
     for insight in insights:
         st.markdown(f"- {insight}")
-    # render_next_steps("popup")
+    render_next_steps("popup")
     if st.button("Close", key="insights_close"):
         st.rerun()
 
 
-# def render_next_steps(key: str) -> None:
-#     """
-#     'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
-#     playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
-#     kept in session state), and sends only aggregate numbers and group names.
-#     """
-#     state_key = f"next_steps_{source}_{dimension}"
-#     st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
-#     if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
-#         with st.spinner("Working out next steps..."):
-#             st.session_state[state_key] = recommend_next_steps(
-#                 anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
-#     result = st.session_state.get(state_key)
-#     if result:
-#         st.markdown(result["text"])
-#         st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
+def render_next_steps(key: str) -> None:
+    """
+    'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
+    playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
+    kept in session state), and sends only aggregate numbers and group names.
+    """
+    state_key = f"next_steps_{source}_{dimension}"
+    st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
+    if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
+        with st.spinner("Working out next steps..."):
+            st.session_state[state_key] = recommend_next_steps(
+                anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
+    result = st.session_state.get(state_key)
+    if result:
+        st.markdown(result["text"])
+        st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
 
 st.title("Cycode Security Metrics Dashboard")
 st.caption(f"Report: {source}  |  Grouped by {dimension}  |  Cycode is the source of truth for resolution")
@@ -219,6 +232,7 @@ st.caption(f"Report: {source}  |  Grouped by {dimension}  |  Cycode is the sourc
 m3_all = frames.get("M3 detail", pd.DataFrame())
 m4_all = frames.get("M4 detail", pd.DataFrame())
 m5_all = frames.get("M5 detail", pd.DataFrame())
+m9_all = frames.get("M9 detail", pd.DataFrame())
 
 
 def first_value(df: pd.DataFrame, column: str):
@@ -260,7 +274,24 @@ def org_headline(drop_unmapped: bool) -> dict:
     m5 = _group_rows(m5_all, drop_unmapped)
     if not m5.empty and "n" in m5 and m5["n"].sum():
         out["hygiene"] = 100 * (1 - m5["sla_breached_count"].sum() / m5["n"].sum())
+    out["posture"] = org_posture(drop_unmapped)
     return out
+
+
+def org_posture(drop_unmapped: bool) -> float:
+    """
+    Org risk posture score (0-100, higher is better): the plain average of the per-product
+    (Project) posture scores from M9. Always taken from the Project rows, so it does not change
+    with the Group-by choice. M9 scores products against each other (the median product = 50),
+    so this average sits near 50 by construction: read it as a trend, not an absolute grade.
+    """
+    if m9_all.empty or "dimension" not in m9_all or "posture_score" not in m9_all:
+        return float("nan")
+    rows = m9_all[m9_all["dimension"] == "Project"]
+    if drop_unmapped:
+        rows = rows[rows["group"].astype(str).str.lower() != UNMAPPED_LABEL.lower()]
+    scores = pd.to_numeric(rows["posture_score"], errors="coerce").dropna()
+    return float(scores.mean()) if len(scores) else float("nan")
 
 
 def _kpi(column, label: str, value: float, with_unmapped: float, suffix: str = "") -> None:
@@ -339,9 +370,9 @@ if anomalies or insight_lines:
     with st.expander(f"What changed or looks unusual ({len(anomalies)})", expanded=bool(_needs_attention)):
         for line in insight_lines:
             st.markdown(f"- {line}")
-        st.caption(f"Compared with {previous_label}."
+        st.caption(f"Compared with {previous_label}. Thresholds are placeholders (ANOMALY_RULES in cycode_pipeline.py)."
                    if previous_label else "No earlier report to compare with.")
-        # render_next_steps("page")
+        render_next_steps("page")
     _popup_key = f"insights_popup_{source}_{dimension}"
     if st.sidebar.button("Show insights popup", key="insights_button") or (
             _needs_attention and not st.session_state.get(_popup_key)):
@@ -374,14 +405,14 @@ _kpi(k3, "Noise rate (org)", _org("noise", "general_issue_noise_rate", m4_all),
      first_value(m4_all, "general_issue_noise_rate"), "%")
 _kpi(k4, "Mean time to remediate (days)", _org("mttr", "general_ttr_days", m3_all),
      first_value(m3_all, "general_ttr_days"))
-_kpi(k5, "Hygiene score (org)", _org("hygiene", "general_hygiene_score", m5_all),
-     first_value(m5_all, "general_hygiene_score"))
+_kpi(k5, "Risk posture score (org)", _use.get("posture", org_posture(False)), org_posture(False))
 if HIDE_UNMAPPED and not _has_unmapped:
     st.caption(f"No 'Unmapped' group in this grouping ({dimension}), so the headline is unchanged.")
 
 tabs = st.tabs([
     "Scorecard", "Backlog (M1)", "Remediation (M3)", "Noise (M4)", "Age (M5)",
-    "AI & cost (M6, M8)", "Coverage (M7)", "Posture (M9)", "Extras (X)", "Flow & SLA",
+    "AI & cost (M6, M8)", "Coverage (M7)", "Posture (M9)", "Extras (X)", "Caveats", "Flow & SLA",
+    "False Positive Review Candidates (FP)"
 ])
 
 # ----------------------------------------------------------------------------
@@ -391,6 +422,8 @@ with tabs[0]:
     st.subheader(f"All metrics side by side, by {dimension}")
     st.caption("Green is better, red is worse, within each column. Blank means no data for that group.")
     cols = [c for c in HIGHER_IS_BETTER if c in score.columns]
+    cols.remove("M7 Scanner coverage (%)")
+    cols.remove("M6 AI-verified (% of secrets)")
     values = score[cols]
     scaled = values.copy()
     for c in cols:
@@ -480,6 +513,9 @@ with tabs[4]:
     if d.empty:
         st.info("No age data.")
     else:
+        _hyg = _use.get("hygiene", first_value(m5_all, "general_hygiene_score"))
+        st.metric("Hygiene score (org)", fmt(_hyg),
+                  help="100 x (1 - SLA-breached actionable issues / actionable issues). SLA days are placeholders.")
         c1, c2 = st.columns(2)
         c1.plotly_chart(px.bar(d.sort_values("sla_breached_count"), x="sla_breached_count", y="group",
                                orientation="h", text="sla_breached_count",
@@ -606,9 +642,25 @@ with tabs[8]:
         st.caption("Automation share reads 0% until audit actor IDs are mapped to service accounts.")
 
 # ----------------------------------------------------------------------------
-# Flow & SLA (X14-X16)
+# Caveats
 # ----------------------------------------------------------------------------
 with tabs[9]:
+    st.subheader("Data caveats and metric status")
+    notes = frames.get("Notes")
+    if notes is not None:
+        for line in notes.iloc[:, 0].dropna():
+            st.markdown(f"- {line}")
+    st.markdown("**Metric status in this report**")
+    st.table(pd.DataFrame(
+        [{"Metric": m, "Status": status_badge(frames, m)} for m in
+         ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9"]]
+    ))
+    st.markdown("- M2 (backlog trend) needs a previous snapshot, so it is not charted yet.")
+
+# ----------------------------------------------------------------------------
+# Flow & SLA (X14-X16)
+# ----------------------------------------------------------------------------
+with tabs[10]:
     st.subheader("Issues opened vs resolved per day")
     flow = frames.get("X14 daily flow by Project" if dimension == "Project" else "X14 daily flow")
     flow_all = frames.get("X14 daily flow")
@@ -623,7 +675,7 @@ with tabs[9]:
         f = flow_all if pick == "All" else by_project[by_project["group"].astype(str) == pick]
         f = f.copy()
         f["date"] = pd.to_datetime(f["date"])
-        window = st.slider("Last N days", 8, max(15, len(f)), min(90, max(15, len(f))), key="flow_days")
+        window = st.slider("Last N days", 8, max(15, len(f)), 14, key="flow_days")
         f = f.tail(window)
         f["resolved_neg"] = -f["resolved"]
         fig = go.Figure()
@@ -664,3 +716,61 @@ with tabs[9]:
     st.caption("Survival analysis: P(miss) = S(SLA) / S(age) from how long similar issues took to fix, with open and "
                "dismissed issues counted as censored. SLA days are placeholders. Strata with under 30 fixes fall back "
                "to a broader group. Dismissals are not independent of fixing, so treat the probability as a ranking.")
+
+    # ----------------------------------------------------------------------------
+    # False Positive Review Candidates (FP)
+    # ----------------------------------------------------------------------------
+    with tabs[11]:
+        st.subheader("Unusual scan weeks (Isolation Forest)")
+        isolation_forest = frames.get("X17 Isolation Forest")
+        if isolation_forest is None or isolation_forest.empty:
+            st.info("No X17 data in this report (needs scikit-learn when the pipeline runs, and at least 30 group-weeks).")
+        else:
+            iso = isolation_forest.copy()
+            iso["is_outlier"] = iso["is_outlier"].astype(str).str.lower().eq("true")
+            iso = iso.sort_values("is_outlier")                      # draw outliers on top
+            iso["label"] = iso["is_outlier"].map({True: "Unusual", False: "Normal"})
+            st.plotly_chart(px.scatter(iso, x="total", y="high_risk_share", color="label",
+                                    hover_data=["group", "week", "anomaly_score"], log_x=True,
+                                    color_discrete_map={"Unusual": "#d1495b", "Normal": "#9aa5b1"},
+                                    labels={"total": "New findings in the week (log)", "high_risk_share": "High/Critical share"},
+                                    title="Group-weeks by volume and severity mix"), use_container_width=True)
+            st.dataframe(iso[iso["is_outlier"]].drop(columns=["is_outlier", "label"]),
+                        use_container_width=True, hide_index=True)
+            # st.caption("Per product line and week of first detection; the strangest ~5% are flagged. A flagged week means a "
+            #         "burst, a new scanner rule or a mass import: investigate, it is not a verdict. The first-scan week "
+            #         "(26-Aug) is the initial load.")
+
+        st.subheader("False Positive Review Candidates")
+        fp = frames.get("FP review candidates")
+        if fp is not None and not fp.empty:
+            fp = fp.copy()
+            for _col in ("fp_verify_first", "fp_review_candidate", "fp_protected"):
+                if _col in fp.columns:
+                    fp[_col] = fp[_col].astype(str).str.lower().eq("true")
+            _prob = "is_false_positive_probability"
+            if "fp_verify_first" in fp.columns:
+                hi = fp[fp["fp_verify_first"]].sort_values(_prob, ascending=False)
+                lo = fp[fp.get("fp_review_candidate", ~fp["fp_verify_first"])].sort_values(_prob, ascending=False)
+            else:                                    # older report: Medium/Low candidates only
+                hi, lo = fp.iloc[0:0], fp.sort_values(_prob, ascending=False)
+            a, b = st.columns(2)
+            a.metric("High/Critical: verify first", f"{len(hi):,}")
+            b.metric("Medium/Low: review candidates", f"{len(lo):,}")
+            st.markdown("**High/Critical issues the model thinks are false positives (verify first)**")
+            if hi.empty:
+                st.info("None in this report. If you expected some, re-run test_false_positives.py: older runs "
+                        "wrote only the Medium/Low candidates.")
+            else:
+                if "severity" in hi.columns:
+                    severity = st.multiselect("Severity", sorted(hi["severity"].dropna().unique()),
+                                            default=sorted(hi["severity"].dropna().unique()), key="fp_hi_severity")
+                    hi = hi[hi["severity"].isin(severity)]
+                st.dataframe(hi, use_container_width=True, hide_index=True)
+            st.markdown("**Medium/Low review candidates**")
+            st.dataframe(lo, use_container_width=True, hide_index=True)
+            st.caption("High/Critical findings are never suppressed automatically. The model only ranks them so a "
+                       "person can confirm quickly; a confirmed false positive frees the most triage time. "
+                       "The label is a proxy (dismissed with no reason recorded), so treat the probability as a ranking.")
+        else:
+            st.info("No FP review candidates data.")
