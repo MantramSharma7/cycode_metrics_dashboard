@@ -27,7 +27,7 @@ for _p in (str(_CYCODE_DIR), str(Path(__file__).resolve().parent)):
 import importlib
 import cycode_pipeline as _cycode_pipeline
 importlib.reload(_cycode_pipeline)
-from cycode_pipeline import attain_insights, display_isolation_forest, identify_anomalies, recommend_next_steps  # noqa: E402
+from cycode_pipeline import attain_insights, identify_anomalies, recommend_next_steps 
 
 REPORT_DIR = Path(__file__).resolve().parent.parent / "reports"
 DIMENSIONS = ["Project", "Team", "Repository"]
@@ -204,27 +204,27 @@ def show_popup(insights: list[str]):
     st.caption("Most important first. The full list is under the title on the page.")
     for insight in insights:
         st.markdown(f"- {insight}")
-    # render_next_steps("popup")
-    # if st.button("Close", key="insights_close"):
-    #     st.rerun()
+    render_next_steps("popup")
+    if st.button("Close", key="insights_close"):
+        st.rerun()
 
 
-# def render_next_steps(key: str) -> None:
-#     """
-#     'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
-#     playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
-#     kept in session state), and sends only aggregate numbers and group names.
-#     """
-#     state_key = f"next_steps_{source}_{dimension}"
-#     st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
-#     if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
-#         with st.spinner("Working out next steps..."):
-#             st.session_state[state_key] = recommend_next_steps(
-#                 anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
-#     result = st.session_state.get(state_key)
-#     if result:
-#         st.markdown(result["text"])
-#         st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
+def render_next_steps(key: str) -> None:
+    """
+    'What should we do next?' button: an AI opinion on the insights above it, with a rule-based
+    playbook as the fallback. Runs only when clicked, once per report and grouping (the answer is
+    kept in session state), and sends only aggregate numbers and group names.
+    """
+    state_key = f"next_steps_{source}_{dimension}"
+    st.caption("Sends this week's aggregate numbers and group names (no finding text) to the model.")
+    if st.button("What should we do next? (AI opinion)", key=f"next_steps_btn_{key}"):
+        with st.spinner("Working out next steps..."):
+            st.session_state[state_key] = recommend_next_steps(
+                anomalies, {"report": source, "compared_with": previous_label, "grouped_by": dimension})
+    result = st.session_state.get(state_key)
+    if result:
+        st.markdown(result["text"])
+        st.caption(f"Source: {result['source']}. An opinion from one week's aggregates; check the data caveats before acting.")
 
 st.title("Cycode Security Metrics Dashboard")
 st.caption(f"Report: {source}  |  Grouped by {dimension}  |  Cycode is the source of truth for resolution")
@@ -370,9 +370,9 @@ if anomalies or insight_lines:
     with st.expander(f"What changed or looks unusual ({len(anomalies)})", expanded=bool(_needs_attention)):
         for line in insight_lines:
             st.markdown(f"- {line}")
-        st.caption(f"Compared with {previous_label}.)."
+        st.caption(f"Compared with {previous_label}. Thresholds are placeholders (ANOMALY_RULES in cycode_pipeline.py)."
                    if previous_label else "No earlier report to compare with.")
-        # render_next_steps("page")
+        render_next_steps("page")
     _popup_key = f"insights_popup_{source}_{dimension}"
     if st.sidebar.button("Show insights popup", key="insights_button") or (
             _needs_attention and not st.session_state.get(_popup_key)):
@@ -754,6 +754,16 @@ with tabs[10]:
                 lo = fp[fp.get("fp_review_candidate", ~fp["fp_verify_first"])].sort_values(_prob, ascending=False)
             else:                                    # older report: Medium/Low candidates only
                 hi, lo = fp.iloc[0:0], fp.sort_values(_prob, ascending=False)
+            if "fp_rule_explained" in fp.columns or "fp_explained_by" in fp.columns:
+                _col = "fp_explained_by"
+                if st.checkbox("Hide candidates already explained by a test-file or non-production-path rule",
+                               value=True, key="fp_hide_rule"):
+                    hi = hi[hi[_col].fillna("").eq("")] if _col in hi.columns else hi
+                    lo = lo[lo[_col].fillna("").eq("")] if _col in lo.columns else lo
+            groups = frames.get("FP candidate groups")
+            if groups is not None and not groups.empty:
+                st.markdown("**By group (same policy and repository, many files)**")
+                st.dataframe(groups, use_container_width=True, hide_index=False)
             a, b = st.columns(2)
             a.metric("High/Critical: verify first", f"{len(hi):,}")
             b.metric("Medium/Low: review candidates", f"{len(lo):,}")

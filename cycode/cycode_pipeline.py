@@ -637,12 +637,16 @@ def unmapped_repositories(violations_df: pd.DataFrame) -> pd.Series:
 
 def write_asset_worksheet(all_df: pd.DataFrame, product_map: pd.DataFrame | None = None, path: str | Path | None = None) -> pd.DataFrame:
     """
-    Create or extend asset_map.csv: one row per asset_key among repository-less findings
+    Create or EXTEND asset_map.csv: one row per asset_key among repository-less findings
     (asset_key, category, findings, open_findings, product_line, team, suggested_product_line,
-    suggested_team, notes). Your product_line/team/notes are kept on re-runs. The suggestions are
-    only exact name matches with a repo in the product map (container repo "roadmapping" =
-    repo roadmapping) and are NOT applied: copy them into product_line/team once confirmed.
-    Rows with a blank product_line stay Unmapped.
+    suggested_team, notes). The suggestions are only exact name matches with a repo in the product
+    map (container repo "roadmapping" = repo roadmapping) and are NOT applied: copy them into
+    product_line/team once confirmed. Rows with a blank product_line stay Unmapped.
+
+    Existing rows are never dropped. Your product_line / team / notes (and any column you added) are
+    kept for every key, including keys that are not in this export (their counts become 0), so running
+    an older or newer export cannot discard labels. Keys match case-insensitively. When the file
+    changes, the previous version is saved next to it as asset_map.csv.bak.
     """
     path = Path(path) if path else ASSET_MAP_PATH
     keyed = add_asset_key(all_df)
@@ -659,13 +663,36 @@ def write_asset_worksheet(all_df: pd.DataFrame, product_map: pd.DataFrame | None
     table["suggested_product_line"] = name.map(repos).fillna("")
     table["suggested_team"] = name.map(teams).fillna("")
     table["notes"] = ""
+    table["_k"] = table["asset_key"].str.strip().str.lower()
+    old_text = None
     if path.exists():
-        old = _read_asset_map(path).set_index("asset_key")
-        for column in ("product_line", "team", "notes"):
-            kept = table["asset_key"].map(old[column]) if column in old.columns else pd.Series(pd.NA, index=table.index)
-            table[column] = kept.where(kept.notna() & kept.ne(""), table[column])
-    table = table.sort_values("open_findings", ascending=False)
-    table.to_csv(path, index=False)
+        old_text = path.read_text(encoding="utf-8-sig")
+        old = _read_asset_map(path)
+        old["_k"] = old["asset_key"].str.strip().str.lower()
+        # one row per key; prefer the labelled one when a key is repeated
+        old = old.assign(_l=old.get("product_line", "").ne("") if "product_line" in old else False)
+        old = old.sort_values("_l", ascending=False, kind="mergesort").drop_duplicates("_k").drop(columns="_l").set_index("_k")
+        for column in old.columns:
+            if column in ("asset_key", "category", "findings", "open_findings"):
+                continue
+            kept = table["_k"].map(old[column])
+            if column in table.columns:
+                table[column] = kept.where(kept.notna() & kept.ne(""), table[column])
+            else:
+                table[column] = kept.fillna("")
+        gone = old[~old.index.isin(table["_k"])].reset_index()   # keys absent from this export: keep, counts 0
+        if not gone.empty:
+            for column in ("findings", "open_findings"):
+                gone[column] = 0
+            table = pd.concat([table, gone], ignore_index=True)
+    table = table.drop(columns="_k")
+    for column in ("findings", "open_findings"):
+        table[column] = pd.to_numeric(table[column], errors="coerce").fillna(0).astype(int)
+    table = table.sort_values(["open_findings", "findings"], ascending=False, kind="mergesort")
+    new_text = table.to_csv(index=False)
+    if old_text is not None and old_text.replace("\r\n", "\n") != new_text:
+        path.with_name(path.name + ".bak").write_text(old_text, encoding="utf-8")
+    path.write_text(new_text, encoding="utf-8")
     return table
 
 def _column(frame: pd.DataFrame, *names: str) -> str:
@@ -2292,6 +2319,13 @@ def run_report(
         extras["FP review candidates"] = fp_review_candidates
     except Exception as exc:  # false positive review candidates shape problems must not stop the report
         warnings.warn(f"FP review candidates failed: {exc}")
+    try:
+        extras["FP candidate groups"] = pd.read_csv(
+            "~/Documents/CyCode Project/false_positive_analysis/fp_review_groups.csv").set_index("policy")
+    except FileNotFoundError:
+        pass                                            # written by test_false_positives.py; optional
+    except Exception as exc:
+        warnings.warn(f"FP candidate groups failed: {exc}")
 
     sheets = {f"Scorecard {dim}": (table, True) for dim, table in summaries.items()}
     notes = list(SUMMARY_FOOTNOTES)
@@ -3897,6 +3931,13 @@ def sla_at_risk_list(scored: pd.DataFrame, limit: int = 50) -> pd.DataFrame:
 FP_POSITIVE_REASONS = ("FalsePositive", "NoReasonSpecified", "ExcludeSpecificViolation")
 FP_NEGATIVE_REASONS = ("Fixed",)           # a real fix is the clearest "not a false positive"
 FP_TEXT_FEATURES = 5000
+# Most "NoReasonSpecified" dismissals are not human judgements: 99% have no actor and ~70% happen in
+# bursts of 50+ in one minute (Cycode automation: deleted branches, test files, unmaintained packages).
+# Training treats the three kinds of positive differently so the model learns true false positives:
+FP_TRUE_WEIGHT = 25.0     # explicit FalsePositive reason, or dismissed by a real person (has an actor id)
+FP_BULK_WEIGHT = 0.25     # dismissed in a burst of FP_BULK_BURST+ rows by the same actor in one minute
+FP_BULK_BURST = 50        # every other positive keeps weight 1
+_NO_ACTOR = {"", "-", "nan", "none", "<na>", "00000000-0000-0000-0000-000000000000"}
 _FP_CATEGORICAL = ["category", "severity", "risk_level", "ext", "repo"]
 _FP_NUMERIC = ["risk_score", "severity_rank", "path_depth", "non_prod", "test_file", "fix_available",
                "has_package", "ai_verified", "latest_code", "text_len"]
@@ -3950,14 +3991,29 @@ def _fp_labels(all_df: pd.DataFrame, positive_reasons=FP_POSITIVE_REASONS, negat
     if labelled.empty:
         return pd.DataFrame()
     detected = _to_utc(labelled["detected_at"] if "detected_at" in labelled.columns else labelled["first_detected_at"])
-    work = pd.DataFrame({"issue_key": labelled["issue_key"], "pos": pos[labelled.index], "neg": neg[labelled.index],
-                         "detected_at": detected}, index=labelled.index)
-    agg = work.groupby("issue_key").agg(pos=("pos", "max"), neg=("neg", "max"), detected_at=("detected_at", "min"))
+    # who closed it and whether it was part of a bulk run: separates people from automation
+    actor = (labelled["status_updated_by_id"].astype(str).str.strip().str.lower()
+             if "status_updated_by_id" in labelled.columns else pd.Series("", index=labelled.index))
+    human = ~actor.isin(_NO_ACTOR)
+    minute = (_to_utc(labelled["last_status_change"]).dt.floor("min")
+              if "last_status_change" in labelled.columns else pd.Series(pd.NaT, index=labelled.index))
+    pos_l = pos[labelled.index]
+    burst = pd.Series(0, index=labelled.index)
+    if minute.notna().any():
+        burst = pd.Series(labelled.assign(_a=actor, _m=minute).groupby(["_a", "_m"])["issue_key"].transform("size"), index=labelled.index)
+    true_row = pos_l & (reason[labelled.index].eq("FalsePositive") | human)
+    bulk_row = pos_l & ~true_row & burst.ge(FP_BULK_BURST)
+    work = pd.DataFrame({"issue_key": labelled["issue_key"], "pos": pos_l, "neg": neg[labelled.index],
+                         "true": true_row, "bulk": bulk_row, "detected_at": detected}, index=labelled.index)
+    agg = work.groupby("issue_key").agg(pos=("pos", "max"), neg=("neg", "max"), true=("true", "max"),
+                                         bulk=("bulk", "max"), detected_at=("detected_at", "min"))
     agg = agg[agg["pos"] != agg["neg"]]                      # drop issues labelled both ways
     first = labelled.drop_duplicates("issue_key").set_index("issue_key").loc[agg.index]
     feats = build_fp_features(first.reset_index(drop=True))
     feats.index = agg.index
     feats["is_false_positive"] = agg["pos"].astype(int)
+    feats["fp_true"] = agg["true"].astype(bool)
+    feats["fp_weight"] = np.where(agg["true"], FP_TRUE_WEIGHT, np.where(agg["bulk"], FP_BULK_WEIGHT, 1.0))
     feats["detected_at"] = agg["detected_at"]
     return feats.dropna(subset=["detected_at"]).reset_index()
 
@@ -4010,23 +4066,30 @@ def train_false_positive(all_df: pd.DataFrame, positive_reasons=FP_POSITIVE_REAS
         result["message"] = "train or test split holds only one class"
         return result
     cols = _FP_CATEGORICAL + _FP_NUMERIC + ["text"]
-    model = _make_fp_pipeline().fit(train[cols], train["is_false_positive"])
+    model = _make_fp_pipeline().fit(train[cols], train["is_false_positive"], lr__sample_weight=train["fp_weight"].to_numpy())
     prob = model.predict_proba(test[cols])[:, list(model.classes_).index(1)]
     y = test["is_false_positive"].to_numpy()
-    precision, recall, thresholds = precision_recall_curve(y, prob)
+    weights = test["fp_weight"].to_numpy()
+    # Precision is weighted too, so the threshold has to be right about true false positives, not just
+    # about bulk-dismissed findings.
+    precision, recall, thresholds = precision_recall_curve(y, prob, sample_weight=weights)
     ok = np.where(precision[:-1] >= ML_MIN_PRECISION)[0]
     threshold = float(thresholds[ok[0]]) if len(ok) else None
     flagged = (prob >= threshold) if threshold is not None else np.zeros(len(prob), bool)
     result["metrics"] = {
         "labelled_issues": int(len(data)), "train_issues": int(len(train)), "test_issues": int(len(test)),
         "base_rate_false_positive": round(float(y.mean()), 3),
-        "roc_auc": round(float(roc_auc_score(y, prob)), 3),
-        "avg_precision": round(float(average_precision_score(y, prob)), 3),
+        "roc_auc": round(float(roc_auc_score(y, prob, sample_weight=weights)), 3),
+        "avg_precision": round(float(average_precision_score(y, prob, sample_weight=weights)), 3),
         "flagged_test_issues": int(flagged.sum()),
         "precision_at_threshold": round(float(y[flagged].mean()), 3) if flagged.any() else None,
         "recall_at_threshold": round(float(flagged[y == 1].mean()), 3),
+        "true_fp_issues_total": int(data["fp_true"].sum()),
+        "true_fp_test_issues": int(test["fp_true"].sum()),
+        "true_fp_recall_at_threshold": (round(float(flagged[test["fp_true"].to_numpy()].mean()), 3)
+                                        if test["fp_true"].any() else None),
     }
-    final = _make_fp_pipeline().fit(data[cols], data["is_false_positive"])    # refit on everything
+    final = _make_fp_pipeline().fit(data[cols], data["is_false_positive"], lr__sample_weight=data["fp_weight"].to_numpy())
     names = final.named_steps["prep"].get_feature_names_out()
     coef = final.named_steps["lr"].coef_[0]
     terms = pd.DataFrame({"feature": names, "weight": coef}).sort_values("weight")
@@ -4078,7 +4141,39 @@ def predict_false_positive(model, new_data: pd.DataFrame, open_only: bool = True
     # High/Critical findings the model thinks are false positives: never auto-suppressed, but they are
     # the most valuable to verify first (a quick human "yes, false positive" frees the most triage time).
     out["fp_verify_first"] = out["is_false_positive"] & out["fp_protected"]
+    # Cycode / the tuning rules already cover test files and non-production paths, so these are the
+    # "obvious" ones; the interesting candidates are the ones NOT explained by a rule.
+    path = out["file_path"].fillna("").astype(str) if "file_path" in out.columns else pd.Series("", index=out.index)
+    test_tag = out["tag_test_file"].fillna(False).astype(bool) if "tag_test_file" in out.columns else pd.Series(False, index=out.index)
+    out["fp_explained_by"] = np.where(test_tag, "test file tag", np.where(path.str.contains(NON_PROD_PATH_RE), "non-production path", ""))
+    out["fp_rule_explained"] = out["fp_explained_by"].ne("")
     return out
+
+
+def summarize_fp_groups(scored: pd.DataFrame, only_flagged: bool = True) -> pd.DataFrame:
+    """
+    Candidates repeat the same issue across many files, so review them by group instead:
+    one row per (policy, repository, risk level) with the number of issues, files, the mean and
+    top probability, how many are High/Critical (verify first) and an example file. Largest first.
+    Run on the output of predict_false_positive().
+    """
+    work = scored[scored["is_false_positive"]] if only_flagged and "is_false_positive" in scored.columns else scored
+    if work.empty:
+        return pd.DataFrame()
+    repo = work["repository"].map(_repo_slug) if "repository" in work.columns else pd.Series(pd.NA, index=work.index)
+    if "asset_key" in work.columns:                     # container / cloud findings have no repository
+        repo = repo.where(~_blank(repo), work["asset_key"].replace("", pd.NA))
+    work = work.assign(_repo=repo.fillna("(none)"))
+    file_col = work["file_path"].fillna("") if "file_path" in work.columns else pd.Series("", index=work.index)
+    grouped = work.assign(_file=file_col).groupby(["policy", "_repo", "risk_level"], dropna=False)
+    out = grouped.agg(issues=("issue_key", "size"), files=("_file", "nunique"),
+                      mean_probability=("is_false_positive_probability", "mean"),
+                      top_probability=("is_false_positive_probability", "max"),
+                      verify_first=("fp_verify_first", "sum"),
+                      rule_explained=("fp_rule_explained", "sum"),
+                      example_file=("_file", "first")).reset_index().rename(columns={"_repo": "repository"})
+    out["mean_probability"] = out["mean_probability"].round(3)
+    return out.sort_values(["verify_first", "issues"], ascending=False).reset_index(drop=True)
 
 
 if __name__ == "__main__":
