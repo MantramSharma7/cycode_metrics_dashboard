@@ -228,41 +228,41 @@ snapshot_date,metric,dimension,group,value,n,status
 snapshot_date,metric,dimension,group,new,resolved,net,value,n,status,note
 2026-11-12T00:00:00Z,backlog_trend,Project,AI Tools,57,100,-43,-43,1091,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,AWS,0,0,0,0,6,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Alpha Serve,249,206,43,43,3916,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Alpha Serve,249,233,16,16,3916,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,AlphaServe,8,15,-7,-7,891,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Apps,131,0,131,131,1526,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Connector for Jira,8,14,-6,-6,445,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Custom Charts,111,391,-280,-280,6803,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Kaid,26,33,-7,-7,542,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Loop,680,233,447,447,8384,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Other,721,108,613,613,4209,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Other,721,112,609,609,4209,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Portfolio Manager,31,48,-17,-17,3720,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Strategic Roadmaps,222,237,-15,-15,9074,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Structure,126,90,36,36,5662,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Tempo for Jira,666,1109,-443,-443,18533,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Strategic Roadmaps,222,278,-56,-56,9074,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Structure,126,137,-11,-11,5662,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Tempo for Jira,666,1237,-571,-571,18533,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Time Tracker,46,72,-26,-26,1635,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Project,Unmapped,0,303,-303,-303,0,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Project,Unmapped,0,56,-56,-56,0,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Project,Workforce Intelligence,116,90,26,26,1882,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,AWS,0,0,0,0,6,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,All Structure,122,77,45,45,4585,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,AlphaServe Cloud,256,220,36,36,4794,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,All Structure,122,124,-2,-2,4585,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,AlphaServe Cloud,256,247,9,9,4794,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,AlphaServe DC,120,56,64,64,1552,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Apps,53,0,53,53,1380,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,Avengers,508,712,-204,-204,8957,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,Avengers,508,840,-332,-332,8957,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Beaver,31,37,-6,-6,626,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Brazil / eCore,204,469,-265,-265,11205,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Custom Charts,111,391,-280,-280,6803,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Dev,13,14,-1,-1,42,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Kaid,26,33,-7,-7,542,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,Kenobi Mongoose Visualizations,146,136,10,10,6427,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,Kenobi Mongoose Visualizations,146,174,-28,-28,6427,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,"Kenobi, Mongoose, Visualizations",76,101,-25,-25,2587,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Kraken,31,48,-17,-17,3720,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,Leeward,0,0,0,0,60,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,Leeward,0,3,-3,-3,60,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Meerkat,26,63,-37,-37,465,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,Other,675,53,622,622,3219,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,Other,675,57,618,618,3219,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,Structure DC,4,13,-9,-9,1077,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,TBA,0,0,0,0,1,READY,new = open now but not in previous snapshot; resolved = open then but not now
-2026-11-12T00:00:00Z,backlog_trend,Team,Unmapped,0,303,-303,-303,0,READY,new = open now but not in previous snapshot; resolved = open then but not now
+2026-11-12T00:00:00Z,backlog_trend,Team,Unmapped,0,56,-56,-56,0,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,"Vanguard, The Rejects, Insights",680,233,447,447,8384,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Team,X-Men,116,90,26,26,1887,READY,new = open now but not in previous snapshot; resolved = open then but not now
 2026-11-12T00:00:00Z,backlog_trend,Repository,Pod-2-Playground,6,9,-3,-3,189,READY,new = open now but not in previous snapshot; resolved = open then but not now
